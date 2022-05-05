@@ -11,7 +11,7 @@ namespace EstacionaTEC
 {
 
 
-    public partial class Agregarusuario
+    public partial class EditarUsuario
     {
 
         /// <summary>
@@ -22,6 +22,15 @@ namespace EstacionaTEC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+
+        /// <summary>
+        /// BuscarButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BuscarButton;
 
         /// <summary>
         /// DocenteBox control.
@@ -51,12 +60,12 @@ namespace EstacionaTEC
         protected global::System.Web.UI.WebControls.CheckBox ServiciosBox;
 
         /// <summary>
-        /// RegistarButton control.
+        /// EditarButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RegistarButton;
+        protected global::System.Web.UI.WebControls.Button EditarButton;
     }
 }

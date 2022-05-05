@@ -19,10 +19,10 @@
              <asp:LinkButton runat="server" id="agregarEspacio" href="AgregarEspacio.apsx" CssClass="btn btn-primary btn-sm">Agregar Espacio</asp:LinkButton>
         </p>
         <p>
-             <asp:LinkButton runat="server" id="crearUsuario" href="http://www.asp.net" CssClass="btn btn-primary btn-sm">Crear Usuario</asp:LinkButton>
+             <asp:LinkButton runat="server" id="crearUsuario" href="Agregarusuario.aspx" CssClass="btn btn-primary btn-sm">Crear Usuario</asp:LinkButton>
         </p>
         <p>
-             <asp:LinkButton runat="server" id="editarUsuario" href="http://www.asp.net" CssClass="btn btn-primary btn-sm">Editar Usuario</asp:LinkButton>
+             <asp:LinkButton runat="server" id="editarUsuario" href="EditarUsuario.aspx" CssClass="btn btn-primary btn-sm">Editar Usuario</asp:LinkButton>
         </p>
     </form>
 </body>
