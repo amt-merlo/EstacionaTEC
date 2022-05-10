@@ -43,7 +43,7 @@ template {
   display: none;
 }
 a {
-  background-color: transparent;
+  background-color: #6666FF;
 }
 a:active,
 a:hover {
@@ -117,8 +117,7 @@ input,
 optgroup,
 select,
 textarea {
-  color: inherit;
-  font: inherit;
+  color: #FFFFFF;
   margin: 0;
 }
 button {
@@ -134,6 +133,8 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
+    font-weight: 700;
+    background-color: #6666FF;
 }
 button[disabled],
 html input[disabled] {
@@ -4328,6 +4329,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .container-fluid > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px;
+    color: #99CCFF;
 }
 @media (min-width: 768px) {
   .container > .navbar-header,
@@ -4665,7 +4667,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ccc;
 }
 .navbar-inverse {
-  background-color: #222;
+  background-color: #6666FF;
   border-color: #080808;
 }
 .navbar-inverse .navbar-brand {
