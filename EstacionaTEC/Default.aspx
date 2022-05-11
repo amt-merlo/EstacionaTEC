@@ -12,22 +12,28 @@
             <p>
                 Dirección de correo electrónico:&nbsp;&nbsp;&nbsp;</p>
             <p>
-                <asp:TextBox ID="txtBoxCorreo" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtBoxCorreo" runat="server" Wrap="False" Font-Bold="True" ForeColor="#0033CC"></asp:TextBox>
             </p>
+            <p>
+                &nbsp;</p>
             <p>
                 &nbsp;Contraseña:&nbsp;</p>
             <p>
-                &nbsp;<asp:TextBox ID="txtBoxContrasenna" runat="server"></asp:TextBox>
+                &nbsp;<asp:TextBox ID="txtBoxContrasenna" runat="server" TextMode="Password" Font-Bold="True" ForeColor="#0033CC"></asp:TextBox>
             </p>
             <p>
                 &nbsp;&nbsp;&nbsp;
                 &nbsp;<asp:Button ID="Button1" runat="server" Text="Iniciar Sesión" Width="140px" Height="33px" OnClick="Button1_Click" />
+            &nbsp;&nbsp;
+                <asp:Label ID="lblMensaje" runat="server" Text=""></asp:Label>
+            &nbsp;
+                <asp:Label ID="lblPrueba" runat="server" Text="Label"></asp:Label>
             </p>
             <p>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnection %>" SelectCommand="checkLogin" SelectCommandType="StoredProcedure">
                     <SelectParameters>
-                        <asp:ControlParameter ControlID="txtBoxContrasenna" Name="inCorreo" PropertyName="Text" Type="String" />
-                        <asp:ControlParameter ControlID="txtBoxCorreo" Name="inContrasenna" PropertyName="Text" Type="String" />
+                        <asp:ControlParameter ControlID="txtBoxCorreo" Name="inCorreo" PropertyName="Text" Type="String" />
+                        <asp:ControlParameter ControlID="txtBoxContrasenna" Name="inContrasenna" PropertyName="Text" Type="String" />
                     </SelectParameters>
                 </asp:SqlDataSource>
             </p>
