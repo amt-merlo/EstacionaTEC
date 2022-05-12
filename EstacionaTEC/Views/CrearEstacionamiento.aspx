@@ -16,7 +16,9 @@
                 <asp:DropDownList ID="ddTipoEstacionamiento" runat="server" DataSourceID="sqlGetTipoEstacionamiento" DataTextField="tipo" DataValueField="tipo" ForeColor="#000099" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
                 </asp:DropDownList>
             </p>
-            <p class="text-left">&nbsp;</p>
+            <p class="text-left">
+                <asp:Label ID="lblPrueba" runat="server" Text="Label"></asp:Label>
+            </p>
             <p class="text-left">
                 Nombre:
                 <asp:TextBox ID="txtBoxNombre" runat="server"></asp:TextBox>
@@ -52,14 +54,14 @@
                 <asp:Button ID="btnRegistrar" runat="server" OnClick="Button1_Click" Text="Registrar" Width="129px" />
             </p>
             <p class="text-center">
-                <asp:SqlDataSource ID="sqlGetNombre" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionUp %>" SelectCommand="SELECT [nombreCompleto] FROM [Persona] WHERE ([identificacion] = @identificacion)">
+                <asp:SqlDataSource ID="sqlGetNombre" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [nombreCompleto] FROM [Persona] WHERE ([identificacion] = @identificacion)">
                     <SelectParameters>
                         <asp:SessionParameter Name="identificacion" SessionField="ID" Type="Int32" />
                     </SelectParameters>
                 </asp:SqlDataSource>
             </p>
             <p class="text-center">
-                <asp:SqlDataSource ID="sqlGetTipoEstacionamiento" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionUp %>" SelectCommand="SELECT [tipo] FROM [TipoEstacionamiento]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="sqlGetTipoEstacionamiento" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [tipo] FROM [TipoEstacionamiento]"></asp:SqlDataSource>
             </p>
         </div>   
     </div>

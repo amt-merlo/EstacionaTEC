@@ -202,7 +202,9 @@
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\DTOEstacionamientos.cs" />
+    <Compile Include="Controllers\DTOPersonas.cs" />
     <Compile Include="Controllers\GestorEstacionamiento.cs" />
+    <Compile Include="Controllers\GestorPersonas.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
