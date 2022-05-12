@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace EstacionaTEC.Models
+namespace EstacionaTEC.Controllers
 {
-    public class Reserva
+    public class DTOReservas
     {
         private int identificacionPersona;
         private string placa;
@@ -13,7 +13,7 @@ namespace EstacionaTEC.Models
         private TimeSpan horaSalida;
         private int idEspacio;
 
-        public Reserva(int identificacionPersona, string placa, TimeSpan horaEntrada, TimeSpan horaSalida, int idEspacio)
+        public DTOReservas(int identificacionPersona, string placa, TimeSpan horaEntrada, TimeSpan horaSalida, int idEspaciod)
         {
             this.identificacionPersona = identificacionPersona;
             this.placa = placa;
