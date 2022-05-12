@@ -7,6 +7,7 @@ namespace EstacionaTEC.Controllers
 {
     public class Controller
     {
+        private static Controller instance = null;
         private readonly GestorEstacionamiento gestorEstacionamiento = new GestorEstacionamiento();
         private readonly GestorFranjas gestorFranjas = new GestorFranjas();
         private readonly GestorReservas gestorReservas = new GestorReservas();
@@ -14,12 +15,21 @@ namespace EstacionaTEC.Controllers
         private readonly GestorVehiculos gestorVehiculos = new GestorVehiculos();
         private readonly GestorPersonas gestorPersonas = new GestorPersonas();
 
+        public static Controller getInstance()
+        {
+            if (instance == null)
+            {
+                instance = new Controller();
+            }
+            return instance;
+        }
+
         public void crearPersona(DTOPersonas persona)
         {
             gestorPersonas.crearPersona(persona);
         }
 
-        public void monstrarEstacionamiento()
+        public void mostrarEstacionamiento()
         {
             gestorEstacionamiento.mostrarEstacionamientos();
         }
