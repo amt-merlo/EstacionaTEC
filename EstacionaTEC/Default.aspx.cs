@@ -29,20 +29,35 @@ namespace EstacionaTEC
 
             //Se asignan los valores en las variables
             ID = (int)groupsTable.Rows[0]["ID"];
-            esAdmin = (bool)groupsTable.Rows[0]["Administrativo"];
+            
 
             
 
             if (ID == -100) //El usuario no existe
             {
-                lblPrueba.Text = ID.ToString();
+                
                 lblMensaje.Text = "El usuario no se encuentra registrado";
             }
             else
             {
-                lblPrueba.Text = ID.ToString();
-                lblMensaje.Text = "Bienvenido";
-                //lblMensaje.Text = "Usuario registrado :)";
+                //Se crea una variable global para identificar al usuario en cada pagina por separado
+                Session["ID"] = ID;
+
+                //Si el usuario existe, valida si es administrador o no
+                esAdmin = (bool)groupsTable.Rows[0]["Administrativo"];
+                
+
+                if (esAdmin)
+                {
+                    //Se redirecciona al menú para administrador
+                    Response.Redirect("Views/AdministradorLanding.aspx");
+                }
+                else
+                {
+                    //Se redirecciona al menu para funcionario normal
+                    Response.Redirect("Views/FuncionarioLanding.aspx");
+                }
+
             }
 
 

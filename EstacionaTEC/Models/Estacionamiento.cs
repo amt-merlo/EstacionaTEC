@@ -8,6 +8,6 @@ namespace EstacionaTEC.Models
 {
     public interface Estacionamiento
     {
-        public abstract void CrearEspacio();
+        void CrearEspacio();
     }
 }

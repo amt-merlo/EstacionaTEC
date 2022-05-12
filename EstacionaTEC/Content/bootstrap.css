@@ -135,6 +135,7 @@ input[type="submit"] {
   cursor: pointer;
     font-weight: 700;
     background-color: #6666FF;
+    text-align: center;
 }
 button[disabled],
 html input[disabled] {
@@ -1270,10 +1271,12 @@ h1,
 h2,
 .h2 {
   font-size: 30px;
+    text-align: left;
 }
 h3,
 .h3 {
   font-size: 24px;
+    text-align: left;
 }
 h4,
 .h4 {
@@ -1314,7 +1317,7 @@ mark,
   text-align: left;
 }
 .text-right {
-  text-align: right;
+  text-align: left;
 }
 .text-center {
   text-align: center;
