@@ -24,22 +24,13 @@ namespace EstacionaTEC.Views
         protected global::System.Web.UI.WebControls.Label lblNombre;
 
         /// <summary>
-        /// Control ddTipoEstacionamiento.
+        /// Control radButtonTipoParqueo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddTipoEstacionamiento;
-
-        /// <summary>
-        /// Control lblPrueba.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPrueba;
+        protected global::System.Web.UI.WebControls.RadioButtonList radButtonTipoParqueo;
 
         /// <summary>
         /// Control txtBoxNombre.
@@ -51,31 +42,58 @@ namespace EstacionaTEC.Views
         protected global::System.Web.UI.WebControls.TextBox txtBoxNombre;
 
         /// <summary>
-        /// Control txtBoxUbicacion.
+        /// Control txtBoxDireccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBoxUbicacion;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxDireccion;
 
         /// <summary>
-        /// Control txtBoxHoraApertura.
+        /// Control ddListHoraApertura.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBoxHoraApertura;
+        protected global::System.Web.UI.WebControls.DropDownList ddListHoraApertura;
 
         /// <summary>
-        /// Control txtBoxHoraCierra.
+        /// Control ddListMinutosApertura.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBoxHoraCierra;
+        protected global::System.Web.UI.WebControls.DropDownList ddListMinutosApertura;
+
+        /// <summary>
+        /// Control ddListHoraCierre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddListHoraCierre;
+
+        /// <summary>
+        /// Control ddListMinutosCierre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddListMinutosCierre;
+
+        /// <summary>
+        /// Control lblNumContrato.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNumContrato;
 
         /// <summary>
         /// Control txtBoxNumContrato.
@@ -87,6 +105,15 @@ namespace EstacionaTEC.Views
         protected global::System.Web.UI.WebControls.TextBox txtBoxNumContrato;
 
         /// <summary>
+        /// Control lblSubtituloContacto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSubtituloContacto;
+
+        /// <summary>
         /// Control lblNombreContacto.
         /// </summary>
         /// <remarks>
@@ -96,13 +123,13 @@ namespace EstacionaTEC.Views
         protected global::System.Web.UI.WebControls.Label lblNombreContacto;
 
         /// <summary>
-        /// Control TextBox1.
+        /// Control txtBoxNombreContacto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxNombreContacto;
 
         /// <summary>
         /// Control lblTelefono.
@@ -114,13 +141,13 @@ namespace EstacionaTEC.Views
         protected global::System.Web.UI.WebControls.Label lblTelefono;
 
         /// <summary>
-        /// Control TextBox2.
+        /// Control txtBoxTelefonoContacto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxTelefonoContacto;
 
         /// <summary>
         /// Control btnRegistrar.
@@ -148,5 +175,14 @@ namespace EstacionaTEC.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource sqlGetTipoEstacionamiento;
+
+        /// <summary>
+        /// Control lblPrueba.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPrueba;
     }
 }

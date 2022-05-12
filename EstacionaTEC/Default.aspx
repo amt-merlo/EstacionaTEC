@@ -12,12 +12,12 @@
             <p>
                 Dirección de correo electrónico:&nbsp;&nbsp;&nbsp;</p>
             <p>
-                <asp:TextBox ID="txtBoxCorreo" runat="server" Wrap="False" Font-Bold="True" ForeColor="#0033CC"></asp:TextBox>
+                <asp:TextBox ID="txtBoxCorreo" runat="server" Wrap="False" Font-Bold="True" ForeColor="#0033CC" Height="24px" Width="204px"></asp:TextBox>
             </p>
             <p>
                 &nbsp;Contraseña:&nbsp;</p>
             <p>
-                &nbsp;<asp:TextBox ID="txtBoxContrasenna" runat="server" TextMode="Password" Font-Bold="True" ForeColor="#0033CC"></asp:TextBox>
+                <asp:TextBox ID="txtBoxContrasenna" runat="server" TextMode="Password" Font-Bold="True" ForeColor="#0033CC" Height="25px" Width="199px"></asp:TextBox>
             </p>
             <p>
                 &nbsp;&nbsp;&nbsp;

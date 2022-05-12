@@ -10,16 +10,19 @@
                 <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
             </h4>
             <p class="text-center">
-                <asp:Button ID="btnCrearEstacionamiento" runat="server" Text="Crear Estacionamiento" OnClick="btnCrearEstacionamiento_Click" />
+                <asp:Button ID="btnCrearEstacionamiento" runat="server" Text="Crear Estacionamiento" OnClick="btnCrearEstacionamiento_Click" Height="36px" />
             </p>
             <p class="text-center">
-                <asp:Button ID="btnAgregarEspacio" runat="server" Text="Agregar Espacio" />
+                <asp:Button ID="btnVerEstacionamientos" runat="server" Text="Ver estacionamientos" />
             </p>
             <p class="text-center">
-                <asp:Button ID="btnRegistrarUsuario" runat="server" Text="Registrar Usuario" />
+                <asp:Button ID="btnAgregarEspacio" runat="server" Text="Agregar Espacio" Height="34px" />
             </p>
             <p class="text-center">
-                <asp:Button ID="btnEditarUsuario" runat="server" Text="Editar Usuarios" />
+                <asp:Button ID="btnRegistrarUsuario" runat="server" Text="Registrar Usuario" Height="34px" />
+            </p>
+            <p class="text-center">
+                <asp:Button ID="btnEditarUsuario" runat="server" Text="Editar Usuarios" Height="37px" />
             </p>
             <p class="text-center">
                 <asp:SqlDataSource ID="sqlGetNombre" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [nombreCompleto] FROM [Persona] WHERE ([identificacion] = @identificacion)">
