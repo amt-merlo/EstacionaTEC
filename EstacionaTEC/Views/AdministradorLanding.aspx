@@ -10,19 +10,19 @@
                 <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
             </h4>
             <p class="text-center">
-                <asp:Button ID="btnCrearEstacionamiento" runat="server" Text="Crear Estacionamiento" OnClick="btnCrearEstacionamiento_Click" Height="36px" />
+                <asp:Button ID="btnCrearEstacionamiento" runat="server" Text="Crear Estacionamiento" OnClick="btnCrearEstacionamiento_Click" Height="36px" Width="232px" />
             </p>
             <p class="text-center">
-                <asp:Button ID="btnVerEstacionamientos" runat="server" Text="Ver estacionamientos" />
+                <asp:Button ID="btnVerEstacionamientos" runat="server" Text="Ver estacionamientos" Height="40px" Width="233px" />
             </p>
             <p class="text-center">
-                <asp:Button ID="btnAgregarEspacio" runat="server" Text="Agregar Espacio" Height="34px" />
+                <asp:Button ID="btnAgregarEspacio" runat="server" Text="Agregar Espacio" Height="34px" Width="231px" />
             </p>
             <p class="text-center">
-                <asp:Button ID="btnRegistrarUsuario" runat="server" Text="Registrar Usuario" Height="34px" />
+                <asp:Button ID="btnRegistrarUsuario" runat="server" Text="Registrar Funcionario" Height="34px" Width="230px" OnClick="btnRegistrarUsuario_Click" />
             </p>
             <p class="text-center">
-                <asp:Button ID="btnEditarUsuario" runat="server" Text="Editar Usuarios" Height="37px" />
+                <asp:Button ID="btnEditarUsuario" runat="server" Text="Editar Funcionarios" Height="37px" Width="231px" />
             </p>
             <p class="text-center">
                 <asp:SqlDataSource ID="sqlGetNombre" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [nombreCompleto] FROM [Persona] WHERE ([identificacion] = @identificacion)">

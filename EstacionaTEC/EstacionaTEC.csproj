@@ -178,7 +178,9 @@
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\AdministradorLanding.aspx" />
     <Content Include="Views\CrearEstacionamiento.aspx" />
+    <Content Include="Views\CrearFuncionario.aspx" />
     <Content Include="Views\FuncionarioLanding.aspx" />
+    <Content Include="Views\Informes.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
@@ -271,12 +273,26 @@
     <Compile Include="Views\CrearEstacionamiento.aspx.designer.cs">
       <DependentUpon>CrearEstacionamiento.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\CrearFuncionario.aspx.cs">
+      <DependentUpon>CrearFuncionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CrearFuncionario.aspx.designer.cs">
+      <DependentUpon>CrearFuncionario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\FuncionarioLanding.aspx.cs">
       <DependentUpon>FuncionarioLanding.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\FuncionarioLanding.aspx.designer.cs">
       <DependentUpon>FuncionarioLanding.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Informes.aspx.cs">
+      <DependentUpon>Informes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Informes.aspx.designer.cs">
+      <DependentUpon>Informes.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

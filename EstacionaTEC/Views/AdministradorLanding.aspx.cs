@@ -30,5 +30,10 @@ namespace EstacionaTEC.Views
         {
             Response.Redirect("CrearEstacionamiento.aspx");
         }
+
+        protected void btnRegistrarUsuario_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CrearFuncionario.aspx");
+        }
     }
 }
