@@ -34,9 +34,14 @@ namespace EstacionaTEC.Views
 
         }
 
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void ddTipoEstacionamiento_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            int index = ddTipoEstacionamiento.SelectedIndex;
+            if (index==0) //Propio
+            {
+                lblNombreContacto.Text = "";
+                lblTelefono.Text = "";
+            }
         }
     }
 }

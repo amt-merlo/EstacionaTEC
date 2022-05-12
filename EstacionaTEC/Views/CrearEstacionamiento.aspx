@@ -44,7 +44,7 @@
                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
             </p>
             <p class="text-left">
-                Teléfono:
+                <asp:Label ID="lblTelefono" runat="server" Text="Telefono: "></asp:Label>
                 <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
             </p>
             <p class="text-left">
@@ -52,14 +52,14 @@
                 <asp:Button ID="btnRegistrar" runat="server" OnClick="Button1_Click" Text="Registrar" Width="129px" />
             </p>
             <p class="text-center">
-                <asp:SqlDataSource ID="sqlGetNombre" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnection %>" SelectCommand="SELECT [nombreCompleto] FROM [Persona] WHERE ([identificacion] = @identificacion)">
+                <asp:SqlDataSource ID="sqlGetNombre" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionUp %>" SelectCommand="SELECT [nombreCompleto] FROM [Persona] WHERE ([identificacion] = @identificacion)">
                     <SelectParameters>
-                        <asp:SessionParameter DefaultValue="0" Name="identificacion" SessionField="ID" Type="Int32" />
+                        <asp:SessionParameter Name="identificacion" SessionField="ID" Type="Int32" />
                     </SelectParameters>
                 </asp:SqlDataSource>
             </p>
             <p class="text-center">
-                <asp:SqlDataSource ID="sqlGetTipoEstacionamiento" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnection %>" SelectCommand="SELECT [tipo] FROM [TipoEstacionamiento]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="sqlGetTipoEstacionamiento" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionUp %>" SelectCommand="SELECT [tipo] FROM [TipoEstacionamiento]"></asp:SqlDataSource>
             </p>
         </div>   
     </div>

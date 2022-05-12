@@ -20,9 +20,9 @@
             </p>
             
             <p class="text-center">
-                <asp:SqlDataSource ID="sqlGetNombre" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnection %>" SelectCommand="SELECT [nombreCompleto] FROM [Persona] WHERE ([identificacion] = @identificacion)">
+                <asp:SqlDataSource ID="sqlGetNombre" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionUp %>" SelectCommand="SELECT [nombreCompleto] FROM [Persona] WHERE ([identificacion] = @identificacion)">
                     <SelectParameters>
-                        <asp:SessionParameter DefaultValue="0" Name="identificacion" SessionField="ID" Type="Int32" />
+                        <asp:SessionParameter Name="identificacion" SessionField="ID" Type="Int32" />
                     </SelectParameters>
                 </asp:SqlDataSource>
             </p>

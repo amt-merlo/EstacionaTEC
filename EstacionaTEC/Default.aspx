@@ -29,7 +29,7 @@
                 <asp:Label ID="lblMensaje" runat="server" Text="" style="color: #CC0000"></asp:Label>
                 </p>
             <p>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnection %>" SelectCommand="checkLogin" SelectCommandType="StoredProcedure">
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="checkLogin" SelectCommandType="StoredProcedure">
                     <SelectParameters>
                         <asp:ControlParameter ControlID="txtBoxCorreo" Name="inCorreo" PropertyName="Text" Type="String" />
                         <asp:ControlParameter ControlID="txtBoxContrasenna" Name="inContrasenna" PropertyName="Text" Type="String" />
