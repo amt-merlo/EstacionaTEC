@@ -19,6 +19,21 @@ namespace EstacionaTEC.Models
         private int numeroTelefonoContacto;
         private string contrato;
 
+        public EstacionamientoSubcontratado(int idEstacionamiento, string nombre, string ubicacion, int cantidadEspaciosTotal, int cantidadEspaciosActual, int cantidadVehicEspecial, TimeSpan horaApertura, TimeSpan horaCierre, string nombreContrato, int numeroTelefonoContacto, string contrato)
+        {
+            IdEstacionamiento = idEstacionamiento;
+            this.nombre = nombre;
+            this.ubicacion = ubicacion;
+            this.cantidadEspaciosTotal = cantidadEspaciosTotal;
+            this.cantidadEspaciosActual = cantidadEspaciosActual;
+            this.cantidadVehicEspecial = cantidadVehicEspecial;
+            this.horaApertura = horaApertura;
+            this.horaCierre = horaCierre;
+            this.nombreContrato = nombreContrato;
+            this.numeroTelefonoContacto = numeroTelefonoContacto;
+            this.contrato = contrato;
+        }
+
         public int IdEstacionamiento1 { get => IdEstacionamiento; set => IdEstacionamiento = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Ubicacion { get => ubicacion; set => ubicacion = value; }
