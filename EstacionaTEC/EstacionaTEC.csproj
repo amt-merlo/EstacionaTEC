@@ -176,6 +176,9 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Views\AdministradorLanding.aspx" />
+    <Content Include="Views\CrearEstacionamiento.aspx" />
+    <Content Include="Views\FuncionarioLanding.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
@@ -198,8 +201,6 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\DTOEstacionamientos.cs" />
-    <Compile Include="Controllers\GestorEstacionamiento.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -241,9 +242,31 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Views\AdministradorLanding.aspx.cs">
+      <DependentUpon>AdministradorLanding.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\AdministradorLanding.aspx.designer.cs">
+      <DependentUpon>AdministradorLanding.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CrearEstacionamiento.aspx.cs">
+      <DependentUpon>CrearEstacionamiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CrearEstacionamiento.aspx.designer.cs">
+      <DependentUpon>CrearEstacionamiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FuncionarioLanding.aspx.cs">
+      <DependentUpon>FuncionarioLanding.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\FuncionarioLanding.aspx.designer.cs">
+      <DependentUpon>FuncionarioLanding.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
