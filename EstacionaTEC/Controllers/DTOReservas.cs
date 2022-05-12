@@ -19,7 +19,7 @@ namespace EstacionaTEC.Controllers
             this.placa = placa;
             this.horaEntrada = horaEntrada;
             this.horaSalida = horaSalida;
-            this.idEspacio = idEspacio;
+            this.idEspacio = idEspaciod;
         }
 
         public int IdentificacionPersona { get => identificacionPersona; set => identificacionPersona = value; }

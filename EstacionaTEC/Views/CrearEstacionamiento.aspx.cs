@@ -74,14 +74,20 @@ namespace EstacionaTEC.Views
 
                 //Se crea el objeto de tipo DTO
                 DTOEstacionamientos estacionamiento = new DTOEstacionamientos(0, nombre, direccion, 0, 0, 0, tsApertura, tsCierre, nombreContacto, telefonoContacto, contrato, tipo);
-                lblPrueba.Text = "Funciona 1";
+                lblPrueba.Text = "¡Estacionamiento registrado exitosamente!";
             }
             else if(tipo == 1)
             {
                 DTOEstacionamientos estacionamiento = new DTOEstacionamientos(0, nombre, direccion, 0, 0, 0, tsApertura, tsCierre, tipo, 0);
-                lblPrueba.Text = "Funciona 2";
+                lblPrueba.Text = "¡Estacionamiento registrado exitosamente!";
             }
 
+            //Se limpian los campos
+            txtBoxNombre.Text = "";
+            txtBoxDireccion.Text = "";
+            txtBoxNombreContacto.Text = "";
+            txtBoxNumContrato.Text = "";
+            txtBoxTelefonoContacto.Text = "";
             
 
             

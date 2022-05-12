@@ -157,7 +157,7 @@
                 <asp:SqlDataSource ID="sqlGetTipoEstacionamiento" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [tipo] FROM [TipoEstacionamiento]"></asp:SqlDataSource>
             </p>
             <p class="text-center">
-                <asp:Label ID="lblPrueba" runat="server" Text=""></asp:Label>
+                <asp:Label ID="lblPrueba" runat="server" ForeColor="#3333FF"></asp:Label>
             </p>
         </div>   
     </div>
