@@ -10,7 +10,7 @@ namespace EstacionaTEC.Controllers
     {
         private readonly CreadorTEC creadorTEC = new CreadorTEC();
         private readonly CreadorSubcontradado creadorSUB = new CreadorSubcontradado();
-        public void monstrarEstacionamientos()
+        public void mostrarEstacionamientos()
         {
 
         }
