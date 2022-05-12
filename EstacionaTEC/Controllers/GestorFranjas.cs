@@ -8,8 +8,9 @@ namespace EstacionaTEC.Controllers
 {
     public class GestorFranjas
     {
-        public void createFranja(DTOFranja franj) {
+        public bool createFranja(DTOFranja franj) {
             FranjaHoraria franja = new FranjaHoraria(franj.IdDia, franj.IdPersona, franj.Inicio, franj.Fin);
+            return true;
         }
     }
 }

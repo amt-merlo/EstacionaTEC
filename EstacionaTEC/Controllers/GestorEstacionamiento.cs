@@ -10,11 +10,11 @@ namespace EstacionaTEC.Controllers
     {
         private readonly CreadorTEC creadorTEC = new CreadorTEC();
         private readonly CreadorSubcontradado creadorSUB = new CreadorSubcontradado();
-        public void mostrarEstacionamientos()
+        public bool mostrarEstacionamientos()
         {
-
+            return true;
         }
-        public void crearEstacionamiento(DTOEstacionamientos DTOEst)
+        public bool crearEstacionamiento(DTOEstacionamientos DTOEst)
         {
             Estacionamiento estacionamiento;
             switch (DTOEst.Tipo)
@@ -31,6 +31,7 @@ namespace EstacionaTEC.Controllers
                 default:
                     throw new Exception("No existe el tipo de parqueo");
             }
+            return true;
         }
     }
 }

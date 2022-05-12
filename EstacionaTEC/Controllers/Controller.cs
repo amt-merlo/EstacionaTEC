@@ -24,53 +24,63 @@ namespace EstacionaTEC.Controllers
             return instance;
         }
 
-        public void crearPersona(DTOPersonas persona)
+        public bool crearPersona(DTOPersonas persona)
         {
-            gestorPersonas.crearPersona(persona);
+            bool resp = gestorPersonas.crearPersona(persona);
+            return resp;
         }
 
-        public void mostrarEstacionamiento()
+        public bool mostrarEstacionamiento()
         {
-            gestorEstacionamiento.mostrarEstacionamientos();
+            bool resp = gestorEstacionamiento.mostrarEstacionamientos();
+            return true;
         }
 
-        public void crearEstacionamiento(DTOEstacionamientos estacionamientos)
+        public bool crearEstacionamiento(DTOEstacionamientos estacionamientos)
         {
-            gestorEstacionamiento.crearEstacionamiento(estacionamientos);
+            bool resp = gestorEstacionamiento.crearEstacionamiento(estacionamientos);
+            return resp;
         }
 
-        public void crearFranja(DTOFranja franja)
+        public bool crearFranja(DTOFranja franja)
         {
-            gestorFranjas.createFranja(franja);
+            bool resp = gestorFranjas.createFranja(franja);
+            return resp;
         }
 
-        public void crearReporteEstacionamientos()
+        public bool crearReporteEstacionamientos()
         {
-            gestorResportes.crearReporteEstacionamientos();
+            bool resp = gestorResportes.crearReporteEstacionamientos();
+            return resp;
         }
 
-        public void crearReporteFuncionarios() {
-            gestorResportes.crearReporteFuncionarios();
+        public bool crearReporteFuncionarios() {
+            bool resp = gestorResportes.crearReporteFuncionarios();
+            return resp;
         }
 
-        public void crearReporteFuncionario(int buscado)
+        public bool crearReporteFuncionario(int buscado)
         {
-            gestorResportes.crearReporteFuncionario(buscado);
+            bool resp = gestorResportes.crearReporteFuncionario(buscado);
+            return resp;
         }
 
-        public void crearEstadistica()
+        public bool crearEstadistica()
         {
-            gestorResportes.crearEstadistica();
+            bool resp = gestorResportes.crearEstadistica();
+            return resp;
         }
 
-        public void createReserva(DTOReservas reservas)
+        public bool createReserva(DTOReservas reservas)
         {
-            gestorReservas.crearReserva(reservas);
+            bool resp = gestorReservas.crearReserva(reservas);
+            return resp;
         }
 
-        public void crearVehiculo(DTOVehiculos vehiculos)
+        public bool crearVehiculo(DTOVehiculos vehiculos)
         {
-            gestorVehiculos.crearVehiculo(vehiculos);
+            bool resp = gestorVehiculos.crearVehiculo(vehiculos);
+            return resp;
         }
     }
 }

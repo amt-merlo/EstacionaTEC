@@ -8,8 +8,9 @@ namespace EstacionaTEC.Controllers
 {
     public class GestorReservas
     {
-        public void crearReserva(DTOReservas res) {
+        public bool crearReserva(DTOReservas res) {
             Reserva reserva = new Reserva(res.IdentificacionPersona,res.Placa,res.HoraEntrada,res.HoraSalida,res.IdEspacio);
+            return true;
         }
     }
 }
