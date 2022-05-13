@@ -53,7 +53,7 @@ namespace EstacionaTEC.Controllers.DAO
             }
             else
             {
-                return new Persona(0,"",0,"","","",false,false,false);
+                return false;
             }
         }
 
