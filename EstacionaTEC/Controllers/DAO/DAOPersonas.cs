@@ -40,7 +40,7 @@ namespace EstacionaTEC.Controllers.DAO
         public object get(int id)
         {
             Persona retorno;
-            SqlConnection conexion = new SqlConnection("Data Source=DatabaseServer;Initial Catalog=ProyectoDisenno;User ID=JohelPF_SQLLogin_1;Password=w7v8k5itwh");
+            SqlConnection conexion = new SqlConnection("Data Source=DatabaseServer;Initial Catalog=ProyectoDisenno.mssql.somee.com;User ID=JohelPF_SQLLogin_1;Password=w7v8k5itwh");
             conexion.Open();
             String cadena = "exec buscarPersona " + id;
             SqlCommand comando = new SqlCommand(cadena, conexion);
@@ -49,10 +49,13 @@ namespace EstacionaTEC.Controllers.DAO
             {
                 retorno = new Persona(reader.GetInt32(1), reader.GetString(2), reader.GetInt32(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetBoolean(7), reader.GetBoolean(8), reader.GetBoolean(9));
                 reader.Close();
+                conexion.Close();
                 return retorno;
             }
             else
             {
+                reader.Close();
+                conexion.Close();
                 return false;
             }
         }

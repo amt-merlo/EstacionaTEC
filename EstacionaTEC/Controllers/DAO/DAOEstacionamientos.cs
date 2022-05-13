@@ -17,7 +17,7 @@ namespace EstacionaTEC.Controllers.DAO
             if (obj is EstacionamientoTEC)
             {
                 EstacionamientoTEC estacionamiento = (EstacionamientoTEC)obj;
-                String cadena = "exec insertarEstacionamiento " + estacionamiento.Nombre + estacionamiento.Ubicacion + estacionamiento.Tipo + estacionamiento.CantidadEspaciosTotal + estacionamiento.CantidadEspaciosActual + estacionamiento.CantidadVehicTEC + estacionamiento.CantidadVehicEspecial + estacionamiento.HoraApertura + estacionamiento.HoraCierre + null + null + null;
+                String cadena = "exec insertarEstacionamiento " + estacionamiento.Nombre + estacionamiento.Ubicacion + estacionamiento.Tipo + estacionamiento.CantidadEspaciosTotal + estacionamiento.CantidadEspaciosActual + estacionamiento.CantidadVehicTEC + estacionamiento.CantidadVehicEspecial + estacionamiento.HoraApertura + estacionamiento.HoraCierre + "" + 0 + "";
                 SqlCommand comando = new SqlCommand(cadena, conexion);
                 retorno = (int)comando.ExecuteScalar();
                 conexion.Close();
@@ -26,7 +26,7 @@ namespace EstacionaTEC.Controllers.DAO
             else
             {
                 EstacionamientoSubcontratado estacionamiento = (EstacionamientoSubcontratado)obj;
-                String cadena = "exec insertarEstacionamiento " + estacionamiento.Nombre + estacionamiento.Ubicacion + 3 + estacionamiento.CantidadEspaciosTotal + estacionamiento.CantidadEspaciosActual + null + estacionamiento.CantidadVehicEspecial + estacionamiento.HoraApertura + estacionamiento.HoraCierre + estacionamiento.NombreContrato + estacionamiento.NumeroTelefonoContacto + estacionamiento.Contrato;
+                String cadena = "exec insertarEstacionamiento " + estacionamiento.Nombre + estacionamiento.Ubicacion + 3 + estacionamiento.CantidadEspaciosTotal + estacionamiento.CantidadEspaciosActual + 0 + estacionamiento.CantidadVehicEspecial + estacionamiento.HoraApertura + estacionamiento.HoraCierre + estacionamiento.NombreContrato + estacionamiento.NumeroTelefonoContacto + estacionamiento.Contrato;
                 SqlCommand comando = new SqlCommand(cadena, conexion);
                 retorno = (int)comando.ExecuteScalar();
                 conexion.Close();
@@ -45,10 +45,10 @@ namespace EstacionaTEC.Controllers.DAO
             throw new NotImplementedException();
         }
 
-        public List<Estacionamiento> getAll()
+        public List<Object> getAll()
         {
-            List<Estacionamiento> estacionamientos = new List<Estacionamiento>();
-            SqlConnection conexion = new SqlConnection("Data Source=DatabaseServer;Initial Catalog=ProyectoDisenno;User ID=JohelPF_SQLLogin_1;Password=w7v8k5itwh");
+            List<Object> estacionamientos = new List<Object>();
+            SqlConnection conexion = new SqlConnection("Data Source=DatabaseServer;Initial Catalog=ProyectoDisenno.mssql.somee.com;User ID=JohelPF_SQLLogin_1;Password=w7v8k5itwh");
             conexion.Open();
             String cadena = "exec verTodosEstacionamienos";
             SqlCommand comando = new SqlCommand(cadena, conexion);
@@ -67,6 +67,8 @@ namespace EstacionaTEC.Controllers.DAO
                     estacionamientos.Add(estacionamiento);
                 }
             }
+            reader.Close();
+            conexion.Close();
             return estacionamientos;
         }
 
