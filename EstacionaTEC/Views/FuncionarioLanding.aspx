@@ -13,7 +13,7 @@
                 <asp:Button ID="btnEstacionamientos" runat="server" Text="Estacionamientos" OnClick="btnCrearEstacionamiento_Click" />
             </p>
             <p class="text-center">
-                <asp:Button ID="btnInformes" runat="server" Text="Informes y Estadísticas" />
+                <asp:Button ID="btnInformes" runat="server" Text="Informes y Estadísticas" OnClick="btnInformes_Click" />
             </p>
             <p class="text-center">
                 <asp:Button ID="btnModificarDatos" runat="server" Text="Información Personal" />

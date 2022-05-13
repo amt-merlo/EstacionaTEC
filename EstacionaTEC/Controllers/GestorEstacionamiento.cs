@@ -20,13 +20,13 @@ namespace EstacionaTEC.Controllers
             Estacionamiento estacionamiento;
             switch (DTOEst.Tipo)
             {
-                case 0:
-                    estacionamiento = creadorTEC.createEstacionamiento(DTOEst);
-                    break;
                 case 1:
                     estacionamiento = creadorTEC.createEstacionamiento(DTOEst);
                     break;
                 case 2:
+                    estacionamiento = creadorTEC.createEstacionamiento(DTOEst);
+                    break;
+                case 3:
                     estacionamiento = creadorSUB.createEstacionamiento(DTOEst);
                     break;
                 default:
