@@ -8,12 +8,12 @@ namespace EstacionaTEC.Controllers.DAO
 {
     public interface DAOSolicitudes
     {
-        bool create();
-        object get();
+        bool create(Object obj);
+        object get(int id);
         List<object> getAll();
         List<object> getBy();
-        bool update();
-        bool delete();
+        bool update(Object obj);
+        bool delete(Object obj);
 
     }
 }
