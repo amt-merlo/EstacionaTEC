@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EstacionaTEC.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -30,10 +31,10 @@ namespace EstacionaTEC.Controllers
             return resp;
         }
 
-        public bool mostrarEstacionamiento()
+        public List<Estacionamiento> mostrarEstacionamiento()
         {
-            bool resp = gestorEstacionamiento.mostrarEstacionamientos();
-            return true;
+            List<Estacionamiento> resp = gestorEstacionamiento.mostrarEstacionamientos();
+            return resp;
         }
 
         public bool crearEstacionamiento(DTOEstacionamientos estacionamientos)

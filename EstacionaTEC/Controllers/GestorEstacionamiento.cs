@@ -10,9 +10,10 @@ namespace EstacionaTEC.Controllers
     {
         private readonly CreadorTEC creadorTEC = new CreadorTEC();
         private readonly CreadorSubcontradado creadorSUB = new CreadorSubcontradado();
-        public bool mostrarEstacionamientos()
+        public List<Estacionamiento> mostrarEstacionamientos()
         {
-            return true;
+            List<Estacionamiento> estacionamientos = new List<Estacionamiento>();
+            return estacionamientos;
         }
         public bool crearEstacionamiento(DTOEstacionamientos DTOEst)
         {
