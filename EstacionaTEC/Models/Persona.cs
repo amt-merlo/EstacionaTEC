@@ -13,26 +13,31 @@ namespace EstacionaTEC.Models
         private String correoInstitucional;
         private String correoAlterno;
         private String departamento;
-        private List<Vehiculo> vehiculos = new List<Vehiculo>();
+        private List<Vehiculo> vehiculos;
         private bool esJefatura;
         private bool esAdmin;
         private bool serviciosEspeciales;
-        private List<FranjaHoraria> horario = new List<FranjaHoraria>();
+        private bool esAdministrativo;
+        private bool estaEnPlanilla;
+        private List<FranjaHoraria> horario;
         private string contraseña;
 
-        public Persona(int identificacion, string nombreCompleto, int numTelefono, string correoInstitucional, string correoAlterno, string departamento,
-            bool esJefatura, bool esAdmin, bool serviciosEspeciales, string contraseña)
+        public Persona(int identificacion, string nombreCompleto, int numTelefono, string correoInstitucional, string correoAlterno, string departamento, bool esJefatura, bool esAdmin, bool serviciosEspeciales, bool esAdministrativo, bool estaEnPlanilla, string contraseña)
         {
-            this.Identificacion = identificacion;
-            this.NombreCompleto = nombreCompleto;
-            this.NumTelefono = numTelefono;
-            this.CorreoInstitucional = correoInstitucional;
-            this.CorreoAlterno = correoAlterno;
-            this.Departamento = departamento;
-            this.EsJefatura = esJefatura;
-            this.EsAdmin = esAdmin;
-            this.ServiciosEspeciales = serviciosEspeciales;
-            this.Contraseña = contraseña;
+            this.identificacion = identificacion;
+            this.nombreCompleto = nombreCompleto;
+            this.numTelefono = numTelefono;
+            this.correoInstitucional = correoInstitucional;
+            this.correoAlterno = correoAlterno;
+            this.departamento = departamento;
+            this.vehiculos = new List<Vehiculo>();
+            this.esJefatura = esJefatura;
+            this.esAdmin = esAdmin;
+            this.serviciosEspeciales = serviciosEspeciales;
+            this.esAdministrativo = esAdministrativo;
+            this.estaEnPlanilla = estaEnPlanilla;
+            this.horario = new List<FranjaHoraria>();
+            this.contraseña = contraseña;
         }
 
         public int Identificacion { get => identificacion; set => identificacion = value; }
@@ -41,11 +46,13 @@ namespace EstacionaTEC.Models
         public string CorreoInstitucional { get => correoInstitucional; set => correoInstitucional = value; }
         public string CorreoAlterno { get => correoAlterno; set => correoAlterno = value; }
         public string Departamento { get => departamento; set => departamento = value; }
+        public List<Vehiculo> Vehiculos { get => vehiculos; set => vehiculos = value; }
         public bool EsJefatura { get => esJefatura; set => esJefatura = value; }
         public bool EsAdmin { get => esAdmin; set => esAdmin = value; }
         public bool ServiciosEspeciales { get => serviciosEspeciales; set => serviciosEspeciales = value; }
+        public bool EsAdministrativo { get => esAdministrativo; set => esAdministrativo = value; }
+        public bool EstaEnPlanilla { get => estaEnPlanilla; set => estaEnPlanilla = value; }
+        public List<FranjaHoraria> Horario { get => horario; set => horario = value; }
         public string Contraseña { get => contraseña; set => contraseña = value; }
-        internal List<Vehiculo> Vehiculos { get => vehiculos; set => vehiculos = value; }
-        internal List<FranjaHoraria> Horario { get => horario; set => horario = value; }
     }
 }

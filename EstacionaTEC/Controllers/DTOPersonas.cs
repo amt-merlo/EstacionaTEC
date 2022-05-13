@@ -17,20 +17,24 @@ namespace EstacionaTEC.Controllers
         private bool esJefatura;
         private bool esAdmin;
         private bool serviciosEspeciales;
-        private string contraseña;
+        private bool esAdministrativo;
+        private bool estaEnPlanilla;
+        private string contrasenna;
 
-        public DTOPersonas(int identificacion, string nombreCompleto, int numTelefono, string correoInstitucional, string correoAlterno, string departamento, bool esJefatura, bool esAdmin, bool serviciosEspeciales, string contraseña)
+        public DTOPersonas(int identificacion, string nombreCompleto, int numTelefono, string correoInstitucional, string correoAlterno, string departamento, bool esJefatura, bool esAdmin, bool serviciosEspeciales, bool esAdministrativo, bool estaEnPlanilla, string contrasenna)
         {
-            this.Identificacion = identificacion;
-            this.NombreCompleto = nombreCompleto ?? throw new ArgumentNullException(nameof(nombreCompleto));
-            this.NumTelefono = numTelefono;
-            this.CorreoInstitucional = correoInstitucional ?? throw new ArgumentNullException(nameof(correoInstitucional));
-            this.CorreoAlterno = correoAlterno ?? throw new ArgumentNullException(nameof(correoAlterno));
-            this.Departamento = departamento ?? throw new ArgumentNullException(nameof(departamento));
-            this.EsJefatura = esJefatura;
-            this.EsAdmin = esAdmin;
-            this.ServiciosEspeciales = serviciosEspeciales;
-            this.Contraseña = contraseña ?? throw new ArgumentNullException(nameof(contraseña));
+            this.identificacion = identificacion;
+            this.nombreCompleto = nombreCompleto ?? throw new ArgumentNullException(nameof(nombreCompleto));
+            this.numTelefono = numTelefono;
+            this.correoInstitucional = correoInstitucional ?? throw new ArgumentNullException(nameof(correoInstitucional));
+            this.correoAlterno = correoAlterno ?? throw new ArgumentNullException(nameof(correoAlterno));
+            this.departamento = departamento ?? throw new ArgumentNullException(nameof(departamento));
+            this.esJefatura = esJefatura;
+            this.esAdmin = esAdmin;
+            this.serviciosEspeciales = serviciosEspeciales;
+            this.esAdministrativo = esAdministrativo;
+            this.estaEnPlanilla = estaEnPlanilla;
+            this.contrasenna = contrasenna ?? throw new ArgumentNullException(nameof(contrasenna));
         }
 
         public int Identificacion { get => identificacion; set => identificacion = value; }
@@ -42,6 +46,8 @@ namespace EstacionaTEC.Controllers
         public bool EsJefatura { get => esJefatura; set => esJefatura = value; }
         public bool EsAdmin { get => esAdmin; set => esAdmin = value; }
         public bool ServiciosEspeciales { get => serviciosEspeciales; set => serviciosEspeciales = value; }
-        public string Contraseña { get => contraseña; set => contraseña = value; }
+        public bool EsAdministrativo { get => esAdministrativo; set => esAdministrativo = value; }
+        public bool EstaEnPlanilla { get => estaEnPlanilla; set => estaEnPlanilla = value; }
+        public string Contrasenna { get => contrasenna; set => contrasenna = value; }
     }
 }
