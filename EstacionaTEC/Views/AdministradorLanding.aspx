@@ -13,13 +13,13 @@
                 <asp:Button ID="btnCrearEstacionamiento" runat="server" Text="Crear Estacionamiento" OnClick="btnCrearEstacionamiento_Click" Height="36px" Width="232px" />
             </p>
             <p class="text-center">
-                <asp:Button ID="btnAgregarEspacio" runat="server" Text="Agregar Espacio" Height="34px" Width="231px" />
+                <asp:Button ID="btnAgregarEspacio" runat="server" Text="Agregar Espacio" Height="34px" Width="231px" OnClick="btnAgregarEspacio_Click" />
             </p>
             <p class="text-center">
                 <asp:Button ID="btnRegistrarUsuario" runat="server" Text="Registrar Funcionario" Height="34px" Width="230px" OnClick="btnRegistrarUsuario_Click" />
             </p>
             <p class="text-center">
-                <asp:Button ID="btnEditarUsuario" runat="server" Text="Editar Funcionarios" Height="37px" Width="231px" />
+                <asp:Button ID="btnEditarUsuario" runat="server" Text="Editar Funcionarios" Height="37px" Width="231px" OnClick="btnEditarUsuario_Click" />
             </p>
             <p class="text-center">
                 <asp:Button ID="btnInformes" runat="server" Text="Informes y Estadísticas" Height="35px" Width="233px" />

@@ -35,5 +35,15 @@ namespace EstacionaTEC.Views
         {
             Response.Redirect("CrearFuncionario.aspx");
         }
+
+        protected void btnAgregarEspacio_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AgregarEspacio.aspx");
+        }
+
+        protected void btnEditarUsuario_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("EditarFuncionarios.aspx");
+        }
     }
 }

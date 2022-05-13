@@ -177,8 +177,10 @@
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\AdministradorLanding.aspx" />
+    <Content Include="Views\AgregarEspacio.aspx" />
     <Content Include="Views\CrearEstacionamiento.aspx" />
     <Content Include="Views\CrearFuncionario.aspx" />
+    <Content Include="Views\EditarFuncionarios.aspx" />
     <Content Include="Views\FuncionarioLanding.aspx" />
     <Content Include="Views\Informes.aspx" />
     <Content Include="Web.config" />
@@ -266,6 +268,13 @@
     <Compile Include="Views\AdministradorLanding.aspx.designer.cs">
       <DependentUpon>AdministradorLanding.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\AgregarEspacio.aspx.cs">
+      <DependentUpon>AgregarEspacio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\AgregarEspacio.aspx.designer.cs">
+      <DependentUpon>AgregarEspacio.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\CrearEstacionamiento.aspx.cs">
       <DependentUpon>CrearEstacionamiento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -279,6 +288,13 @@
     </Compile>
     <Compile Include="Views\CrearFuncionario.aspx.designer.cs">
       <DependentUpon>CrearFuncionario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditarFuncionarios.aspx.cs">
+      <DependentUpon>EditarFuncionarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\EditarFuncionarios.aspx.designer.cs">
+      <DependentUpon>EditarFuncionarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\FuncionarioLanding.aspx.cs">
       <DependentUpon>FuncionarioLanding.aspx</DependentUpon>
