@@ -61,10 +61,14 @@ namespace EstacionaTEC.Views
             TimeSpan tsApertura = TimeSpan.Parse(horaApertura);
             TimeSpan tsCierre = TimeSpan.Parse(horaCierre);
 
+            //Se crea el objeto DTO
+            DTOEstacionamientos estacionamiento;
+
             //Dependiendo del tipo de estacionamiento se obtiene informacion extra
             int tipo = radButtonTipoParqueo.SelectedIndex+1;
             
-            if (tipo == 2)//Parqueo Subcontratado
+
+            if (tipo == 3)//Parqueo Subcontratado
             {
                 String contrato = txtBoxNumContrato.Text;
 
@@ -73,14 +77,18 @@ namespace EstacionaTEC.Views
                 int telefonoContacto = int.Parse(txtBoxTelefonoContacto.Text);
 
                 //Se crea el objeto de tipo DTO
-                DTOEstacionamientos estacionamiento = new DTOEstacionamientos(0, nombre, direccion, 0, 0, 0, tsApertura, tsCierre, nombreContacto, telefonoContacto, contrato, tipo);
+                estacionamiento = new DTOEstacionamientos(0, nombre, direccion, 0, 0, 0, tsApertura, tsCierre, nombreContacto, telefonoContacto, contrato, tipo);
                 lblPrueba.Text = "¡Estacionamiento registrado exitosamente!";
             }
-            else if(tipo == 1)
+            else 
             {
-                DTOEstacionamientos estacionamiento = new DTOEstacionamientos(0, nombre, direccion, 0, 0, 0, tsApertura, tsCierre, tipo, 0);
+                estacionamiento = new DTOEstacionamientos(0, nombre, direccion, 0, 0, 0, tsApertura, tsCierre, tipo, 0);
                 lblPrueba.Text = "¡Estacionamiento registrado exitosamente!";
             }
+
+            //Se envia el objeto al gestor por medio del controller
+            Controller controller = Controller.GetInstance();
+            controller.crearEstacionamiento(estacionamiento);
 
             //Se limpian los campos
             txtBoxNombre.Text = "";
@@ -89,16 +97,14 @@ namespace EstacionaTEC.Views
             txtBoxNumContrato.Text = "";
             txtBoxTelefonoContacto.Text = "";
             
-
-            
         }
 
         protected void radButtonTipoParqueo_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-            int index = radButtonTipoParqueo.SelectedIndex;
+            String tipo = radButtonTipoParqueo.SelectedValue;
             
-            if (index==0)//Parqueo propio
+            if (tipo.Equals("Principal") || tipo.Equals("Campus"))//Parqueo propio
             {
                 lblNombreContacto.Text = "";
                 lblTelefono.Text = "";
@@ -108,7 +114,7 @@ namespace EstacionaTEC.Views
                 txtBoxTelefonoContacto.Visible = false;
                 txtBoxNumContrato.Visible = false;
             }
-            else if(index==1)//Parqueo subcontratado
+            else if(tipo.Equals("Subcontratado"))//Parqueo subcontratado
             {
                 lblNombreContacto.Text = "Nombre: ";
                 lblTelefono.Text = "Telefono: ";

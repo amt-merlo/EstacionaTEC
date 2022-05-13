@@ -14,6 +14,20 @@ namespace EstacionaTEC.Controllers
         private readonly GestorVehiculos gestorVehiculos = new GestorVehiculos();
         private readonly GestorPersonas gestorPersonas = new GestorPersonas();
 
+        //Constructor
+        private Controller() { }
+
+        private static Controller _instance;
+
+        public static Controller GetInstance()
+        {
+            if(_instance == null)
+            {
+                _instance = new Controller();
+            }
+            return _instance;
+        }
+
         public void crearPersona(DTOPersonas persona)
         {
             gestorPersonas.crearPersona(persona);
