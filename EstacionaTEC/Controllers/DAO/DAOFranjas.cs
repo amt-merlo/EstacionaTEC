@@ -1,5 +1,7 @@
-﻿using System;
+﻿using EstacionaTEC.Models;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
@@ -9,7 +11,15 @@ namespace EstacionaTEC.Controllers.DAO
     {
         public bool create(object obj)
         {
-            throw new NotImplementedException();
+            FranjaHoraria franja = (FranjaHoraria)obj;
+            int retorno;
+            SqlConnection conexion = new SqlConnection("Data Source=DatabaseServer;Initial Catalog=ProyectoDisenno.mssql.somee.com;User ID=JohelPF_SQLLogin_1;Password=w7v8k5itwh");
+            conexion.Open();
+            String cadena = "exec insertarFranjaHoraria " + franja.IdDia + franja.IdPersona + franja.Inicio + franja.Fin;
+            SqlCommand comando = new SqlCommand(cadena, conexion);
+            retorno = (int)comando.ExecuteScalar();
+            conexion.Close();
+            return Convert.ToBoolean(retorno);
         }
 
         public bool delete(object obj)
