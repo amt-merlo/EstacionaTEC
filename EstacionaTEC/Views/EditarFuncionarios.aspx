@@ -10,7 +10,7 @@
                 <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
             </h4>
             <p class="text-center">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" AutoGenerateSelectButton="True" CellPadding="4" DataKeyNames="Identificación" DataSourceID="sqlGetPersonas" ForeColor="#333333" GridLines="None" Width="834px">
+                <asp:GridView ID="gridViewFuncionarios" runat="server" AutoGenerateColumns="False" AutoGenerateSelectButton="True" CellPadding="4" DataKeyNames="Identificación" DataSourceID="sqlGetPersonas" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="834px">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:BoundField DataField="Identificación" HeaderText="Identificación" ReadOnly="True" SortExpression="Identificación" />

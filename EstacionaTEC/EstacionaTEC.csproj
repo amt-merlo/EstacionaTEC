@@ -180,6 +180,7 @@
     <Content Include="Views\AgregarEspacio.aspx" />
     <Content Include="Views\CrearEstacionamiento.aspx" />
     <Content Include="Views\CrearFuncionario.aspx" />
+    <Content Include="Views\EditarFuncionarioIndividual.aspx" />
     <Content Include="Views\EditarFuncionarios.aspx" />
     <Content Include="Views\FuncionarioLanding.aspx" />
     <Content Include="Views\Informes.aspx" />
@@ -288,6 +289,13 @@
     </Compile>
     <Compile Include="Views\CrearFuncionario.aspx.designer.cs">
       <DependentUpon>CrearFuncionario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditarFuncionarioIndividual.aspx.cs">
+      <DependentUpon>EditarFuncionarioIndividual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\EditarFuncionarioIndividual.aspx.designer.cs">
+      <DependentUpon>EditarFuncionarioIndividual.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\EditarFuncionarios.aspx.cs">
       <DependentUpon>EditarFuncionarios.aspx</DependentUpon>

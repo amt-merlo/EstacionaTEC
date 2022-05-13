@@ -16,7 +16,9 @@ namespace EstacionaTEC.Views
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            String IDFuncionario = gridViewFuncionarios.SelectedRow.Cells[1].Text;
+            Session["FuncionarioEditar"] = IDFuncionario;
+            Response.Redirect("EditarFuncionarioIndividual.aspx");
         }
     }
 }
