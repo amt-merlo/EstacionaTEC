@@ -18,9 +18,10 @@ namespace EstacionaTEC.Models
         private bool esAdmin;
         private bool serviciosEspeciales;
         private List<FranjaHoraria> horario = new List<FranjaHoraria>();
+        private string contraseña;
 
         public Persona(int identificacion, string nombreCompleto, int numTelefono, string correoInstitucional, string correoAlterno, string departamento,
-            bool esJefatura, bool esAdmin, bool serviciosEspeciales)
+            bool esJefatura, bool esAdmin, bool serviciosEspeciales, string contraseña)
         {
             this.Identificacion = identificacion;
             this.NombreCompleto = nombreCompleto;
@@ -31,6 +32,7 @@ namespace EstacionaTEC.Models
             this.EsJefatura = esJefatura;
             this.EsAdmin = esAdmin;
             this.ServiciosEspeciales = serviciosEspeciales;
+            this.Contraseña = contraseña;
         }
 
         public int Identificacion { get => identificacion; set => identificacion = value; }
@@ -42,6 +44,7 @@ namespace EstacionaTEC.Models
         public bool EsJefatura { get => esJefatura; set => esJefatura = value; }
         public bool EsAdmin { get => esAdmin; set => esAdmin = value; }
         public bool ServiciosEspeciales { get => serviciosEspeciales; set => serviciosEspeciales = value; }
+        public string Contraseña { get => contraseña; set => contraseña = value; }
         internal List<Vehiculo> Vehiculos { get => vehiculos; set => vehiculos = value; }
         internal List<FranjaHoraria> Horario { get => horario; set => horario = value; }
     }

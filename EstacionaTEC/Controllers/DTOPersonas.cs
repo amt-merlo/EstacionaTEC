@@ -17,8 +17,9 @@ namespace EstacionaTEC.Controllers
         private bool esJefatura;
         private bool esAdmin;
         private bool serviciosEspeciales;
+        private string contraseña;
 
-        public DTOPersonas(int identificacion, string nombreCompleto, int numTelefono, string correoInstitucional, string correoAlterno, string departamento, bool esJefatura, bool esAdmin, bool serviciosEspeciales)
+        public DTOPersonas(int identificacion, string nombreCompleto, int numTelefono, string correoInstitucional, string correoAlterno, string departamento, bool esJefatura, bool esAdmin, bool serviciosEspeciales, string contraseña)
         {
             this.Identificacion = identificacion;
             this.NombreCompleto = nombreCompleto ?? throw new ArgumentNullException(nameof(nombreCompleto));
@@ -29,6 +30,7 @@ namespace EstacionaTEC.Controllers
             this.EsJefatura = esJefatura;
             this.EsAdmin = esAdmin;
             this.ServiciosEspeciales = serviciosEspeciales;
+            this.Contraseña = contraseña ?? throw new ArgumentNullException(nameof(contraseña));
         }
 
         public int Identificacion { get => identificacion; set => identificacion = value; }
@@ -40,5 +42,6 @@ namespace EstacionaTEC.Controllers
         public bool EsJefatura { get => esJefatura; set => esJefatura = value; }
         public bool EsAdmin { get => esAdmin; set => esAdmin = value; }
         public bool ServiciosEspeciales { get => serviciosEspeciales; set => serviciosEspeciales = value; }
+        public string Contraseña { get => contraseña; set => contraseña = value; }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using EstacionaTEC.Controllers;
+using EstacionaTEC.Models;
 
 namespace EstacionaTEC.Controllers
 {
@@ -11,7 +12,7 @@ namespace EstacionaTEC.Controllers
         public bool crearPersona(DTOPersonas dto)
         {
 
-
+            Persona persona = new Persona(dto.Identificacion,dto.NombreCompleto,dto.NumTelefono,dto.CorreoInstitucional,dto.CorreoAlterno,dto.Departamento,dto.EsJefatura,dto.EsAdmin,dto.ServiciosEspeciales,dto.Contraseña);
             return true;
         }
     }
