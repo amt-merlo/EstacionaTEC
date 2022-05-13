@@ -8,8 +8,9 @@ namespace EstacionaTEC.Controllers
 {
     public class GestorVehiculos
     {
-        public void crearVehiculo(DTOVehiculos veh) {
+        public bool crearVehiculo(DTOVehiculos veh) {
             Vehiculo vehiculo = new Vehiculo(veh.IdPersona,veh.Placa);
+            return true;
         }
     }
 }

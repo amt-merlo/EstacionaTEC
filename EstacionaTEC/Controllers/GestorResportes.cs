@@ -7,10 +7,10 @@ namespace EstacionaTEC.Controllers
 {
     public class GestorResportes
     {
-        public void crearReporteEstacionamientos() { }
-        public void crearReporteFuncionarios() { }
-        public void crearReporteFuncionario(int buscado) { }
-        public void crearEstadistica() { }
+        public bool crearReporteEstacionamientos() { return true; }
+        public bool crearReporteFuncionarios() { return true; }
+        public bool crearReporteFuncionario(int buscado) { return true; }
+        public bool crearEstadistica() { return true; }
 
     }
 }
