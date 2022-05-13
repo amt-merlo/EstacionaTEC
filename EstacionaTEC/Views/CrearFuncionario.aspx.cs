@@ -44,7 +44,7 @@ namespace EstacionaTEC.Views
             lblPrueba.Text = "¡Funcionario registrado exitosamente!";
 
             //Se envia el objeto al gestor por medio del controller
-            Controller controller = Controller.GetInstance();
+            Controller controller = Controller.getInstance();
             controller.crearPersona(persona);
 
             //Se limpian los campos

@@ -87,7 +87,7 @@ namespace EstacionaTEC.Views
             }
 
             //Se envia el objeto al gestor por medio del controller
-            Controller controller = Controller.GetInstance();
+            Controller controller = Controller.getInstance();
             controller.crearEstacionamiento(estacionamiento);
 
             //Se limpian los campos
