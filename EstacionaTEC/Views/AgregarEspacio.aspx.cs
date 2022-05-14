@@ -51,5 +51,26 @@ namespace EstacionaTEC.Views
         {
 
         }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String IDEstacionamiento = gridViewEstacionamientoPropio.SelectedRow.Cells[1].Text;
+            Session["Estacionamiento"] = IDEstacionamiento;
+            Response.Redirect("CrearEspacioIndividual.aspx");
+        }
+
+        protected void gridViewEstacionamientoCampus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String IDEstacionamiento = gridViewEstacionamientoCampus.SelectedRow.Cells[1].Text;
+            Session["Estacionamiento"] = IDEstacionamiento;
+            Response.Redirect("CrearEspacioIndividual.aspx");
+        }
+
+        protected void gridViewEstacionamientoSubcontratado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String IDEstacionamiento = gridViewEstacionamientoSubcontratado.SelectedRow.Cells[1].Text;
+            Session["Estacionamiento"] = IDEstacionamiento;
+            Response.Redirect("CrearEspacioIndividual.aspx");
+        }
     }
 }

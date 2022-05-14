@@ -118,7 +118,7 @@ optgroup,
 select,
 textarea {
   color: #FFFFFF;
-    margin-left: 13px;
+    margin-left: 0px;
     margin-right: 0;
     margin-top: 0;
 }
@@ -1321,7 +1321,7 @@ mark,
   text-align: left;
 }
 .text-center {
-  text-align: center;
+  text-align: left;
 }
 .text-justify {
   text-align: justify;

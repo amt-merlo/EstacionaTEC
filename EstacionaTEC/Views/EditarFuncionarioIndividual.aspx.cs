@@ -123,7 +123,7 @@ namespace EstacionaTEC.Views
             String nombre = txtBoxNombre.Text;
             String correo = txtBoxCorreo.Text;
             int numeroTelefono = int.Parse(txtBoxCelular.Text);
-            int departamento = ddListDepartamento.SelectedIndex;
+            int departamento = ddListDepartamento.SelectedIndex+1;
             bool esJefatura = Convert.ToBoolean(radButtonJefatura.SelectedIndex);
             bool esAdmin = Convert.ToBoolean(radButtonAdmin.SelectedIndex);
             bool serviciosEspeciales = Convert.ToBoolean(radButtonServiciosEspeciales.SelectedIndex);
