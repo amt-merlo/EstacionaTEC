@@ -42,15 +42,6 @@ namespace EstacionaTEC.Views
         protected global::System.Web.UI.WebControls.Label lblNombreEstacionamiento;
 
         /// <summary>
-        /// Control lblTipo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTipo;
-
-        /// <summary>
         /// Control lblUbicacion.
         /// </summary>
         /// <remarks>
@@ -123,6 +114,15 @@ namespace EstacionaTEC.Views
         protected global::System.Web.UI.WebControls.RadioButtonList radButtonNumeracion;
 
         /// <summary>
+        /// Control lblNumeracion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNumeracion;
+
+        /// <summary>
         /// Control txtBoxNumeracion.
         /// </summary>
         /// <remarks>
@@ -130,6 +130,15 @@ namespace EstacionaTEC.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBoxNumeracion;
+
+        /// <summary>
+        /// Control lblMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMensaje;
 
         /// <summary>
         /// Control btnAgregar.

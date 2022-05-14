@@ -55,7 +55,7 @@ namespace EstacionaTEC.Controllers.DAO
 
                 if(tipoEstacionamiento==1 || tipoEstacionamiento == 2) //Tipo TEC
                 {
-                    retorno = new EstacionamientoTEC(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(4), reader.GetInt32(5), reader.GetInt32(7), reader.GetTimeSpan(9), reader.GetTimeSpan(2), reader.GetInt32(3), reader.GetInt32(6));
+                    retorno = new EstacionamientoTEC(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(4), reader.GetInt32(5), reader.GetInt32(7), reader.GetTimeSpan(8), reader.GetTimeSpan(9), reader.GetInt32(3), reader.GetInt32(6));
 
                 }
                 else if(tipoEstacionamiento == 3) //Subcontratado

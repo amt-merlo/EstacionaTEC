@@ -16,10 +16,7 @@
             </p>
             <p class="text-left">Nombre:&nbsp;
                 <asp:Label ID="lblNombreEstacionamiento" runat="server" Text=""></asp:Label>
-            </p>
-            <p class="text-left">Tipo de Parqueo:&nbsp;
-                <asp:Label ID="lblTipo" runat="server" Text=""></asp:Label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;
             </p>
             <p class="text-left">Ubicación:
                 <asp:Label ID="lblUbicacion" runat="server" Text=""></asp:Label>
@@ -53,7 +50,7 @@
             <p class="text-center" style="text-align: center">
                 ¿El espacio posee alguna forma de numeración?</p>
             <p class="text-center" style="text-align: center">
-                <asp:RadioButtonList ID="radButtonNumeracion" runat="server">
+                <asp:RadioButtonList ID="radButtonNumeracion" runat="server" OnSelectedIndexChanged="radButtonNumeracion_SelectedIndexChanged" AutoPostBack="True">
                     <asp:ListItem>No</asp:ListItem>
                     <asp:ListItem>Si</asp:ListItem>
                 </asp:RadioButtonList>
@@ -61,11 +58,13 @@
             <p class="text-center" style="text-align: center">
                 &nbsp;</p>
             <p class="text-center" style="text-align: center">
-                Ingrese la numeración :
-                <asp:TextBox ID="txtBoxNumeracion" runat="server"></asp:TextBox>
+                &nbsp;<asp:Label ID="lblNumeracion" runat="server" Text="Ingrese la numeración: "></asp:Label>
+&nbsp;
+                <asp:TextBox ID="txtBoxNumeracion" runat="server" ForeColor="Black"></asp:TextBox>
             </p>
             <p class="text-center" style="text-align: center">
-                &nbsp;</p>
+                <asp:Label ID="lblMensaje" runat="server" Text=""></asp:Label>
+            </p>
             <p class="text-center" style="text-align: center">
                 <asp:Button ID="btnAgregar" runat="server" Text="Agregar Espacio" Height="31px" OnClick="btnAgregar_Click" />
             </p>
