@@ -45,6 +45,7 @@ namespace EstacionaTEC.Controllers.DAO
             String cadena = "exec buscarPersona " + id;
             SqlCommand comando = new SqlCommand(cadena, conexion);
             SqlDataReader reader = comando.ExecuteReader();
+            reader.Read();
             if (reader.HasRows)
             {
                 retorno = new Persona(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5), reader.GetBoolean(6), reader.GetBoolean(7), reader.GetBoolean(8),reader.GetBoolean(9),reader.GetBoolean(10),"");
