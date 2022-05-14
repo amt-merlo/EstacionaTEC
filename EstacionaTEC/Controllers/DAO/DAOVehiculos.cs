@@ -39,7 +39,21 @@ namespace EstacionaTEC.Controllers.DAO
 
         public List<object> getBy(int id)
         {
-            throw new NotImplementedException();
+            List<Object> vehiculos = new List<Object>();
+            SqlConnection conexion = new SqlConnection("Data Source = ProyectoDisenno.mssql.somee.com; Initial Catalog = ProyectoDisenno; Persist Security Info=False;User ID = JohelPF_SQLLogin_1; Password=w7v8k5itwh;Packet Size = 4096; Workstation ID = ProyectoDisenno.mssql.somee.com");
+            conexion.Open();
+            String cadena = "exec buscarVehiculos " + id;
+            SqlCommand comando = new SqlCommand(cadena, conexion);
+            SqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                if (reader.HasRows)
+                {
+                    Vehiculo vehiculo = new Vehiculo(reader.GetInt32(1),reader.GetString(2));
+                    vehiculos.Add(vehiculo);
+                }
+            }
+            return vehiculos;
         }
 
         public bool update(object obj)

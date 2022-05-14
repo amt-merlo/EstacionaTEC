@@ -114,5 +114,10 @@ namespace EstacionaTEC.Controllers
             bool resp = gestorPersonas.actualizarPersona(Persona);
             return resp;
         }
+
+        public List<Object> buscarVehiculo(int id)
+        {
+            return gestorVehiculos.buscarVehiculo(id);
+        }
     }
 }

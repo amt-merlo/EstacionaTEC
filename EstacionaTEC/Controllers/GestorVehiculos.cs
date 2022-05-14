@@ -14,5 +14,10 @@ namespace EstacionaTEC.Controllers
             Vehiculo vehiculo = new Vehiculo(veh.IdPersona,veh.Placa);
             return dao.create(vehiculo);
         }
+
+        public List<Object> buscarVehiculo(int id)
+        {
+            return dao.getBy(id);
+        }
     }
 }
