@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net.Mail;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -11,6 +13,20 @@ namespace EstacionaTEC.Views
 {
     public partial class CrearFuncionario : System.Web.UI.Page
     {
+        public bool IsValidEmail(string emailaddress)
+        {
+            try
+            {
+                MailAddress m = new MailAddress(emailaddress);
+
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             //Consulta del nombre del usuario
@@ -33,7 +49,7 @@ namespace EstacionaTEC.Views
             String nombre = txtBoxNombre.Text;
             int telefono = int.Parse(txtBoxTelefono.Text);
             String correo = txtBoxCorreo.Text;
-            String departamento = ddListDepartamento.SelectedValue;
+            int departamento = ddListDepartamento.SelectedIndex+1;
             bool jefatura = Convert.ToBoolean(radButtonJefatura.SelectedIndex);
             bool admin = Convert.ToBoolean(radButtonAdmin.SelectedIndex);
             bool especiales = Convert.ToBoolean(radButtonNecesidadesEspeciales.SelectedIndex);
@@ -41,30 +57,50 @@ namespace EstacionaTEC.Views
             bool planilla = Convert.ToBoolean(radButtonPlanilla.SelectedIndex);
             String contrasenna = txtBoxContrasenna.Text;
 
-
-            //Se crea el objeto DTO
-            DTOPersonas persona = new DTOPersonas(identificacion, nombre, telefono, correo, "", departamento, jefatura, admin, especiales, esAdministrativo, planilla, contrasenna);
-            
-
-            //Se envia el objeto al gestor por medio del controller
-            Controller controller = Controller.getInstance();
-            bool resultado = controller.crearPersona(persona);
-
-            if (resultado)
+            //Se valida el correo institucional 
+            bool validarCorreo = IsValidEmail(correo);
+            if (validarCorreo)
             {
-                lblPrueba.Text = "¡Funcionario registrado exitosamente!";
+                Regex regex = new Regex(@"^([\w\.\-]+)@(estudiantec.cr)$|^([\w\.\-]+)@(tec.ac.cr)$");
+                Match match = regex.Match(correo);
+                if (match.Success)
+                {
+                    //Se crea el objeto DTO
+                    DTOPersonas persona = new DTOPersonas(identificacion, nombre, telefono, correo, "", departamento, jefatura, admin, especiales, esAdministrativo, planilla, contrasenna);
+
+
+                    //Se envia el objeto al gestor por medio del controller
+                    Controller controller = Controller.getInstance();
+                    bool resultado = controller.crearPersona(persona);
+
+                    if (resultado)
+                    {
+                        lblCorreo.Text = "";
+                        lblPrueba.Text = "¡Funcionario registrado exitosamente!";
+                    }
+                    else
+                    {
+                        lblCorreo.Text = "";
+                        lblPrueba.Text = "Ya existe un funcionario registrado con el número identificación indicado";
+                    }
+
+                    //Se limpian los campos
+                    txtBoxNombre.Text = "";
+                    txtBoxIdentificacion.Text = "";
+                    txtBoxCorreo.Text = "";
+                    txtBoxTelefono.Text = "";
+                    txtBoxContrasenna.Text = "";
+                }
+                else
+                {
+                    lblCorreo.Text = "La dirección de correo indicada no pertenece a un dominio institucional";
+                }
             }
             else
             {
-                lblPrueba.Text = "Ya existe un funcionario registrado con el número identificación indicado";
+                lblCorreo.Text = "La dirección de correo indicada no es válida";
             }
-
-            //Se limpian los campos
-            txtBoxNombre.Text = "";
-            txtBoxIdentificacion.Text = "";
-            txtBoxCorreo.Text = "";
-            txtBoxTelefono.Text = "";
-            txtBoxContrasenna.Text = "";
+            
         }
     }
 }
