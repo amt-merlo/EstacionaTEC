@@ -13,7 +13,7 @@ namespace EstacionaTEC.Controllers.DAO
         {
             FranjaHoraria franja = (FranjaHoraria)obj;
             int retorno;
-            SqlConnection conexion = new SqlConnection("Data Source=DatabaseServer;Initial Catalog=ProyectoDisenno.mssql.somee.com;User ID=JohelPF_SQLLogin_1;Password=w7v8k5itwh");
+            SqlConnection conexion = new SqlConnection("Data Source = ProyectoDisenno.mssql.somee.com; Initial Catalog = ProyectoDisenno; Persist Security Info=False;User ID = JohelPF_SQLLogin_1; Password=w7v8k5itwh;Packet Size = 4096; Workstation ID = ProyectoDisenno.mssql.somee.com");
             conexion.Open();
             String cadena = "exec insertarFranjaHoraria " + franja.IdDia + franja.IdPersona + franja.Inicio + franja.Fin;
             SqlCommand comando = new SqlCommand(cadena, conexion);

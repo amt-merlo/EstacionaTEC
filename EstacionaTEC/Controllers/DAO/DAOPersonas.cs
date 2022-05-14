@@ -22,7 +22,7 @@ namespace EstacionaTEC.Controllers.DAO
         {
             Persona persona = (Persona)obj;
             int retorno;
-            SqlConnection conexion = new SqlConnection("Data Source=DatabaseServer;Initial Catalog=ProyectoDisenno.mssql.somee.com;User ID=JohelPF_SQLLogin_1;Password=w7v8k5itwh");
+            SqlConnection conexion = new SqlConnection("Data Source = ProyectoDisenno.mssql.somee.com; Initial Catalog = ProyectoDisenno; Persist Security Info=False;User ID = JohelPF_SQLLogin_1; Password=w7v8k5itwh;Packet Size = 4096; Workstation ID = ProyectoDisenno.mssql.somee.com");
             conexion.Open();
             String cadena = "exec insertarPersona " + persona.Identificacion + persona.NombreCompleto + persona.NumTelefono + persona.CorreoInstitucional + persona.CorreoAlterno + persona.Departamento + persona.EsJefatura + persona.EsAdmin + persona.ServiciosEspeciales + persona.EsAdministrativo + persona.EstaEnPlanilla + persona.Contraseña;
             SqlCommand comando = new SqlCommand(cadena, conexion);
@@ -40,7 +40,7 @@ namespace EstacionaTEC.Controllers.DAO
         public object get(int id)
         {
             Persona retorno;
-            SqlConnection conexion = new SqlConnection("Data Source=DatabaseServer;Initial Catalog=ProyectoDisenno.mssql.somee.com;User ID=JohelPF_SQLLogin_1;Password=w7v8k5itwh");
+            SqlConnection conexion = new SqlConnection("Data Source = ProyectoDisenno.mssql.somee.com; Initial Catalog = ProyectoDisenno; Persist Security Info=False;User ID = JohelPF_SQLLogin_1; Password=w7v8k5itwh;Packet Size = 4096; Workstation ID = ProyectoDisenno.mssql.somee.com");
             conexion.Open();
             String cadena = "exec buscarPersona " + id;
             SqlCommand comando = new SqlCommand(cadena, conexion);
