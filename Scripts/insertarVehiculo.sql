@@ -23,6 +23,8 @@ BEGIN
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
 
+	DECLARE @returnValue INT
+
     --Inserta un vehículo si no existe
 	IF NOT EXISTS(SELECT * 
 				  FROM [dbo].[Vehiculo] AS V 
@@ -33,13 +35,15 @@ BEGIN
 									  [visible])
 		VALUES (@inIdPersona, @inPlaca, 1)
 
-		RETURN 1 --Sin error
+		SET @returnValue = 1
+		SELECT @returnValue -- Sin error
 	END
 
 	ELSE
 
 	BEGIN
-		RETURN 0 --Error
+		SET @returnValue = 0
+		SELECT @returnValue -- error
 	END
 END
 GO

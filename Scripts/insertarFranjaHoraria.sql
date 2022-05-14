@@ -29,6 +29,8 @@ BEGIN
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
 
+	DECLARE @returnValue INT
+
     --Inserta una franja horaria si no existe
 	IF NOT EXISTS(SELECT * 
 				  FROM [dbo].[FranjaHoraria] AS FH
@@ -41,13 +43,15 @@ BEGIN
 		INSERT INTO [dbo].[FranjaHoraria] ([idDia], [idPersona], [inicio], [fin])
 		VALUES (@inIdDia, @inIdPersona, @inInicio, @inFinal)
 
-		RETURN 1 --Sin error
+		SET @returnValue = 1
+		SELECT @returnValue -- Sin error
 	END
 
 	ELSE
 
 	BEGIN
-		RETURN 0 --Error
+		SET @returnValue = 0
+		SELECT @returnValue -- error
 	END
 END
 GO
