@@ -22,5 +22,11 @@ namespace EstacionaTEC.Controllers
             Persona persona = (Persona)dao.get(id);
             return persona;
         }
+
+        public bool actualizarPersona(DTOPersonas dto)
+        {
+            Persona persona = new Persona(dto.Identificacion, dto.NombreCompleto, dto.NumTelefono, dto.CorreoInstitucional, dto.CorreoAlterno, dto.Departamento, dto.EsJefatura, dto.EsAdmin, dto.ServiciosEspeciales, dto.EsAdministrativo, dto.EstaEnPlanilla, dto.Contrasenna);
+            return dao.update(persona);
+        }
     }
 }

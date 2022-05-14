@@ -83,5 +83,11 @@ namespace EstacionaTEC.Controllers
             bool resp = gestorVehiculos.crearVehiculo(vehiculos);
             return resp;
         }
+
+        public bool actualizarPersona(DTOPersonas Persona)
+        {
+            bool resp = gestorPersonas.actualizarPersona(Persona);
+            return resp;
+        }
     }
 }
