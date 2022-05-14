@@ -44,11 +44,20 @@ namespace EstacionaTEC.Views
 
             //Se crea el objeto DTO
             DTOPersonas persona = new DTOPersonas(identificacion, nombre, telefono, correo, "", departamento, jefatura, admin, especiales, esAdministrativo, planilla, contrasenna);
-            lblPrueba.Text = "¡Funcionario registrado exitosamente!";
+            
 
             //Se envia el objeto al gestor por medio del controller
             Controller controller = Controller.getInstance();
-            controller.crearPersona(persona);
+            bool resultado = controller.crearPersona(persona);
+
+            if (resultado)
+            {
+                lblPrueba.Text = "¡Funcionario registrado exitosamente!";
+            }
+            else
+            {
+                lblPrueba.Text = "Ya existe un funcionario registrado con el número identificación indicado";
+            }
 
             //Se limpian los campos
             txtBoxNombre.Text = "";
