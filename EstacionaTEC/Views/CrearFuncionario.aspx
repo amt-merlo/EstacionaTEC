@@ -52,6 +52,22 @@
                 </asp:RadioButtonList>
             </p>
             <p class="text-left">
+                ¿La persona labora para el sector administrativo?</p>
+            <p class="text-left">
+                <asp:RadioButtonList ID="radButtonAdministrativo" runat="server">
+                    <asp:ListItem>No</asp:ListItem>
+                    <asp:ListItem>Si</asp:ListItem>
+                </asp:RadioButtonList>
+            </p>
+            <p class="text-left">
+                ¿La persona se encuentra en planilla?</p>
+            <p class="text-left">
+                <asp:RadioButtonList ID="radButtonPlanilla" runat="server">
+                    <asp:ListItem>No</asp:ListItem>
+                    <asp:ListItem>Si</asp:ListItem>
+                </asp:RadioButtonList>
+            </p>
+            <p class="text-left">
                 &nbsp;</p>
             <p class="text-left">
                 Por favor ingrese la contraseña con la que el funcionario podrá ingresar al sistema de reserva de estacionamientos.</p>

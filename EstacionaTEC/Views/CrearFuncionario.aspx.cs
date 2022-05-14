@@ -37,10 +37,13 @@ namespace EstacionaTEC.Views
             bool jefatura = Convert.ToBoolean(radButtonJefatura.SelectedIndex);
             bool admin = Convert.ToBoolean(radButtonAdmin.SelectedIndex);
             bool especiales = Convert.ToBoolean(radButtonNecesidadesEspeciales.SelectedIndex);
+            bool esAdministrativo = Convert.ToBoolean(radButtonAdministrativo.SelectedIndex);
+            bool planilla = Convert.ToBoolean(radButtonPlanilla.SelectedIndex);
             String contrasenna = txtBoxContrasenna.Text;
 
+
             //Se crea el objeto DTO
-            DTOPersonas persona = new DTOPersonas(identificacion, nombre, telefono, correo, "", departamento, jefatura, admin, especiales);
+            DTOPersonas persona = new DTOPersonas(identificacion, nombre, telefono, correo, "", departamento, jefatura, admin, especiales, esAdministrativo, planilla, contrasenna);
             lblPrueba.Text = "¡Funcionario registrado exitosamente!";
 
             //Se envia el objeto al gestor por medio del controller
