@@ -35,6 +35,8 @@ BEGIN
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
 
+	DECLARE @returnValue int
+
 	BEGIN TRY
 		
 		-- If que invalida la inserción de un estacionamiento duplicado
@@ -71,20 +73,23 @@ BEGIN
 					@inContrato
 				  )
 
-			RETURN 1 -- Sin errores
+			SET @returnValue = 1
+			SELECT @returnValue -- Sin error
 
 		END 
 
 		ELSE 
 		BEGIN
-			RETURN 0 -- Error
+			SET @returnValue = 0
+			SELECT @returnValue -- error
 		END
 
 	END TRY
 
 	BEGIN CATCH
 
-		RETURN 0 -- Error 
+		SET @returnValue = 0
+		SELECT @returnValue -- error
 
 	END CATCH
 	
