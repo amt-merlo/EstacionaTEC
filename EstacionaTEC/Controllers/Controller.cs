@@ -119,5 +119,11 @@ namespace EstacionaTEC.Controllers
         {
             return gestorVehiculos.buscarVehiculo(id);
         }
+
+        public Object getEstacionamiento(int ID)
+        {
+            Object estacionamiento = gestorEstacionamiento.buscarEstacionamiento(ID);
+            return estacionamiento;
+        }
     }
 }

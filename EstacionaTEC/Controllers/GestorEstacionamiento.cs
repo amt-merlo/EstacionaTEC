@@ -37,5 +37,11 @@ namespace EstacionaTEC.Controllers
             }
             return dao.create(estacionamiento);
         }
+
+        public Estacionamiento buscarEstacionamiento(int ID)
+        {
+            Estacionamiento estacionamiento= (Estacionamiento)dao.get(ID);
+            return estacionamiento;
+        }
     }
 }

@@ -42,7 +42,42 @@ namespace EstacionaTEC.Controllers.DAO
 
         public object get(int id)
         {
-            throw new NotImplementedException();
+            Estacionamiento retorno;
+            SqlConnection conexion = new SqlConnection("Data Source = ProyectoDisenno.mssql.somee.com; Initial Catalog = ProyectoDisenno; Persist Security Info=False;User ID = JohelPF_SQLLogin_1; Password=w7v8k5itwh;Packet Size = 4096; Workstation ID = ProyectoDisenno.mssql.somee.com");
+            conexion.Open();
+            String cadena = "exec verEstacionamiento " + id;
+            SqlCommand comando = new SqlCommand(cadena, conexion);
+            SqlDataReader reader = comando.ExecuteReader();
+            reader.Read();
+            if (reader.HasRows)
+            {
+                int tipoEstacionamiento = reader.GetInt32(3); 
+
+                if(tipoEstacionamiento==1 || tipoEstacionamiento == 2) //Tipo TEC
+                {
+                    retorno = new EstacionamientoTEC(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(4), reader.GetInt32(5), reader.GetInt32(7), reader.GetTimeSpan(9), reader.GetTimeSpan(2), reader.GetInt32(3), reader.GetInt32(6));
+
+                }
+                else if(tipoEstacionamiento == 3) //Subcontratado
+                {
+                    retorno = new EstacionamientoSubcontratado(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(4), reader.GetInt32(5), reader.GetInt32(7), reader.GetTimeSpan(8), reader.GetTimeSpan(9), reader.GetString(10), reader.GetInt32(11), reader.GetString(12));
+
+                }
+                else
+                {
+                    throw new NotImplementedException();
+                }
+
+                reader.Close();
+                conexion.Close();
+                return retorno;
+            }
+            else
+            {
+                reader.Close();
+                conexion.Close();
+                return false;
+            }
         }
 
         public List<Object> getAll()
