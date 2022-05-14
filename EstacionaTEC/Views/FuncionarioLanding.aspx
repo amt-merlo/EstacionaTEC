@@ -10,13 +10,13 @@
                 <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
             </h4>
             <p class="text-center">
-                <asp:Button ID="btnEstacionamientos" runat="server" Text="Estacionamientos" OnClick="btnCrearEstacionamiento_Click" />
+                <asp:Button ID="btnReservar" runat="server" Text="Reservar" OnClick="btnReservar_Click" Width="240px" />
             </p>
             <p class="text-center">
-                <asp:Button ID="btnInformes" runat="server" Text="Informes y Estadísticas" OnClick="btnInformes_Click" />
+                <asp:Button ID="btnInformes" runat="server" Text="Informes y Estadísticas" OnClick="btnInformes_Click" Width="240px" />
             </p>
             <p class="text-center">
-                <asp:Button ID="btnModificarDatos" runat="server" Text="Información Personal" />
+                <asp:Button ID="btnModificarDatos" runat="server" Text="Información Personal" Width="240px" OnClick="btnModificarDatos_Click" />
             </p>
             
             <p class="text-center">

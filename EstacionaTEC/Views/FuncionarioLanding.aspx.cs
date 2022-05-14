@@ -24,15 +24,19 @@ namespace EstacionaTEC.Views
             nombre = (String)groupsTable.Rows[0][0];
             lblNombre.Text = nombre;
         }
+        protected void btnInformes_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Informes.aspx");
+        }
 
-        protected void btnCrearEstacionamiento_Click(object sender, EventArgs e)
+        protected void btnReservar_Click(object sender, EventArgs e)
         {
 
         }
 
-        protected void btnInformes_Click(object sender, EventArgs e)
+        protected void btnModificarDatos_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Informes.aspx");
+
         }
     }
 }

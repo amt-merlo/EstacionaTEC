@@ -5,21 +5,21 @@
     </div>
     <div class="row" align="center">
         <div class="col-md-4">
-            <h2 class="text-center" style="text-align: center">Informes y Estadísticas</h2>
-            <h4 class="text-center" style="text-align: center">Bienvenido(a)
+            <h2 class="text-left">Informes y Estadísticas</h2>
+            <h4 class="text-left">Bienvenido(a)
                 <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
             </h4>
             <p class="text-center">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnInfoEstacionamientos" runat="server" Text="Informe de Estacionamientos" OnClick="btnInfoEstacionamientos_Click" />
+                <asp:Button ID="btnInfoEstacionamientos" runat="server" Text="Informe de Estacionamientos" OnClick="btnInfoEstacionamientos_Click" Width="245px" />
             </p>
             <p class="text-center">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnInfoFuncionarios" runat="server" Text="Informe de Funcionarios" />
+                &nbsp;<asp:Button ID="btnInfoFuncionarios" runat="server" Text="Informe de Funcionarios" OnClick="btnInfoFuncionarios_Click" Width="245px" />
+                &nbsp;</p>
+            <p class="text-center">
+                <asp:Button ID="btnEstadisticasFranjasHorarias" runat="server" Text="Estadísticas de Franjas Horarias" OnClick="btnEstadisticasFranjasHorarias_Click" Width="245px" />
             </p>
             <p class="text-center">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnEstadisticasFranjasHorarias" runat="server" Text="Estadísticas de Franjas Horarias" />
+                &nbsp;<asp:Button ID="btnVerFuncionario" runat="server" OnClick="btnVerFuncionario_Click" Text="Informe de un funcionario" Width="245px" />
             </p>
             <p class="text-center">
                 &nbsp;</p>

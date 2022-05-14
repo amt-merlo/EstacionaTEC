@@ -18,5 +18,20 @@ namespace EstacionaTEC.Views
         {
 
         }
+
+        protected void btnInfoFuncionarios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnEstadisticasFranjasHorarias_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnVerFuncionario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
