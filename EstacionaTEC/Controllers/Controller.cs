@@ -60,9 +60,9 @@ namespace EstacionaTEC.Controllers
             return resp;
         }
 
-        public bool crearReporteFuncionario(int buscado)
+        public Persona crearReporteFuncionario(int buscado)
         {
-            bool resp = gestorResportes.crearReporteFuncionario(buscado);
+            Persona resp = gestorPersonas.buscarPersona(buscado);
             return resp;
         }
 

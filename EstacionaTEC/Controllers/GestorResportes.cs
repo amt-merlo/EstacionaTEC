@@ -9,7 +9,6 @@ namespace EstacionaTEC.Controllers
     {
         public bool crearReporteEstacionamientos() { return true; }
         public bool crearReporteFuncionarios() { return true; }
-        public bool crearReporteFuncionario(int buscado) { return true; }
         public bool crearEstadistica() { return true; }
 
     }
