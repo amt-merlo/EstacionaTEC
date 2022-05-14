@@ -207,7 +207,12 @@
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\Controller.cs" />
+    <Compile Include="Controllers\DAO\DAOEstacionamientos.cs" />
+    <Compile Include="Controllers\DAO\DAOFranjas.cs" />
+    <Compile Include="Controllers\DAO\DAOPersonas.cs" />
+    <Compile Include="Controllers\DAO\DAOReservas.cs" />
     <Compile Include="Controllers\DAO\DAOSolicitudes.cs" />
+    <Compile Include="Controllers\DAO\DAOVehiculos.cs" />
     <Compile Include="Controllers\DTOEstacionamientos.cs" />
     <Compile Include="Controllers\DTOFranja.cs" />
     <Compile Include="Controllers\DTOPersonas.cs" />

@@ -56,14 +56,15 @@ namespace EstacionaTEC.Controllers.DAO
             while (reader.Read())
             {
                 int tipo = reader.GetInt32(3);
+                Console.WriteLine(tipo);
                 if(tipo == 3)
                 {
-                    EstacionamientoSubcontratado estacionamiento = new EstacionamientoSubcontratado(reader.GetInt32(1),reader.GetString(2),reader.GetString(3),reader.GetInt32(5),reader.GetInt32(6),reader.GetInt32(8),reader.GetTimeSpan(9),reader.GetTimeSpan(10),reader.GetString(11),reader.GetInt32(12),reader.GetString(13));
+                    EstacionamientoSubcontratado estacionamiento = new EstacionamientoSubcontratado(reader.GetInt32(0),reader.GetString(1),reader.GetString(2),reader.GetInt32(4),reader.GetInt32(5),reader.GetInt32(7),reader.GetTimeSpan(8),reader.GetTimeSpan(9),reader.GetString(10),reader.GetInt32(11),reader.GetString(12));
                     estacionamientos.Add(estacionamiento);
                 }
                 else
                 {
-                    EstacionamientoTEC estacionamiento = new EstacionamientoTEC(reader.GetInt32(1),reader.GetString(2),reader.GetString(3),reader.GetInt32(5),reader.GetInt32(6),reader.GetInt32(8),reader.GetTimeSpan(9),reader.GetTimeSpan(10),tipo,reader.GetInt32(7));
+                    EstacionamientoTEC estacionamiento = new EstacionamientoTEC(reader.GetInt32(0),reader.GetString(1),reader.GetString(2),reader.GetInt32(4),reader.GetInt32(5),reader.GetInt32(7),reader.GetTimeSpan(8),reader.GetTimeSpan(9),tipo,reader.GetInt32(6));
                     estacionamientos.Add(estacionamiento);
                 }
             }

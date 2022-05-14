@@ -14,7 +14,7 @@ namespace EstacionaTEC.Views
         protected void Page_Load(object sender, EventArgs e)
         {
             Controller controller = Controller.getInstance();
-            List<Estacionamiento> estacionamientos = controller.mostrarEstacionamiento();
+            List<Object> estacionamientos = controller.mostrarEstacionamiento();
 
             EstacionamientoTEC estaPrueba = new EstacionamientoTEC(0, "Estacionamiento SJ", "SJ", 0, 0, 0, TimeSpan.Parse("03:23"), TimeSpan.Parse("03:23"), 1, 0);
             estacionamientos.Add(estaPrueba);
