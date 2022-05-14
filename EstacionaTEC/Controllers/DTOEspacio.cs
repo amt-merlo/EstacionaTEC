@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace EstacionaTEC.Models
+namespace EstacionaTEC.Controllers
 {
-    public class Espacio
+    public class DTOEspacio
     {
         private int idEstacionamiento;
         private int idTipo;
         private string numeracion;
 
-        public Espacio(int idEstacionamiento, int idTipo, string numeracion)
+        public DTOEspacio(int idEstacionamiento, int idTipo, string numeracion)
         {
-            this.idEstacionamiento = idEstacionamiento;
-            this.idTipo = idTipo;
-            this.numeracion = numeracion;
+            this.IdEstacionamiento = idEstacionamiento;
+            this.IdTipo = idTipo;
+            this.Numeracion = numeracion;
         }
 
         public int IdEstacionamiento { get => idEstacionamiento; set => idEstacionamiento = value; }
