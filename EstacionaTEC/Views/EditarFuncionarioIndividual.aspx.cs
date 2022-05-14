@@ -17,6 +17,7 @@ namespace EstacionaTEC.Views
             String id = (string)Session["FuncionarioEditar"];
             lblIdentificacion.Text = id;
             //Trae los datos de la persona por medio del DAO y el controller
+            
             Controller controller = Controller.getInstance();
             Persona persona = (Persona)controller.getPersona(int.Parse(id));
 

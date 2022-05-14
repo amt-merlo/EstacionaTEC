@@ -27,7 +27,7 @@
             </p>
             <p class="text-left">
                 Departamento:
-                <asp:DropDownList ID="ddListDepartamento" runat="server" DataSourceID="sqlDepartamentos" DataTextField="tipo" DataValueField="tipo">
+                <asp:DropDownList ID="ddListDepartamento" runat="server" DataSourceID="sqlDepartamentos" DataTextField="tipo" DataValueField="tipo" ForeColor="Black">
                 </asp:DropDownList>
                 <asp:SqlDataSource ID="sqlDepartamentos" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [tipo] FROM [Departamento]"></asp:SqlDataSource>
             </p>
