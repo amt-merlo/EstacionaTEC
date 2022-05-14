@@ -31,6 +31,12 @@ namespace EstacionaTEC.Controllers
             return resp;
         }
 
+        public Object getPersona(int ID)
+        {
+            Object persona = gestorPersonas.buscarPersona(ID);
+            return persona;
+        }
+
         public List<Object> mostrarEstacionamiento()
         {
             List<Object> resp = gestorEstacionamiento.mostrarEstacionamientos();
