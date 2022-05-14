@@ -12,7 +12,7 @@ namespace EstacionaTEC.Models
         private int numTelefono;
         private String correoInstitucional;
         private String correoAlterno;
-        private String departamento;
+        private int departamento;
         private List<Vehiculo> vehiculos;
         private bool esJefatura;
         private bool esAdmin;
@@ -22,7 +22,7 @@ namespace EstacionaTEC.Models
         private List<FranjaHoraria> horario;
         private string contraseña;
 
-        public Persona(int identificacion, string nombreCompleto, int numTelefono, string correoInstitucional, string correoAlterno, string departamento, bool esJefatura, bool esAdmin, bool serviciosEspeciales, bool esAdministrativo, bool estaEnPlanilla, string contraseña)
+        public Persona(int identificacion, string nombreCompleto, int numTelefono, string correoInstitucional, string correoAlterno, int departamento, bool esJefatura, bool esAdmin, bool serviciosEspeciales, bool esAdministrativo, bool estaEnPlanilla, string contraseña)
         {
             this.identificacion = identificacion;
             this.nombreCompleto = nombreCompleto;
@@ -45,7 +45,7 @@ namespace EstacionaTEC.Models
         public int NumTelefono { get => numTelefono; set => numTelefono = value; }
         public string CorreoInstitucional { get => correoInstitucional; set => correoInstitucional = value; }
         public string CorreoAlterno { get => correoAlterno; set => correoAlterno = value; }
-        public string Departamento { get => departamento; set => departamento = value; }
+        public int Departamento { get => departamento; set => departamento = value; }
         public List<Vehiculo> Vehiculos { get => vehiculos; set => vehiculos = value; }
         public bool EsJefatura { get => esJefatura; set => esJefatura = value; }
         public bool EsAdmin { get => esAdmin; set => esAdmin = value; }

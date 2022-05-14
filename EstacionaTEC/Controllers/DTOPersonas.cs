@@ -13,7 +13,7 @@ namespace EstacionaTEC.Controllers
         private int numTelefono;
         private String correoInstitucional;
         private String correoAlterno;
-        private String departamento;
+        private int departamento;
         private bool esJefatura;
         private bool esAdmin;
         private bool serviciosEspeciales;
@@ -21,14 +21,14 @@ namespace EstacionaTEC.Controllers
         private bool estaEnPlanilla;
         private string contrasenna;
 
-        public DTOPersonas(int identificacion, string nombreCompleto, int numTelefono, string correoInstitucional, string correoAlterno, string departamento, bool esJefatura, bool esAdmin, bool serviciosEspeciales, bool esAdministrativo, bool estaEnPlanilla, string contrasenna)
+        public DTOPersonas(int identificacion, string nombreCompleto, int numTelefono, string correoInstitucional, string correoAlterno, int departamento, bool esJefatura, bool esAdmin, bool serviciosEspeciales, bool esAdministrativo, bool estaEnPlanilla, string contrasenna)
         {
             this.identificacion = identificacion;
             this.nombreCompleto = nombreCompleto ?? throw new ArgumentNullException(nameof(nombreCompleto));
             this.numTelefono = numTelefono;
             this.correoInstitucional = correoInstitucional ?? throw new ArgumentNullException(nameof(correoInstitucional));
             this.correoAlterno = correoAlterno ?? throw new ArgumentNullException(nameof(correoAlterno));
-            this.departamento = departamento ?? throw new ArgumentNullException(nameof(departamento));
+            this.departamento = departamento;
             this.esJefatura = esJefatura;
             this.esAdmin = esAdmin;
             this.serviciosEspeciales = serviciosEspeciales;
@@ -42,7 +42,7 @@ namespace EstacionaTEC.Controllers
         public int NumTelefono { get => numTelefono; set => numTelefono = value; }
         public string CorreoInstitucional { get => correoInstitucional; set => correoInstitucional = value; }
         public string CorreoAlterno { get => correoAlterno; set => correoAlterno = value; }
-        public string Departamento { get => departamento; set => departamento = value; }
+        public int Departamento { get => departamento; set => departamento = value; }
         public bool EsJefatura { get => esJefatura; set => esJefatura = value; }
         public bool EsAdmin { get => esAdmin; set => esAdmin = value; }
         public bool ServiciosEspeciales { get => serviciosEspeciales; set => serviciosEspeciales = value; }

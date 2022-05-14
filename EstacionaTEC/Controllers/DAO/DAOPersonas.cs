@@ -24,7 +24,7 @@ namespace EstacionaTEC.Controllers.DAO
             int retorno;
             SqlConnection conexion = new SqlConnection("Data Source = ProyectoDisenno.mssql.somee.com; Initial Catalog = ProyectoDisenno; Persist Security Info=False;User ID = JohelPF_SQLLogin_1; Password=w7v8k5itwh;Packet Size = 4096; Workstation ID = ProyectoDisenno.mssql.somee.com");
             conexion.Open();
-            String cadena = "exec insertarPersona " +persona.Identificacion  + ","+ "'" + persona.NombreCompleto+ "'" + "," +  persona.NumTelefono +","+ "'" + persona.CorreoInstitucional+ "'" + ","+ "'" + persona.CorreoAlterno+ "'" + ","+ 1 +","+ persona.EsJefatura +"," + persona.EsAdmin +","+ persona.ServiciosEspeciales +","+ persona.EsAdministrativo +","+ persona.EstaEnPlanilla +","+ "'" + persona.Contraseña+ "'";
+            String cadena = "exec insertarPersona " +persona.Identificacion  + ","+ "'" + persona.NombreCompleto+ "'" + "," +  persona.NumTelefono +","+ "'" + persona.CorreoInstitucional+ "'" + ","+ "'" + persona.CorreoAlterno+ "'" + ","+ persona.Departamento +","+ persona.EsJefatura +"," + persona.EsAdmin +","+ persona.ServiciosEspeciales +","+ persona.EsAdministrativo +","+ persona.EstaEnPlanilla +","+ "'" + persona.Contraseña+ "'";
             Console.WriteLine(cadena);
             SqlCommand comando = new SqlCommand(cadena, conexion);
             retorno = (int)comando.ExecuteScalar();
@@ -48,7 +48,7 @@ namespace EstacionaTEC.Controllers.DAO
             SqlDataReader reader = comando.ExecuteReader();
             if (reader.HasRows)
             {
-                retorno = new Persona(reader.GetInt32(1), reader.GetString(2), reader.GetInt32(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetBoolean(7), reader.GetBoolean(8), reader.GetBoolean(9),reader.GetBoolean(10),reader.GetBoolean(11),"");
+                retorno = new Persona(reader.GetInt32(1), reader.GetString(2), reader.GetInt32(3), reader.GetString(4), reader.GetString(5), reader.GetInt32(6), reader.GetBoolean(7), reader.GetBoolean(8), reader.GetBoolean(9),reader.GetBoolean(10),reader.GetBoolean(11),"");
                 reader.Close();
                 conexion.Close();
                 return retorno;
