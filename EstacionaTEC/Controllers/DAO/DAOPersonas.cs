@@ -24,7 +24,7 @@ namespace EstacionaTEC.Controllers.DAO
             int retorno;
             SqlConnection conexion = new SqlConnection("Data Source=DatabaseServer;Initial Catalog=ProyectoDisenno.mssql.somee.com;User ID=JohelPF_SQLLogin_1;Password=w7v8k5itwh");
             conexion.Open();
-            String cadena = "exec insertarPersona " + persona.Identificacion + persona.NombreCompleto + persona.NumTelefono + persona.CorreoInstitucional + persona.CorreoAlterno + persona.Departamento + persona.EsJefatura + persona.EsAdmin + persona.ServiciosEspeciales + persona.Contraseña + persona.EsAdministrativo + persona.EstaEnPlanilla;
+            String cadena = "exec insertarPersona " + persona.Identificacion + persona.NombreCompleto + persona.NumTelefono + persona.CorreoInstitucional + persona.CorreoAlterno + persona.Departamento + persona.EsJefatura + persona.EsAdmin + persona.ServiciosEspeciales + persona.EsAdministrativo + persona.EstaEnPlanilla + persona.Contraseña;
             SqlCommand comando = new SqlCommand(cadena, conexion);
             retorno = (int)comando.ExecuteScalar();
             conexion.Close();
