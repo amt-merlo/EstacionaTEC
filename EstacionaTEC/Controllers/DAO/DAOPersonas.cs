@@ -48,7 +48,7 @@ namespace EstacionaTEC.Controllers.DAO
             SqlDataReader reader = comando.ExecuteReader();
             if (reader.HasRows)
             {
-                retorno = new Persona(reader.GetInt32(1), reader.GetString(2), reader.GetInt32(3), reader.GetString(4), reader.GetString(5), reader.GetInt32(6), reader.GetBoolean(7), reader.GetBoolean(8), reader.GetBoolean(9),reader.GetBoolean(10),reader.GetBoolean(11),"");
+                retorno = new Persona(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5), reader.GetBoolean(6), reader.GetBoolean(7), reader.GetBoolean(8),reader.GetBoolean(9),reader.GetBoolean(10),"");
                 reader.Close();
                 conexion.Close();
                 return retorno;
