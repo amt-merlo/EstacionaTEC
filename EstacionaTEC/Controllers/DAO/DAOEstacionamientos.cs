@@ -73,7 +73,7 @@ namespace EstacionaTEC.Controllers.DAO
             return estacionamientos;
         }
 
-        public List<object> getBy()
+        public List<object> getBy(int id)
         {
             throw new NotImplementedException();
         }

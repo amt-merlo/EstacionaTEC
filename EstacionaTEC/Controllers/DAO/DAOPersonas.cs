@@ -63,12 +63,40 @@ namespace EstacionaTEC.Controllers.DAO
 
         public List<object> getAll()
         {
-            throw new NotImplementedException();
+            List<Object> personas = new List<Object>();
+            SqlConnection conexion = new SqlConnection("Data Source = ProyectoDisenno.mssql.somee.com; Initial Catalog = ProyectoDisenno; Persist Security Info=False;User ID = JohelPF_SQLLogin_1; Password=w7v8k5itwh;Packet Size = 4096; Workstation ID = ProyectoDisenno.mssql.somee.com");
+            conexion.Open();
+            String cadena = "exec verTodasPersonas";
+            SqlCommand comando = new SqlCommand(cadena, conexion);
+            SqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                if (reader.HasRows)
+                {
+                    Persona persona = new Persona(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5), reader.GetBoolean(6), reader.GetBoolean(7), reader.GetBoolean(8), reader.GetBoolean(9), reader.GetBoolean(10), "");
+                    personas.Add(persona);
+                }
+            }
+            return personas;
         }
 
-        public List<object> getBy()
+        public List<object> getBy(int id)
         {
-            throw new NotImplementedException();
+            List<Object> personas = new List<Object>();
+            SqlConnection conexion = new SqlConnection("Data Source = ProyectoDisenno.mssql.somee.com; Initial Catalog = ProyectoDisenno; Persist Security Info=False;User ID = JohelPF_SQLLogin_1; Password=w7v8k5itwh;Packet Size = 4096; Workstation ID = ProyectoDisenno.mssql.somee.com");
+            conexion.Open();
+            String cadena = "exec buscarPersonasPorDepartamento " + id;
+            SqlCommand comando = new SqlCommand(cadena, conexion);
+            SqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                if (reader.HasRows)
+                {
+                    Persona persona = new Persona(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5), reader.GetBoolean(6), reader.GetBoolean(7), reader.GetBoolean(8), reader.GetBoolean(9), reader.GetBoolean(10), "");
+                    personas.Add(persona);
+                }
+            }
+            return personas;
         }
 
 

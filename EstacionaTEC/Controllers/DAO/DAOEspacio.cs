@@ -37,7 +37,7 @@ namespace EstacionaTEC.Controllers.DAO
             throw new NotImplementedException();
         }
 
-        public List<object> getBy()
+        public List<object> getBy(int id)
         {
             throw new NotImplementedException();
         }

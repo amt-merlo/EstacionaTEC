@@ -44,6 +44,18 @@ namespace EstacionaTEC.Controllers
             return persona;
         }
 
+        public List<Object> buscarPersonas(int id)
+        {
+            if (id == -1)
+            {
+                return gestorPersonas.buscarTodaslasPersonas();
+            }
+            else
+            {
+                return gestorPersonas.buscarPorDepartamento(id);
+            }
+        }
+
         public List<Object> mostrarEstacionamiento()
         {
             List<Object> resp = gestorEstacionamiento.mostrarEstacionamientos();

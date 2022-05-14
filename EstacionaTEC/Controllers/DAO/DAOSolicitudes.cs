@@ -11,7 +11,7 @@ namespace EstacionaTEC.Controllers.DAO
         bool create(Object obj);
         object get(int id);
         List<object> getAll();
-        List<object> getBy();
+        List<object> getBy(int id);
         bool update(Object obj);
         bool delete(Object obj);
 
