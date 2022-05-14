@@ -18,7 +18,7 @@ GO
 -- Create date: <14/05/2022>
 -- Description:	<Sp que inserta un espacio al estacionamiento>
 -- =============================================
-CREATE PROCEDURE [dbo].[insertarEspacio](@inIdEstacionamiento INT,
+CREATE OR ALTER PROCEDURE [dbo].[insertarEspacio](@inIdEstacionamiento INT,
 									     @inIdTipo INT,
 										 @inNumeracion VARCHAR(50))
 AS
@@ -30,9 +30,36 @@ BEGIN
 	DECLARE @returnValue int
 
 	BEGIN TRY
-
+		
+		--Inserta el espacio
 		INSERT INTO [dbo].[Espacio] ([idEstacionamiento], [idTipo], [numeracion], [disponible])
 		VALUES (@inIdEstacionamiento, @inIdTipo, @inNumeracion, 1)
+
+		IF (@inIdTipo = 1) -- Espacio Normal
+		BEGIN
+			UPDATE Estacionamiento
+			SET cantidadEspaciosTotal = cantidadEspaciosTotal + 1, 
+			    cantidadEspaciosActual = cantidadEspaciosActual + 1
+			WHERE id = @inIdEstacionamiento
+		END
+
+		ELSE IF (@inIdTipo = 2) -- Espacio vehiculo TEC
+		BEGIN
+			UPDATE Estacionamiento
+			SET cantidadEspaciosTotal = cantidadEspaciosTotal + 1, 
+			    cantidadEspaciosActual = cantidadEspaciosActual + 1,
+				cantidadVehicTEC = cantidadVehicTEC + 1
+			WHERE id = @inIdEstacionamiento
+		END
+
+		ELSE IF (@inIdTipo = 3) -- Espacio servicios especiales
+		BEGIN
+			UPDATE Estacionamiento
+			SET cantidadEspaciosTotal = cantidadEspaciosTotal + 1, 
+			    cantidadEspaciosActual = cantidadEspaciosActual + 1,
+				cantidadVehicEspecial = cantidadVehicEspecial + 1
+			WHERE id = @inIdEstacionamiento
+		END
 
 		SET @returnValue = 1 -- Sin error
 		SELECT @returnValue
