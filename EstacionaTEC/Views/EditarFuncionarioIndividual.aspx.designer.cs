@@ -60,6 +60,15 @@ namespace EstacionaTEC.Views
         protected global::System.Web.UI.WebControls.TextBox txtBoxCorreo;
 
         /// <summary>
+        /// Control lblCorreo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCorreo;
+
+        /// <summary>
         /// Control ddListDepartamento.
         /// </summary>
         /// <remarks>
@@ -105,6 +114,24 @@ namespace EstacionaTEC.Views
         protected global::System.Web.UI.WebControls.RadioButtonList radButtonServiciosEspeciales;
 
         /// <summary>
+        /// Control radButtonAdministrativo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList radButtonAdministrativo;
+
+        /// <summary>
+        /// Control radButtonPlanilla.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList radButtonPlanilla;
+
+        /// <summary>
         /// Control btnGuardar.
         /// </summary>
         /// <remarks>
@@ -121,6 +148,15 @@ namespace EstacionaTEC.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDescartar;
+
+        /// <summary>
+        /// Control lblPrueba.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPrueba;
 
         /// <summary>
         /// Control sqlGetNombre.

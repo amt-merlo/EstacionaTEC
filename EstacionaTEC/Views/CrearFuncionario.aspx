@@ -54,7 +54,7 @@
                 </asp:RadioButtonList>
             </p>
             <p class="text-left">
-                ¿La persona labora para el sector administrativo?</p>
+                ¿El funcionario labora para el sector administrativo?</p>
             <p class="text-left">
                 <asp:RadioButtonList ID="radButtonAdministrativo" runat="server">
                     <asp:ListItem>No</asp:ListItem>
@@ -62,7 +62,7 @@
                 </asp:RadioButtonList>
             </p>
             <p class="text-left">
-                ¿La persona se encuentra en planilla?</p>
+                ¿El funcionario se encuentra en planilla?</p>
             <p class="text-left">
                 <asp:RadioButtonList ID="radButtonPlanilla" runat="server">
                     <asp:ListItem>No</asp:ListItem>

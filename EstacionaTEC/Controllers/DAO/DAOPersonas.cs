@@ -42,7 +42,7 @@ namespace EstacionaTEC.Controllers.DAO
             Persona retorno;
             SqlConnection conexion = new SqlConnection("Data Source = ProyectoDisenno.mssql.somee.com; Initial Catalog = ProyectoDisenno; Persist Security Info=False;User ID = JohelPF_SQLLogin_1; Password=w7v8k5itwh;Packet Size = 4096; Workstation ID = ProyectoDisenno.mssql.somee.com");
             conexion.Open();
-            String cadena = "exec buscarPersona " + id;
+            String cadena = "exec verPersona " + id;
             SqlCommand comando = new SqlCommand(cadena, conexion);
             SqlDataReader reader = comando.ExecuteReader();
             reader.Read();
@@ -78,7 +78,7 @@ namespace EstacionaTEC.Controllers.DAO
             int retorno;
             SqlConnection conexion = new SqlConnection("Data Source = ProyectoDisenno.mssql.somee.com; Initial Catalog = ProyectoDisenno; Persist Security Info=False;User ID = JohelPF_SQLLogin_1; Password=w7v8k5itwh;Packet Size = 4096; Workstation ID = ProyectoDisenno.mssql.somee.com");
             conexion.Open();
-            String cadena = "exec editarPersona " + persona.Identificacion + "," + "'" + persona.NombreCompleto + "'" + "," + persona.NumTelefono + "," + "'" + persona.CorreoInstitucional + "'" + "," + "'" + persona.CorreoAlterno + "'" + "," + persona.Departamento + "," + persona.EsJefatura + "," + persona.EsAdmin + "," + persona.ServiciosEspeciales + "," + persona.EsAdministrativo + "," + persona.EstaEnPlanilla;
+            String cadena = "exec editarPersona " + persona.Identificacion + "," + "'" + persona.NombreCompleto + "'" + "," + persona.NumTelefono + "," + "'" + persona.CorreoInstitucional + "'" + "," + persona.Departamento + "," + persona.EsJefatura + "," + persona.EsAdmin + "," + persona.ServiciosEspeciales + "," + persona.EsAdministrativo + "," + persona.EstaEnPlanilla;
             SqlCommand comando = new SqlCommand(cadena, conexion);
             retorno = (int)comando.ExecuteScalar();
             conexion.Close();

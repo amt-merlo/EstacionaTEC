@@ -24,6 +24,8 @@
             </p>
             <p class="text-left">
                 Correo Institucional:<asp:TextBox ID="txtBoxCorreo" runat="server" ForeColor="Black"></asp:TextBox>
+            &nbsp;
+                <asp:Label ID="lblCorreo" runat="server" Text="" style="color: #CC0000"></asp:Label>
             </p>
             <p class="text-left">
                 Departamento:
@@ -58,9 +60,28 @@
                 </asp:RadioButtonList>
             </p>
             <p class="text-left">
+                ¿El funcionario labora para el sector administrativo?</p>
+            <p class="text-left">
+                <asp:RadioButtonList ID="radButtonAdministrativo" runat="server">
+                    <asp:ListItem>No</asp:ListItem>
+                    <asp:ListItem>Si</asp:ListItem>
+                </asp:RadioButtonList>
+            </p>
+            <p class="text-left">
+                ¿El funcionario se encuentra en planilla?</p>
+            <p class="text-left">
+                <asp:RadioButtonList ID="radButtonPlanilla" runat="server">
+                    <asp:ListItem>No</asp:ListItem>
+                    <asp:ListItem>Si</asp:ListItem>
+                </asp:RadioButtonList>
+            </p>
+            <p class="text-left">
                 <asp:Button ID="btnGuardar" runat="server" Text="Guardar Cambios" OnClick="btnGuardar_Click" />
             &nbsp;&nbsp;
-                <asp:Button ID="btnDescartar" runat="server" Text="Descartar" />
+                <asp:Button ID="btnDescartar" runat="server" Text="Descartar" OnClick="btnDescartar_Click" />
+            </p>
+            <p class="text-left">
+                <asp:Label ID="lblPrueba" runat="server" Text="" style="color: #3333FF"></asp:Label>
             </p>
             <p class="text-center">
                 <asp:SqlDataSource ID="sqlGetNombre" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [nombreCompleto] FROM [Persona] WHERE ([identificacion] = @identificacion)">
