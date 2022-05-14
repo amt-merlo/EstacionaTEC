@@ -31,9 +31,9 @@ namespace EstacionaTEC.Controllers
             return resp;
         }
 
-        public List<Estacionamiento> mostrarEstacionamiento()
+        public List<Object> mostrarEstacionamiento()
         {
-            List<Estacionamiento> resp = gestorEstacionamiento.mostrarEstacionamientos();
+            List<Object> resp = gestorEstacionamiento.mostrarEstacionamientos();
             return resp;
         }
 

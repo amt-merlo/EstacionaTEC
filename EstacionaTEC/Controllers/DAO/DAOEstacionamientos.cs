@@ -17,7 +17,7 @@ namespace EstacionaTEC.Controllers.DAO
             if (obj is EstacionamientoTEC)
             {
                 EstacionamientoTEC estacionamiento = (EstacionamientoTEC)obj;
-                String cadena = "exec insertarEstacionamiento " + estacionamiento.Nombre + estacionamiento.Ubicacion + estacionamiento.Tipo + estacionamiento.CantidadEspaciosTotal + estacionamiento.CantidadEspaciosActual + estacionamiento.CantidadVehicTEC + estacionamiento.CantidadVehicEspecial + estacionamiento.HoraApertura + estacionamiento.HoraCierre + "" + 0 + "";
+                String cadena = "exec insertarEstacionamiento " + "'" + estacionamiento.Nombre + "'" + ","+ "'" + estacionamiento.Ubicacion + "'" + "," + estacionamiento.Tipo + "," + estacionamiento.CantidadEspaciosTotal + "," + estacionamiento.CantidadEspaciosActual + "," + estacionamiento.CantidadVehicTEC + "," + estacionamiento.CantidadVehicEspecial + "," + "'" + estacionamiento.HoraApertura + "'" + "," + "'" + estacionamiento.HoraCierre +"'" + ",''" + "," + 0 + ",''" ;
                 SqlCommand comando = new SqlCommand(cadena, conexion);
                 retorno = (int)comando.ExecuteScalar();
                 conexion.Close();
@@ -26,7 +26,7 @@ namespace EstacionaTEC.Controllers.DAO
             else
             {
                 EstacionamientoSubcontratado estacionamiento = (EstacionamientoSubcontratado)obj;
-                String cadena = "exec insertarEstacionamiento " + estacionamiento.Nombre + estacionamiento.Ubicacion + 3 + estacionamiento.CantidadEspaciosTotal + estacionamiento.CantidadEspaciosActual + 0 + estacionamiento.CantidadVehicEspecial + estacionamiento.HoraApertura + estacionamiento.HoraCierre + estacionamiento.NombreContrato + estacionamiento.NumeroTelefonoContacto + estacionamiento.Contrato;
+                String cadena = "exec insertarEstacionamiento " + "'" + estacionamiento.Nombre + "'" + ","  +"'" + estacionamiento.Ubicacion + "'" + "," + 3 +","+ estacionamiento.CantidadEspaciosTotal + "," + estacionamiento.CantidadEspaciosActual + "," + 0 + "," + estacionamiento.CantidadVehicEspecial + "," + "'" + estacionamiento.HoraApertura  + "'" + "," + "'" + estacionamiento.HoraCierre + "'" + "," + "'" + estacionamiento.NombreContrato + "'" + "," + estacionamiento.NumeroTelefonoContacto + "," + "'" + estacionamiento.Contrato + "'";
                 SqlCommand comando = new SqlCommand(cadena, conexion);
                 retorno = (int)comando.ExecuteScalar();
                 conexion.Close();

@@ -25,6 +25,8 @@
             </p>
             <p class="text-left">Correo Institucional:
                 <asp:TextBox ID="txtBoxCorreo" runat="server" Width="154px" ForeColor="Black" Height="23px"></asp:TextBox>
+            &nbsp;
+                <asp:Label ID="lblCorreo" runat="server" Text="" style="color: #CC0000"></asp:Label>
             </p>
             <p class="text-left">Departamento:
                 <asp:DropDownList ID="ddListDepartamento" runat="server" Height="28px" Width="193px" DataSourceID="sqlGetDepartamentos" DataTextField="tipo" DataValueField="tipo" ForeColor="Black">
