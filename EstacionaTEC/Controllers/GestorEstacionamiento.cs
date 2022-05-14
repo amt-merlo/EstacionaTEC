@@ -1,4 +1,5 @@
-﻿using EstacionaTEC.Models;
+﻿using EstacionaTEC.Controllers.DAO;
+using EstacionaTEC.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,11 @@ namespace EstacionaTEC.Controllers
     {
         private readonly CreadorTEC creadorTEC = new CreadorTEC();
         private readonly CreadorSubcontradado creadorSUB = new CreadorSubcontradado();
-        public List<Estacionamiento> mostrarEstacionamientos()
+        private readonly DAOEstacionamientos dao = new DAOEstacionamientos();
+        public List<Object> mostrarEstacionamientos()
         {
-            List<Estacionamiento> estacionamientos = new List<Estacionamiento>();
+            List<Object> estacionamientos = new List<Object>();
+            estacionamientos = dao.getAll();
             return estacionamientos;
         }
         public bool crearEstacionamiento(DTOEstacionamientos DTOEst)
@@ -32,7 +35,7 @@ namespace EstacionaTEC.Controllers
                 default:
                     throw new Exception("No existe el tipo de parqueo");
             }
-            return true;
+            return dao.create(estacionamiento);
         }
     }
 }
