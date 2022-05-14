@@ -60,13 +60,22 @@ namespace EstacionaTEC.Views
         protected global::System.Web.UI.WebControls.TextBox txtBoxCorreo;
 
         /// <summary>
-        /// Control txtBoxDepartamento.
+        /// Control ddListDepartamento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBoxDepartamento;
+        protected global::System.Web.UI.WebControls.DropDownList ddListDepartamento;
+
+        /// <summary>
+        /// Control sqlDepartamentos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlDepartamentos;
 
         /// <summary>
         /// Control radButtonJefatura.
