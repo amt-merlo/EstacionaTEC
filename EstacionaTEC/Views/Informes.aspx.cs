@@ -68,5 +68,24 @@ namespace EstacionaTEC.Views
         {
             Response.Redirect("VerUnFuncionario.aspx");
         }
+
+        protected void btnMenu_Click(object sender, EventArgs e)
+        {
+            int ID = int.Parse(Session["ID"].ToString());
+            Controller controller = Controller.getInstance();
+            Persona persona = (Persona)controller.getPersona(ID);
+
+            bool administrador = persona.EsAdmin;
+
+            if (administrador)
+            {
+                Response.Redirect("AdministradorLanding.aspx");
+            }
+            else
+            {
+                Response.Redirect("FuncionarioLanding.aspx");
+            }
+            
+        }
     }
 }

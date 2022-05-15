@@ -19,5 +19,10 @@ namespace EstacionaTEC.Views
             string parametro = txtIdentificacion.Text;
             lblId.Text = parametro;
         }
+
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Informes.aspx");
+        }
     }
 }

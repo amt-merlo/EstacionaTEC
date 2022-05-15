@@ -120,6 +120,8 @@
                 </SelectParameters>
             </asp:SqlDataSource>
             <br />
+            <asp:Button ID="btnVolver" runat="server" Text="Volver" OnClick="btnVolver_Click" />
+            <br />
             <p class="text-center">
                 &nbsp;</p>
         </div>   

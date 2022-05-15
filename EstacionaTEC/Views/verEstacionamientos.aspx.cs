@@ -24,5 +24,10 @@ namespace EstacionaTEC.Views
             nombre = (String)groupsTable.Rows[0][0];
             lblNombre.Text = nombre;
         }
+
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Informes.aspx");
+        }
     }
 }

@@ -68,6 +68,9 @@
                     </SelectParameters>
                 </asp:SqlDataSource>
             </p>
+            <p>
+                <asp:Button ID="btnVolver" runat="server" Text="Volver" OnClick="btnVolver_Click" />
+            </p>
             <p class="text-center">
                 &nbsp;</p>
         </div>

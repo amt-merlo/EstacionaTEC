@@ -51,6 +51,15 @@ namespace EstacionaTEC.Views
         protected global::System.Web.UI.WebControls.Button btnEstadisticasFranjasHorarias;
 
         /// <summary>
+        /// Control btnVerUnFuncionario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnVerUnFuncionario;
+
+        /// <summary>
         /// Control btnModificarPlanilla.
         /// </summary>
         /// <remarks>
@@ -60,13 +69,13 @@ namespace EstacionaTEC.Views
         protected global::System.Web.UI.WebControls.Button btnModificarPlanilla;
 
         /// <summary>
-        /// Control btnVerUnFuncionario.
+        /// Control btnMenu.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnVerUnFuncionario;
+        protected global::System.Web.UI.WebControls.Button btnMenu;
 
         /// <summary>
         /// Control sqlGetNombre.
