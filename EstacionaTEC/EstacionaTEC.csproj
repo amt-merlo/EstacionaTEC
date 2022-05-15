@@ -178,12 +178,18 @@
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\AdministradorLanding.aspx" />
     <Content Include="Views\AgregarEspacio.aspx" />
+    <Content Include="Views\CrearEspacioIndividual.aspx" />
     <Content Include="Views\CrearEstacionamiento.aspx" />
     <Content Include="Views\CrearFuncionario.aspx" />
     <Content Include="Views\EditarFuncionarioIndividual.aspx" />
     <Content Include="Views\EditarFuncionarios.aspx" />
+    <Content Include="Views\EditarInfoPersonal.aspx" />
     <Content Include="Views\FuncionarioLanding.aspx" />
+    <Content Include="Views\GestionarPlanilla.aspx" />
     <Content Include="Views\Informes.aspx" />
+    <Content Include="Views\verEstacionamientos.aspx" />
+    <Content Include="Views\verFuncionarios.aspx" />
+    <Content Include="Views\verUnFuncionario.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
@@ -207,16 +213,19 @@
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\Controller.cs" />
+    <Compile Include="Controllers\DAO\DAOEspacio.cs" />
     <Compile Include="Controllers\DAO\DAOEstacionamientos.cs" />
     <Compile Include="Controllers\DAO\DAOFranjas.cs" />
     <Compile Include="Controllers\DAO\DAOPersonas.cs" />
     <Compile Include="Controllers\DAO\DAOReservas.cs" />
     <Compile Include="Controllers\DAO\DAOSolicitudes.cs" />
     <Compile Include="Controllers\DAO\DAOVehiculos.cs" />
+    <Compile Include="Controllers\DTOEspacio.cs" />
     <Compile Include="Controllers\DTOEstacionamientos.cs" />
     <Compile Include="Controllers\DTOFranja.cs" />
     <Compile Include="Controllers\DTOPersonas.cs" />
     <Compile Include="Controllers\DTOVehiculos.cs" />
+    <Compile Include="Controllers\GestorEspacio.cs" />
     <Compile Include="Controllers\GestorEstacionamiento.cs" />
     <Compile Include="Controllers\GestorFranjas.cs" />
     <Compile Include="Controllers\GestorPersonas.cs" />
@@ -281,6 +290,13 @@
     <Compile Include="Views\AgregarEspacio.aspx.designer.cs">
       <DependentUpon>AgregarEspacio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\CrearEspacioIndividual.aspx.cs">
+      <DependentUpon>CrearEspacioIndividual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CrearEspacioIndividual.aspx.designer.cs">
+      <DependentUpon>CrearEspacioIndividual.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\CrearEstacionamiento.aspx.cs">
       <DependentUpon>CrearEstacionamiento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -309,6 +325,13 @@
     <Compile Include="Views\EditarFuncionarios.aspx.designer.cs">
       <DependentUpon>EditarFuncionarios.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\EditarInfoPersonal.aspx.cs">
+      <DependentUpon>EditarInfoPersonal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\EditarInfoPersonal.aspx.designer.cs">
+      <DependentUpon>EditarInfoPersonal.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\FuncionarioLanding.aspx.cs">
       <DependentUpon>FuncionarioLanding.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -316,12 +339,40 @@
     <Compile Include="Views\FuncionarioLanding.aspx.designer.cs">
       <DependentUpon>FuncionarioLanding.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\GestionarPlanilla.aspx.cs">
+      <DependentUpon>GestionarPlanilla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\GestionarPlanilla.aspx.designer.cs">
+      <DependentUpon>GestionarPlanilla.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Informes.aspx.cs">
       <DependentUpon>Informes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Informes.aspx.designer.cs">
       <DependentUpon>Informes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\verEstacionamientos.aspx.cs">
+      <DependentUpon>verEstacionamientos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\verEstacionamientos.aspx.designer.cs">
+      <DependentUpon>verEstacionamientos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\verFuncionarios.aspx.cs">
+      <DependentUpon>verFuncionarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\verFuncionarios.aspx.designer.cs">
+      <DependentUpon>verFuncionarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\verUnFuncionario.aspx.cs">
+      <DependentUpon>verUnFuncionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\verUnFuncionario.aspx.designer.cs">
+      <DependentUpon>verUnFuncionario.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
