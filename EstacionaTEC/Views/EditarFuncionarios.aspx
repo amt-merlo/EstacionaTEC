@@ -33,6 +33,9 @@
                 <asp:SqlDataSource ID="sqlGetPersonas" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [identificacion] as Identificación, [nombreCompleto] as Nombre, [celular] as Celular, [correoInstitucional] as Correo, Departamento.[tipo] as Departamento FROM [Persona] INNER JOIN Departamento ON Departamento.id = Persona.idDepartamento"></asp:SqlDataSource>
             </p>
             <p class="text-center">
+                <asp:Button ID="btnMenu" runat="server" Text="Menu Principal" OnClick="btnMenu_Click" />
+            </p>
+            <p class="text-center">
                 <asp:SqlDataSource ID="sqlGetNombre" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [nombreCompleto] FROM [Persona] WHERE ([identificacion] = @identificacion)">
                     <SelectParameters>
                         <asp:SessionParameter Name="identificacion" SessionField="ID" Type="Int32" />

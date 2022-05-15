@@ -114,6 +114,8 @@
                 <SortedDescendingCellStyle BackColor="#E9EBEF" />
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
+            <br />
+            <asp:Button ID="btnMenu" runat="server" Text="Menú Principal" OnClick="btnMenu_Click" />
             <asp:SqlDataSource ID="sqlGetEstacionamientosSubcontratados" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [id] as ID, [nombre] as Nombre, [ubicacion] as Ubicación, [cantidadEspaciosTotal] as Espacios, [cantidadEspaciosActual] as Disponibilidad, [horaApertura] as Apertura, [horaCierre] as Cierre FROM [Estacionamiento] WHERE ([idTipo] = @idTipo)">
                 <SelectParameters>
                     <asp:Parameter DefaultValue="3" Name="idTipo" Type="Int32" />

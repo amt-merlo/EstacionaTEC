@@ -99,7 +99,8 @@ WHERE ([idEstacionamiento] = @idEstacionamiento) ">
                 </asp:SqlDataSource>
             </p>
             <p class="text-center" style="text-align: center">
-                &nbsp;</p>
+                <asp:Button ID="btnVolver" runat="server" Text="Volver" OnClick="btnVolver_Click" />
+            </p>
             <p class="text-center">
                 <asp:SqlDataSource ID="sqlGetNombre" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [nombreCompleto] FROM [Persona] WHERE ([identificacion] = @identificacion)">
                     <SelectParameters>

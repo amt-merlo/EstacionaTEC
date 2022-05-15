@@ -31,5 +31,10 @@ namespace EstacionaTEC.Views
             Session["FuncionarioEditar"] = IDFuncionario;
             Response.Redirect("EditarFuncionarioIndividual.aspx");
         }
+
+        protected void btnMenu_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdministradorLanding.aspx");
+        }
     }
 }

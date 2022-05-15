@@ -19,7 +19,10 @@
                 <asp:Button ID="btnEstadisticasFranjasHorarias" runat="server" Text="Estadísticas de Franjas Horarias" OnClick="btnEstadisticasFranjasHorarias_Click" Width="245px" />
             </p>
             <p class="text-center">
-                &nbsp;<asp:Button ID="btnVerFuncionario" runat="server" OnClick="btnVerFuncionario_Click" Text="Informe de un funcionario" Width="245px" />
+                &nbsp;<asp:Button ID="btnModificarPlanilla" runat="server" Text="Gestionar Planilla" Width="245px" OnClick="btnModificarPlanilla_Click" />
+            </p>
+            <p class="text-center">
+                <asp:Button ID="btnVerUnFuncionario" runat="server" Text="Ver un Funcionario" OnClick="btnVerUnFuncionario_Click" Width="247px" />
             </p>
             <p class="text-center">
                 &nbsp;</p>

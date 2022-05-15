@@ -113,5 +113,10 @@ namespace EstacionaTEC.Views
                 lblMensajeFranja.Text = "Algo salió mal, inténtelo de nuevo más tarde";
             }
         }
+
+        protected void btnMenu_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FuncionarioLanding.aspx");
+        }
     }
 }

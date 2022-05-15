@@ -137,8 +137,7 @@ input[type="submit"] {
   cursor: pointer;
     font-weight: 700;
     background-color: #6666FF;
-    height: 26px;
-}
+    }
 button[disabled],
 html input[disabled] {
   cursor: default;

@@ -57,5 +57,10 @@ namespace EstacionaTEC.Views
             Session["Estacionamiento"] = IDEstacionamiento;
             Response.Redirect("CrearEspacioIndividual.aspx");
         }
+
+        protected void btnMenu_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdministradorLanding.aspx");
+        }
     }
 }

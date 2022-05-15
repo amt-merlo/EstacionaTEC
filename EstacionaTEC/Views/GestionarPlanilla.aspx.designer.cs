@@ -11,8 +11,26 @@ namespace EstacionaTEC.Views
 {
 
 
-    public partial class Informes
+    public partial class GestionarPlanilla
     {
+
+        /// <summary>
+        /// Control sqlGetNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlGetNombre;
+
+        /// <summary>
+        /// Control lblIdentificacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblIdentificacion;
 
         /// <summary>
         /// Control lblNombre.
@@ -24,57 +42,57 @@ namespace EstacionaTEC.Views
         protected global::System.Web.UI.WebControls.Label lblNombre;
 
         /// <summary>
-        /// Control btnInfoEstacionamientos.
+        /// Control lblPlanilla.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnInfoEstacionamientos;
+        protected global::System.Web.UI.WebControls.Label lblPlanilla;
 
         /// <summary>
-        /// Control btnInfoFuncionarios.
+        /// Control radButtonPlanilla.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnInfoFuncionarios;
+        protected global::System.Web.UI.WebControls.RadioButtonList radButtonPlanilla;
 
         /// <summary>
-        /// Control btnEstadisticasFranjasHorarias.
+        /// Control btnAceptar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEstadisticasFranjasHorarias;
+        protected global::System.Web.UI.WebControls.Button btnAceptar;
 
         /// <summary>
-        /// Control btnModificarPlanilla.
+        /// Control lblMensaje.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnModificarPlanilla;
+        protected global::System.Web.UI.WebControls.Label lblMensaje;
 
         /// <summary>
-        /// Control btnVerUnFuncionario.
+        /// Control GridView1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnVerUnFuncionario;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
-        /// Control sqlGetNombre.
+        /// Control sqlGetPersonas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sqlGetNombre;
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlGetPersonas;
     }
 }

@@ -10,7 +10,7 @@
                 <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
             </h4>
             <p class="text-center">
-                <asp:Button ID="btnReservar" runat="server" Text="Reservar" OnClick="btnReservar_Click" Width="240px" />
+                <asp:Button ID="btnReservar" runat="server" Text="Reservar"  Width="240px" />
             </p>
             <p class="text-center">
                 <asp:Button ID="btnInformes" runat="server" Text="Informes y Estadísticas" OnClick="btnInformes_Click" Width="240px" />

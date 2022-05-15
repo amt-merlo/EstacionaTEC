@@ -126,5 +126,10 @@ namespace EstacionaTEC.Views
 
             }
         }
+
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdministradorLanding.aspx");
+        }
     }
 }

@@ -194,6 +194,9 @@
             &nbsp;<asp:Label ID="lblMensajeFranja" runat="server" Text="" style="color: #CC0000"></asp:Label>
             </p>
             <p class="text-center">
+                <asp:Button ID="btnMenu" runat="server" Text="Menu Principal" Width="168px" OnClick="btnMenu_Click" />
+            </p>
+            <p class="text-center">
                 &nbsp;</p>
             
             <p class="text-center">

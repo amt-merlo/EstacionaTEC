@@ -14,7 +14,7 @@ namespace EstacionaTEC.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int ID = int.Parse(Session["ID"].ToString());
+            
             //Consulta del nombre del usuario
             DataView dv = (DataView)sqlGetNombre.Select(DataSourceSelectArguments.Empty);
             //Se convierte el resultado en una tabla
@@ -26,10 +26,6 @@ namespace EstacionaTEC.Views
             //Se asignan los valores en las variables
             nombre = (String)groupsTable.Rows[0][0];
             lblNombre.Text = nombre;
-
-            Controller controller = Controller.getInstance();
-            Persona persona = (Persona)controller.getPersona(ID);
-
         }
         protected void btnInformes_Click(object sender, EventArgs e)
         {

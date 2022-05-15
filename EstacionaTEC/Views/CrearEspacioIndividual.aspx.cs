@@ -107,5 +107,10 @@ namespace EstacionaTEC.Views
                 lblNumeracion.Text = "Ingrese la numeración: ";
             }
         }
+
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AgregarEspacio.aspx");
+        }
     }
 }
