@@ -21,7 +21,7 @@ namespace EstacionaTEC.Views
 
         protected void btnInfoFuncionarios_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("verFuncionarios.aspx");
         }
 
         protected void btnEstadisticasFranjasHorarias_Click(object sender, EventArgs e)
