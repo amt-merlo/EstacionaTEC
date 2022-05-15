@@ -11,7 +11,7 @@ namespace EstacionaTEC.Views
 {
 
 
-    public partial class verFuncionarios
+    public partial class verUnFuncionario
     {
 
         /// <summary>
@@ -33,40 +33,22 @@ namespace EstacionaTEC.Views
         protected global::System.Web.UI.WebControls.SqlDataSource sqlGetNombre;
 
         /// <summary>
-        /// Control radButtonFiltro.
+        /// Control txtIdentificacion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList radButtonFiltro;
+        protected global::System.Web.UI.WebControls.TextBox txtIdentificacion;
 
         /// <summary>
-        /// Control lblFiltro.
+        /// Control btnBuscar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFiltro;
-
-        /// <summary>
-        /// Control ddListDepartamento.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddListDepartamento;
-
-        /// <summary>
-        /// Control sqlGetDepartamentos.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sqlGetDepartamentos;
+        protected global::System.Web.UI.WebControls.Button btnBuscar;
 
         /// <summary>
         /// Control lblId.

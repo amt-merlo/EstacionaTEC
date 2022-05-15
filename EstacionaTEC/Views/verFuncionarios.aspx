@@ -32,9 +32,11 @@
             </p>
             <p class="text-center" style="text-align: center">
                 &nbsp;</p>
-            <h2 style="text-align: center">Personas</h2>
+            <h2 style="text-align: center">
+                <asp:Label ID="lblId" runat="server" Text="Label"></asp:Label>
+                Personas</h2>
             <p>
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Identificación" DataSourceID="sqlGetPersonas" ForeColor="#333333" GridLines="None" ShowFooter="True" ShowHeaderWhenEmpty="True" Width="652px" >
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Identificación" DataSourceID="sqlGetPersonas" ForeColor="#333333" GridLines="None" ShowFooter="True" ShowHeaderWhenEmpty="True" Width="1091px" >
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:BoundField DataField="Identificación" HeaderText="Identificación" ReadOnly="True" SortExpression="Identificación" />
@@ -62,7 +64,7 @@
                 </asp:GridView>
                 <asp:SqlDataSource ID="sqlGetPersonas" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="buscarPersonasPorDepartamento" SelectCommandType="StoredProcedure">
                     <SelectParameters>
-                        <asp:ControlParameter ControlID="ddListDepartamento" DefaultValue="-1" Name="inIdDepartamento" PropertyName="SelectedValue" Type="Int32" />
+                        <asp:ControlParameter ControlID="lblId" DefaultValue="-1" Name="inIdDepartamento" PropertyName="Text" Type="Int32" />
                     </SelectParameters>
                 </asp:SqlDataSource>
             </p>

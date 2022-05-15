@@ -12,20 +12,33 @@ namespace EstacionaTEC.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ddListDepartamento.Visible = false;
-            lblFiltro.Text = "";
 
-            //Consulta del nombre del usuario
-            DataView dv = (DataView)sqlGetNombre.Select(DataSourceSelectArguments.Empty);
-            //Se convierte el resultado en una tabla
-            DataTable groupsTable = dv.ToTable();
+            lblId.Visible = false;
 
-            //Variables a usar
-            String nombre = "";
+            if (IsPostBack)
+            {
+                ddListDepartamento.Visible = true;
+                lblFiltro.Text = "¿Desea filtrar las personas por departamento?";
+            }
+            else {
+                
+                ddListDepartamento.Visible = false;
+                lblFiltro.Text = "";
+                lblId.Text = "";
 
-            //Se asignan los valores en las variables
-            nombre = (String)groupsTable.Rows[0][0];
-            lblNombre.Text = nombre;
+                //Consulta del nombre del usuario
+                DataView dv = (DataView)sqlGetNombre.Select(DataSourceSelectArguments.Empty);
+                //Se convierte el resultado en una tabla
+                DataTable groupsTable = dv.ToTable();
+
+                //Variables a usar
+                String nombre = "";
+
+                //Se asignan los valores en las variables
+                nombre = (String)groupsTable.Rows[0][0];
+                lblNombre.Text = nombre;
+            }
+
         }
 
         protected void radButtonFiltro_SelectedIndexChanged(object sender, EventArgs e)
@@ -40,18 +53,19 @@ namespace EstacionaTEC.Views
             else {
                 ddListDepartamento.Visible = false;
                 lblFiltro.Text = "";
+                int index2 = -1;
+                lblId.Text = index2.ToString();
             }
         }
 
         protected void ddListDepartamento_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*
-            int index = ddListDepartamento.SelectedIndex;
+            int index = ddListDepartamento.SelectedIndex + 1;
             string parametro = index.ToString();
-            DataSource source = sqlGetPersonas.SelectParameters.Add("idDepartamento", parametro);
-            GridView1.DataSource = 
+            lblId.Text = parametro;
+            //GridView1.DataSource = sqlGetPersonas.SelectParameters.Add("idDepartamento", parametro);
 
-            */
+
         }
 
         
