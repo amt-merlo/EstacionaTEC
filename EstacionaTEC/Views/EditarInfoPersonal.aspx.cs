@@ -14,30 +14,35 @@ namespace EstacionaTEC.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Consulta del nombre del usuario
-            DataView dv = (DataView)sqlGetNombre.Select(DataSourceSelectArguments.Empty);
-            //Se convierte el resultado en una tabla
-            DataTable groupsTable = dv.ToTable();
-
-            //Variables a usar
-            String nombre = "";
-
-            //Se asignan los valores en las variables
-            nombre = (String)groupsTable.Rows[0][0];
-            lblNombre.Text = nombre;
-
-            //Para los datos del funcionario a editar>>>
-            int id = int.Parse(Session["ID"].ToString());
-            
-            //Trae los datos de la persona por medio del DAO y el controller
-
-            Controller controller = Controller.getInstance();
-            Persona persona = (Persona)controller.getPersona(id);
-
             if(IsPostBack)
             {
-                txtBoxCorreoAlterno.Text = persona.CorreoAlterno;
+                //Consulta del nombre del usuario
+                DataView dv = (DataView)sqlGetNombre.Select(DataSourceSelectArguments.Empty);
+                //Se convierte el resultado en una tabla
+                DataTable groupsTable = dv.ToTable();
+
+                //Variables a usar
+                String nombre = "";
+
+                //Se asignan los valores en las variables
+                nombre = (String)groupsTable.Rows[0][0];
+                lblNombre.Text = nombre;
+
+                //Para los datos del funcionario a editar>>>
+                int id = int.Parse(Session["ID"].ToString());
+
+                //Trae los datos de la persona por medio del DAO y el controller
+
+                Controller controller = Controller.getInstance();
+                Persona persona = (Persona)controller.getPersona(id);
             }
+            else
+            {
+                //DO nothing
+            }
+            
+
+            
 
             
         }
@@ -60,7 +65,11 @@ namespace EstacionaTEC.Views
             bool respuesta = controller.actualizarPersona(nuevaPersona); //Se manda a actualizar con el DAO
             if (respuesta)
             {
-                lblMensajeCorreo.Text = "Funciona";
+                lblMensajeCorreo.Text = "¡Correo agregado exitosamente!";
+            }
+            else
+            {
+                lblMensajeCorreo.Text = ("Algo salió mal, inténtelo más tarde");
             }
 
         }
