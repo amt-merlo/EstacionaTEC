@@ -16,7 +16,7 @@
             </asp:SqlDataSource>
             <p class="text-center" style="text-align: center">
                 &nbsp;</p>
-            ¿Desea filtrar los funcionarios por departamento?<asp:RadioButtonList ID="radButtonFiltro" runat="server" OnSelectedIndexChanged="radButtonFiltro_SelectedIndexChanged">
+            ¿Desea filtrar los funcionarios por departamento?<asp:RadioButtonList ID="radButtonFiltro" runat="server" OnSelectedIndexChanged="radButtonFiltro_SelectedIndexChanged" AutoPostBack="True">
                 <asp:ListItem>No</asp:ListItem>
                 <asp:ListItem>Si</asp:ListItem>
                 </asp:RadioButtonList>
@@ -26,7 +26,7 @@
                 <asp:Label ID="lblFiltro" runat="server" Text=""></asp:Label>
             </p>
             <p class="text-center" style="text-align: center">
-                <asp:DropDownList ID="ddListDepartamento" runat="server" DataSourceID="sqlGetDepartamentos" DataTextField="tipo" DataValueField="tipo" ForeColor="Black" Height="27px" Width="140px" OnSelectedIndexChanged="ddListDepartamento_SelectedIndexChanged">
+                <asp:DropDownList ID="ddListDepartamento" runat="server" DataSourceID="sqlGetDepartamentos" DataTextField="tipo" DataValueField="tipo" ForeColor="Black" Height="27px" Width="140px" OnSelectedIndexChanged="ddListDepartamento_SelectedIndexChanged" AutoPostBack="True">
                 </asp:DropDownList>
                 <asp:SqlDataSource ID="sqlGetDepartamentos" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [tipo] FROM [Departamento]"></asp:SqlDataSource>
             </p>
@@ -34,12 +34,20 @@
                 &nbsp;</p>
             <h2 style="text-align: center">Personas</h2>
             <p>
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" DataSourceID="sqlGetEspacios" ForeColor="#333333" GridLines="None" ShowFooter="True" ShowHeaderWhenEmpty="True" Width="652px">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Identificación" DataSourceID="sqlGetPersonas" ForeColor="#333333" GridLines="None" ShowFooter="True" ShowHeaderWhenEmpty="True" Width="652px" >
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
-                        <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
-                        <asp:BoundField DataField="Numeración" HeaderText="Numeración" SortExpression="Numeración" />
-                        <asp:BoundField DataField="Tipo" HeaderText="Tipo" SortExpression="Tipo" />
+                        <asp:BoundField DataField="Identificación" HeaderText="Identificación" ReadOnly="True" SortExpression="Identificación" />
+                        <asp:BoundField DataField="Nombre completo" HeaderText="Nombre completo" SortExpression="Nombre completo" />
+                        <asp:BoundField DataField="Teléfono" HeaderText="Teléfono" SortExpression="Teléfono" />
+                        <asp:BoundField DataField="Correo institucional" HeaderText="Correo institucional" SortExpression="Correo institucional" />
+                        <asp:BoundField DataField="Correo alterno" HeaderText="Correo alterno" SortExpression="Correo alterno" />
+                        <asp:BoundField DataField="Departamento" HeaderText="Departamento" SortExpression="Departamento" />
+                        <asp:CheckBoxField DataField="Es Jefatura" HeaderText="Es Jefatura" SortExpression="Es Jefatura" />
+                        <asp:CheckBoxField DataField="Es Admin" HeaderText="Es Admin" SortExpression="Es Admin" />
+                        <asp:CheckBoxField DataField="Tiene servicios especiales" HeaderText="Tiene servicios especiales" SortExpression="Tiene servicios especiales" />
+                        <asp:CheckBoxField DataField="Es administrativo" HeaderText="Es administrativo" SortExpression="Es administrativo" />
+                        <asp:CheckBoxField DataField="Está en planilla" HeaderText="Está en planilla" SortExpression="Está en planilla" />
                     </Columns>
                     <EditRowStyle BackColor="#2461BF" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

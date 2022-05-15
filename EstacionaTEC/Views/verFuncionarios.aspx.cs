@@ -45,10 +45,15 @@ namespace EstacionaTEC.Views
 
         protected void ddListDepartamento_SelectedIndexChanged(object sender, EventArgs e)
         {
+            /*
+            int index = ddListDepartamento.SelectedIndex;
+            string parametro = index.ToString();
+            DataSource source = sqlGetPersonas.SelectParameters.Add("idDepartamento", parametro);
+            GridView1.DataSource = 
 
-            //int index = ddListDepartamento.SelectedIndex;
-            //string parametro = index.ToString();
-
+            */
         }
+
+        
     }
 }

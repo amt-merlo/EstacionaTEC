@@ -85,5 +85,33 @@ namespace EstacionaTEC.Views
             controller.crearVehiculo(vehiculo); //Se envia a la DAO por medio del controller
             Response.Redirect("EditarInfoPersonal.aspx");
         }
+
+        protected void btnRegistrarFranja_Click(object sender, EventArgs e)
+        {
+            int dia = ddListDia.SelectedIndex + 1;
+            String horaInicio = ddListHoraInicio.SelectedValue;
+            String minutosInicio = ddListMinutosInicio.SelectedValue;
+            String horaFin = ddListHoraFin.SelectedValue;
+            String minutosFin = ddListMinutosFin.SelectedValue;
+
+            int ID = int.Parse(Session["ID"].ToString());
+
+            //Se conforman los timeSpan
+            TimeSpan inicio = TimeSpan.Parse( horaInicio + ":" + minutosInicio);
+            TimeSpan fin = TimeSpan.Parse(horaFin + ":" + minutosFin);
+
+            DTOFranja franja = new DTOFranja(dia, ID, inicio, fin);
+            Controller controller = Controller.getInstance();
+            bool respuesta = controller.crearFranja(franja); //Se manda a registrar con el DAO
+
+            if (respuesta)
+            {
+                Response.Redirect("EditarInfoPersonal.aspx");
+            }
+            else
+            {
+                lblMensajeFranja.Text = "Algo salió mal, inténtelo de nuevo más tarde";
+            }
+        }
     }
 }

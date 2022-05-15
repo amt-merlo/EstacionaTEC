@@ -27,7 +27,7 @@ namespace EstacionaTEC.Controllers
             this.nombreCompleto = nombreCompleto ?? throw new ArgumentNullException(nameof(nombreCompleto));
             this.numTelefono = numTelefono;
             this.correoInstitucional = correoInstitucional ?? throw new ArgumentNullException(nameof(correoInstitucional));
-            this.correoAlterno = correoAlterno ?? throw new ArgumentNullException(nameof(correoAlterno));
+            this.correoAlterno = correoAlterno;
             this.departamento = departamento;
             this.esJefatura = esJefatura;
             this.esAdmin = esAdmin;
