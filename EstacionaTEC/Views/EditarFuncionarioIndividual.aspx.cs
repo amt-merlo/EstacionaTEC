@@ -129,6 +129,7 @@ namespace EstacionaTEC.Views
             bool serviciosEspeciales = Convert.ToBoolean(radButtonServiciosEspeciales.SelectedIndex);
             bool esAdministrativo = Convert.ToBoolean(radButtonAdministrativo.SelectedIndex);
             bool planilla = Convert.ToBoolean(radButtonPlanilla.SelectedIndex);
+            String correoAlterno = null;
 
             //Se valida el correo institucional 
             bool validarCorreo = IsValidEmail(correo);
@@ -140,7 +141,7 @@ namespace EstacionaTEC.Views
                 {
                     lblCorreo.Text = correo;
                     //Se crea el objeto DTO
-                    DTOPersonas persona = new DTOPersonas(id, nombre, numeroTelefono, correo, "", departamento, esJefatura, esAdmin, serviciosEspeciales, esAdministrativo, planilla, "");
+                    DTOPersonas persona = new DTOPersonas(id, nombre, numeroTelefono, correo, correoAlterno, departamento, esJefatura, esAdmin, serviciosEspeciales, esAdministrativo, planilla, "");
 
 
                     //Se envia el objeto al gestor por medio del controller

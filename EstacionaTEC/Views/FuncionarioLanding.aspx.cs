@@ -36,7 +36,7 @@ namespace EstacionaTEC.Views
 
         protected void btnModificarDatos_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("EditarInfoPersonal.aspx");
         }
     }
 }

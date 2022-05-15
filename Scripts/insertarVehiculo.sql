@@ -32,8 +32,9 @@ BEGIN
 	BEGIN
 		INSERT INTO [dbo].[Vehiculo] ([idPersona], 
 									  [placa],
-									  [visible])
-		VALUES (@inIdPersona, @inPlaca, 1)
+									  [visible], 
+									  [esOficial])
+		VALUES (@inIdPersona, @inPlaca, 1, 0)
 
 		SET @returnValue = 1
 		SELECT @returnValue -- Sin error
