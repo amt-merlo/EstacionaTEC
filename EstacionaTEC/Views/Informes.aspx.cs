@@ -16,7 +16,7 @@ namespace EstacionaTEC.Views
 
         protected void btnInfoEstacionamientos_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("verEstacionamientos.aspx");
         }
 
         protected void btnInfoFuncionarios_Click(object sender, EventArgs e)

@@ -22,7 +22,7 @@
                 <asp:Button ID="btnEditarUsuario" runat="server" Text="Editar Funcionarios" Height="37px" Width="231px" OnClick="btnEditarUsuario_Click" />
             </p>
             <p class="text-center">
-                <asp:Button ID="btnInformes" runat="server" Text="Informes y Estadísticas" Height="35px" Width="233px" />
+                <asp:Button ID="btnInformes" runat="server" Text="Informes y Estadísticas" Height="35px" Width="233px" OnClick="btnInformes_Click" />
             </p>
             <p class="text-center">
                 <asp:SqlDataSource ID="sqlGetNombre" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [nombreCompleto] FROM [Persona] WHERE ([identificacion] = @identificacion)">
