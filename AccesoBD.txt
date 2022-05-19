@@ -1,0 +1,4 @@
+Para acceder a la base de datos utilice las siguientes credenciales
+ProyectoDisenno.mssql.somee.com
+JohelPF_SQLLogin_1
+w7v8k5itwh
