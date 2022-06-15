@@ -92,7 +92,6 @@ C:\Users\amtme\Documents\GitHub\EstacionaTEC\EstacionaTEC\obj\Debug\EstacionaTEC
 C:\Users\amtme\Documents\GitHub\EstacionaTEC\EstacionaTEC\obj\Debug\EstacionaTEC.csproj.CopyComplete
 C:\Users\amtme\Documents\GitHub\EstacionaTEC\EstacionaTEC\obj\Debug\EstacionaTEC.dll
 C:\Users\amtme\Documents\GitHub\EstacionaTEC\EstacionaTEC\obj\Debug\EstacionaTEC.pdb
-X:\CinepolisApp\EstacionaTEC\EstacionaTEC\obj\Debug\EstacionaTEC.csprojAssemblyReference.cache
 X:\CinepolisApp\EstacionaTEC\EstacionaTEC\obj\Debug\EstacionaTEC.csproj.CoreCompileInputs.cache
 X:\CinepolisApp\EstacionaTEC\EstacionaTEC\obj\Debug\EstacionaTEC.dll
 X:\CinepolisApp\EstacionaTEC\EstacionaTEC\obj\Debug\EstacionaTEC.pdb
@@ -186,3 +185,13 @@ X:\CinepolisApp\EstacionaTEC\EstacionaTEC\bin\es\System.Web.Webpages.Razor.resou
 X:\CinepolisApp\EstacionaTEC\EstacionaTEC\bin\es\System.Web.Helpers.resources.dll
 X:\CinepolisApp\EstacionaTEC\EstacionaTEC\bin\es\System.Web.Mvc.resources.dll
 X:\CinepolisApp\EstacionaTEC\EstacionaTEC\obj\Debug\EstacionaTEC.csproj.CopyComplete
+X:\CinepolisApp\EstacionaTEC\EstacionaTEC\bin\LiveCharts.dll
+X:\CinepolisApp\EstacionaTEC\EstacionaTEC\bin\LiveCharts.Wpf.dll
+X:\CinepolisApp\EstacionaTEC\EstacionaTEC\bin\LiveCharts.pdb
+X:\CinepolisApp\EstacionaTEC\EstacionaTEC\bin\LiveCharts.xml
+X:\CinepolisApp\EstacionaTEC\EstacionaTEC\bin\LiveCharts.Wpf.pdb
+X:\CinepolisApp\EstacionaTEC\EstacionaTEC\bin\LiveCharts.Wpf.xml
+X:\CinepolisApp\EstacionaTEC\EstacionaTEC\bin\LiveCharts.WinForms.dll
+X:\CinepolisApp\EstacionaTEC\EstacionaTEC\bin\LiveCharts.WinForms.pdb
+X:\CinepolisApp\EstacionaTEC\EstacionaTEC\bin\LiveCharts.WinForms.xml
+X:\CinepolisApp\EstacionaTEC\EstacionaTEC\obj\Debug\EstacionaTEC.csprojAssemblyReference.cache
