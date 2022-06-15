@@ -3,22 +3,23 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1 class="text-center">Estaciona<span style="color: #6666FF">TEC</span></h1>
+        <h1 align="center">Estaciona<span style="color: #6666FF; ">TEC</span></h1>
     </div>
 
-    <div>
-        <div>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
             <h2 class="text-center">Iniciar Sesión&nbsp; </h2>
             <p class="text-center">
                 Dirección de correo electrónico:&nbsp;&nbsp;&nbsp;</p>
             <p class="text-center">
-                <asp:TextBox ID="txtBoxCorreo" runat="server" Wrap="False" Font-Bold="True" ForeColor="#0033CC" Height="24px" Width="204px"></asp:TextBox>
+                <asp:TextBox ID="txtBoxCorreo" runat="server" Wrap="False" Font-Bold="True" ForeColor="#0033CC" Height="24px" Width="204px" style="text-align:center"></asp:TextBox>
             </p>
             <p>
                 &nbsp;&nbsp;&nbsp;
                 &nbsp;Contraseña:&nbsp;</p>
             <p class="text-center">
-                <asp:TextBox ID="txtBoxContrasenna" runat="server" TextMode="Password" Font-Bold="True" ForeColor="#0033CC" Height="25px" Width="199px"></asp:TextBox>
+                <asp:TextBox ID="txtBoxContrasenna" runat="server" TextMode="Password" Font-Bold="True" ForeColor="#0033CC" Height="25px" Width="199px" style="text-align:center"></asp:TextBox>
             </p>
             <p>
                 &nbsp;</p>
@@ -40,10 +41,8 @@
                 </asp:SqlDataSource>
             </p>
         </div>
-        <div class="col-md-4">
-            <p>
-                &nbsp;</p>
-        </div>
+       
     </div>
+    
 
 </asp:Content>

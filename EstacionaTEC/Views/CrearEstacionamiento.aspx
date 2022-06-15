@@ -3,38 +3,38 @@
     <div class="jumbotron">
         <h1 class="text-center" style="text-align: center">Estaciona<span style="color: #6666FF">TEC</span></h1>
     </div>
-    <div >
-        <div >
-            <p class="text-right">
+    <div class="row">
+        <div class="col-md-4">
+          
+        </div>
+        <div class="col-md-4">
+            <p class="center">
                 Funcionario:
                 <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
             </p>
-            <p class="text-right">
+            <p class="center">
                 &nbsp;</p>
-            <h2 class="text-left">Registrar Nuevo Estacionamiento</h2>
-            <p class="text-left">Indique el tipo de estacionamiento que desea registrar:
+            <h2 class="text-center">Registrar Nuevo Estacionamiento</h2>
+            <p class="center">Indique el tipo de estacionamiento que desea registrar:
             </p>
-            <p class="text-left">
-                <asp:RadioButtonList ID="radButtonTipoParqueo" runat="server" DataSourceID="sqlGetTipoEstacionamiento" DataTextField="tipo" DataValueField="tipo" AutoPostBack="True" OnSelectedIndexChanged="radButtonTipoParqueo_SelectedIndexChanged" TabIndex="1" Height="18px">
+            <p class="center">&nbsp;</p>
+                <asp:RadioButtonList ID="radButtonTipoParqueo" HorizontalAlign="Center" runat="server" DataSourceID="sqlGetTipoEstacionamiento" DataTextField="tipo" DataValueField="tipo" AutoPostBack="True" OnSelectedIndexChanged="radButtonTipoParqueo_SelectedIndexChanged" TabIndex="1" Height="18px">
                 </asp:RadioButtonList>
-            </p>
-            <p class="text-left">
-                &nbsp;</p>
-            <h3 class="text-left">Información del Parqueo 
+            <h3 class="text-center">Información del Parqueo 
             </h3>
-            <p class="text-left">
+            <p class="center">
                 Nombre:
                 <asp:TextBox ID="txtBoxNombre" runat="server" ForeColor="Black" Width="188px"></asp:TextBox>
             </p>
-            <p class="text-left">
+            <p class="text-center">
                 Dirección:
                 <asp:TextBox ID="txtBoxDireccion" runat="server" ForeColor="Black"></asp:TextBox>
             </p>
-            <p class="text-left">
+            <p class="text-center">
                 &nbsp;</p>
-            <p class="text-left">
-                Hora de apertura</p>
-            <p class="text-left">
+            <p class="text-center">
+                Hora de aperturas</p>
+            <p class="text-center">
                 Hora:
                 <asp:DropDownList ID="ddListHoraApertura" runat="server" ForeColor="#000099" Height="16px" Width="50px">
                     <asp:ListItem>0</asp:ListItem>
@@ -76,12 +76,11 @@
                     <asp:ListItem>45</asp:ListItem>
                     <asp:ListItem>50</asp:ListItem>
                     <asp:ListItem>55</asp:ListItem>
-                    <asp:ListItem>60</asp:ListItem>
                 </asp:DropDownList>
 &nbsp;</p>
-            <p class="text-left">
+            <p class="text-center">
                 Hora de cierre</p>
-            <p class="text-left">
+            <p class="text-center">
                 Hora
                 <asp:DropDownList ID="ddListHoraCierre" runat="server" ForeColor="#000099" Height="16px" Width="51px">
                     <asp:ListItem>1</asp:ListItem>
@@ -122,31 +121,30 @@
                     <asp:ListItem>45</asp:ListItem>
                     <asp:ListItem>50</asp:ListItem>
                     <asp:ListItem>55</asp:ListItem>
-                    <asp:ListItem>60</asp:ListItem>
+                   
                 </asp:DropDownList>
                 &nbsp;</p>
-            <p class="text-left">
+            <p class="text-center">
                 <asp:Label ID="lblNumContrato" runat="server" Text="Número de contrato: "></asp:Label>
                 &nbsp;<asp:TextBox ID="txtBoxNumContrato" runat="server" Width="178px" Height="21px" ForeColor="Black"></asp:TextBox>
             </p>
-            <p class="text-left">
+            <p class="text-center">
                 &nbsp;</p>
-            <h3>
-                <asp:Label ID="lblSubtituloContacto" runat="server" Text="Información de Contacto"></asp:Label>
+            <h3 class="text-center">
+                <asp:Label ID="lblSubtituloContacto" runat="server" Text="Información de Contacto" style="text-align: center"></asp:Label>
             </h3>
-            <p class="text-left">
+            <p class="text-center">
                 &nbsp;<asp:Label ID="lblNombreContacto" runat="server" Text="Nombre: "></asp:Label>
                 <asp:TextBox ID="txtBoxNombreContacto" runat="server" Width="250px" Height="21px" ForeColor="Black"></asp:TextBox>
             </p>
-            <p class="text-left">
+            <p class="text-center">
                 <asp:Label ID="lblTelefono" runat="server" Text="Telefono: "></asp:Label>
                 <asp:TextBox ID="txtBoxTelefonoContacto" runat="server" Width="244px" ForeColor="Black"></asp:TextBox>
             </p>
-            <p class="text-left">
-                &nbsp;
-                <asp:Button ID="btnRegistrar" runat="server" OnClick="Button1_Click" Text="Registrar" Width="149px" Height="32px" />
+            <p class="text-center">
+                &nbsp;<asp:Button ID="btnRegistrar" runat="server" OnClick="Button1_Click" Text="Registrar" Width="149px" Height="32px" />
             &nbsp;</p>
-            <p class="text-left">
+            <p class="text-center">
                 <asp:Button ID="btnVolver" runat="server" Height="31px" Text="Menu Principal" Width="153px" OnClick="btnVolver_Click" />
             </p>
             <p class="text-center">

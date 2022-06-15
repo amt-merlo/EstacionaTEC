@@ -3,8 +3,9 @@
     <div class="jumbotron">
         <h1 class="text-center">Estaciona<span style="color: #6666FF">TEC</span></h1>
     </div>
-    <div>
-        <div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
             <h2 class="text-left">Editar Información Personal de Funcionario</h2>
             <h4 class="text-left">Bienvenido(a)
                 <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
@@ -91,5 +92,6 @@
                 </asp:SqlDataSource>
             </p>
         </div>   
+        <div class="col-md-4"></div>
     </div>
 </asp:Content>

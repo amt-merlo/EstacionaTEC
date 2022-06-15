@@ -3,7 +3,8 @@
     <div class="jumbotron">
         <h1 class="text-center" style="text-align: center">Estaciona<span style="color: #6666FF">TEC</span></h1>
     </div>
-    <div align="center" class="row">
+    <div class="row">
+        <div class="col-md-4"></div>
         <div class="col-md-4">
             <h2 class="text-left" style="text-align: center">Informe sobre todos los funcionarios</h2>
             <h4>Bienvenido(a)
@@ -21,8 +22,6 @@
                 <asp:ListItem>Si</asp:ListItem>
                 </asp:RadioButtonList>
             <p class="text-center" style="text-align: center">
-                &nbsp;</p>
-            <p class="text-center" style="text-align: center">
                 <asp:Label ID="lblFiltro" runat="server" Text=""></asp:Label>
             </p>
             <p class="text-center" style="text-align: center">
@@ -30,13 +29,26 @@
                 </asp:DropDownList>
                 <asp:SqlDataSource ID="sqlGetDepartamentos" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [tipo] FROM [Departamento]"></asp:SqlDataSource>
             </p>
-            <p class="text-center" style="text-align: center">
-                &nbsp;</p>
             <h2 style="text-align: center">
                 <asp:Label ID="lblId" runat="server" Text="Label"></asp:Label>
                 Personas</h2>
             <p>
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Identificación" DataSourceID="sqlGetPersonas" ForeColor="#333333" GridLines="None" ShowFooter="True" ShowHeaderWhenEmpty="True" Width="1091px" >
+                <asp:SqlDataSource ID="sqlGetPersonas" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="buscarPersonasPorDepartamento" SelectCommandType="StoredProcedure">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="lblId" DefaultValue="-1" Name="inIdDepartamento" PropertyName="Text" Type="Int32" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+            </p>
+        </div>
+        <div>
+
+        </div>
+    </div>
+    <div class="row" align="center">
+
+        <div class="col-md-4">
+            <p class="text-center">
+                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Identificación" DataSourceID="sqlGetPersonas" ForeColor="#333333" GridLines="None" ShowFooter="True" ShowHeaderWhenEmpty="True" Width="1211px" >
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:BoundField DataField="Identificación" HeaderText="Identificación" ReadOnly="True" SortExpression="Identificación" />
@@ -62,17 +74,18 @@
                     <SortedDescendingCellStyle BackColor="#E9EBEF" />
                     <SortedDescendingHeaderStyle BackColor="#4870BE" />
                 </asp:GridView>
-                <asp:SqlDataSource ID="sqlGetPersonas" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="buscarPersonasPorDepartamento" SelectCommandType="StoredProcedure">
+            </p>
+            <p class="text-center">
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="buscarPersonasPorDepartamento" SelectCommandType="StoredProcedure">
                     <SelectParameters>
                         <asp:ControlParameter ControlID="lblId" DefaultValue="-1" Name="inIdDepartamento" PropertyName="Text" Type="Int32" />
                     </SelectParameters>
                 </asp:SqlDataSource>
             </p>
-            <p>
+            <p class="text-center">
                 <asp:Button ID="btnVolver" runat="server" Text="Volver" OnClick="btnVolver_Click" />
             </p>
-            <p class="text-center">
-                &nbsp;</p>
         </div>
+        
     </div>
 </asp:Content>

@@ -3,7 +3,9 @@
     <div class="jumbotron">
         <h1 class="text-center" style="text-align: center">Estaciona<span style="color: #6666FF">TEC</span></h1>
     </div>
+
     <div align="center" class="row">
+        <div class="col-md-4"></div>
         <div class="col-md-4">
             <h2 class="text-left" style="text-align: center">Informe sobre un funcionario</h2>
             <h4>Bienvenido(a)
@@ -25,7 +27,11 @@
             <h2 style="text-align: center">
                 <asp:Label ID="lblId" runat="server" Text="Label" Visible="False"></asp:Label>
                 Personas</h2>
-            <p>
+            
+        </div>
+    </div>
+    <div class="row" align="center">
+        <p>
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="identificacion" DataSourceID="sqlGetPersonas" ForeColor="#333333" GridLines="None" ShowFooter="True" ShowHeaderWhenEmpty="True" Width="1241px" >
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
@@ -63,6 +69,5 @@
             </p>
             <p class="text-center">
                 &nbsp;</p>
-        </div>
     </div>
 </asp:Content>

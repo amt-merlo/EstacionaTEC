@@ -5,8 +5,8 @@
     </div>
     <div>
         <div>
-            <h2 class="text-left">Informes y Estadísticas</h2>
-            <h4 class="text-left">Bienvenido(a)
+            <h2 class="text-center">Informes y Estadísticas</h2>
+            <h4 class="text-center">Bienvenido(a)
                 <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
             </h4>
             <p class="text-center">
