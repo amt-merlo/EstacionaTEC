@@ -3,29 +3,32 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1 class="text-center">EstacionaTEC</h1>
+        <h1 class="text-center">Estaciona<span style="color: #6666FF">TEC</span></h1>
     </div>
 
-    <div class="row" >
-        <div class="col-md-4">
-            <h2>Iniciar Sesión&nbsp; </h2>
-            <p>
+    <div>
+        <div>
+            <h2 class="text-center">Iniciar Sesión&nbsp; </h2>
+            <p class="text-center">
                 Dirección de correo electrónico:&nbsp;&nbsp;&nbsp;</p>
-            <p>
+            <p class="text-center">
                 <asp:TextBox ID="txtBoxCorreo" runat="server" Wrap="False" Font-Bold="True" ForeColor="#0033CC" Height="24px" Width="204px"></asp:TextBox>
             </p>
             <p>
+                &nbsp;&nbsp;&nbsp;
                 &nbsp;Contraseña:&nbsp;</p>
-            <p>
+            <p class="text-center">
                 <asp:TextBox ID="txtBoxContrasenna" runat="server" TextMode="Password" Font-Bold="True" ForeColor="#0033CC" Height="25px" Width="199px"></asp:TextBox>
             </p>
             <p>
+                &nbsp;</p>
+            <p class="text-center">
                 &nbsp;&nbsp;&nbsp;
                 &nbsp;<asp:Button ID="Button1" runat="server" Text="Iniciar Sesión" Width="140px" Height="33px" OnClick="Button1_Click" />
             &nbsp;&nbsp;
                 &nbsp;
                 </p>
-            <p>
+            <p class="text-center">
                 <asp:Label ID="lblMensaje" runat="server" Text="" style="color: #CC0000"></asp:Label>
                 </p>
             <p>

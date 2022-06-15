@@ -1,10 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CrearEspacioIndividual.aspx.cs" Inherits="EstacionaTEC.Views.CrearEspacioIndividual" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron">
-        <h1 class="text-center" style="text-align: center">EstacionaTEC</h1>
+        <h1 class="text-center" style="text-align: center">Estaciona<span style="color: #6666FF">TEC</span></h1>
     </div>
-    <div class="row" align="center">
-        <div class="col-md-4">
+    <div >
+        <div >
             <h2 class="text-left" style="text-align: center">Agregar Espacio</h2>
             <h4>Bienvenido(a)
                 <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
@@ -49,12 +49,10 @@
                 &nbsp;</p>
             <p class="text-center" style="text-align: center">
                 ¿El espacio posee alguna forma de numeración?</p>
-            <p class="text-center" style="text-align: center">
-                <asp:RadioButtonList ID="radButtonNumeracion" runat="server" OnSelectedIndexChanged="radButtonNumeracion_SelectedIndexChanged" AutoPostBack="True">
+                <asp:RadioButtonList ID="radButtonNumeracion" HorizontalAlign="Center" runat="server" OnSelectedIndexChanged="radButtonNumeracion_SelectedIndexChanged" AutoPostBack="True">
                     <asp:ListItem>No</asp:ListItem>
                     <asp:ListItem>Si</asp:ListItem>
                 </asp:RadioButtonList>
-            </p>
             <p class="text-center" style="text-align: center">
                 &nbsp;</p>
             <p class="text-center" style="text-align: center">
@@ -73,7 +71,7 @@
             <h2 style="text-align: center">
                 Espacios registrados en el estacionamiento</h2>
             <p>
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" DataSourceID="sqlGetEspacios" ForeColor="#333333" GridLines="None" Width="652px" ShowFooter="True" ShowHeaderWhenEmpty="True">
+                <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" DataSourceID="sqlGetEspacios" ForeColor="#333333" GridLines="None" Width="652px" ShowFooter="True" ShowHeaderWhenEmpty="True">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />

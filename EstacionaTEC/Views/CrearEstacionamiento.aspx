@@ -1,10 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CrearEstacionamiento.aspx.cs" Inherits="EstacionaTEC.Views.CrearEstacionamiento" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron">
-        <h1 class="text-center" style="text-align: center">EstacionaTEC</h1>
+        <h1 class="text-center" style="text-align: center">Estaciona<span style="color: #6666FF">TEC</span></h1>
     </div>
-    <div class="row">
-        <div class="col-md-4">
+    <div >
+        <div >
             <p class="text-right">
                 Funcionario:
                 <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>

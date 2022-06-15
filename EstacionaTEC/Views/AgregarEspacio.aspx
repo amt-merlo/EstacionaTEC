@@ -1,10 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AgregarEspacio.aspx.cs" Inherits="EstacionaTEC.Views.AgregarEspacio" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron">
-        <h1 class="text-center" style="text-align: center">EstacionaTEC</h1>
+        <h1 class="text-center" style="text-align: center">Estaciona<span style="color: #6666FF">TEC</span></h1>
     </div>
-    <div class="row" align="center">
-        <div class="col-md-4">
+    <div >
+        <div class="text-center" >
             <h2 class="text-center">
                 <div style="text-align: center">
                     Agregar Espacio en Estacionamiento</div>
@@ -14,10 +14,10 @@
                     </SelectParameters>
                 </asp:SqlDataSource>
             </h2>
-            <h4>Bienvenido(a)
+            <h4 class="text-left">Bienvenido(a)
                 <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
             </h4>
-            <h3>Estacionamientos Propios</h3>
+            <h3 class="text-left">Estacionamientos Propios</h3>
             <p class="text-center">
                   
                 <asp:GridView ID="gridViewEstacionamientoPropio" runat="server" AutoGenerateColumns="False" AutoGenerateSelectButton="True" CellPadding="4" DataKeyNames="id" DataSourceID="sqlGetEstacionamientosPropios" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" ShowFooter="True" Width="1120px">
@@ -51,7 +51,7 @@
             <p class="text-center">
                   
                 &nbsp;</p>
-            <h3>
+            <h3 class="text-left">
                   
                 Estacionamientos del Campus</h3>
                   
@@ -89,7 +89,7 @@
             <p class="text-center">
                   
                     &nbsp;</p>
-            <h3>
+            <h3 class="text-left">
                   
                     Estacionamientos Subcontratados</h3>
             <asp:GridView ID="gridViewEstacionamientoSubcontratado" runat="server" AutoGenerateColumns="False" AutoGenerateSelectButton="True" CellPadding="4" DataKeyNames="ID" DataSourceID="sqlGetEstacionamientosSubcontratados" ForeColor="#333333" GridLines="None" ShowFooter="True" Width="1132px" OnSelectedIndexChanged="gridViewEstacionamientoSubcontratado_SelectedIndexChanged">
@@ -114,14 +114,18 @@
                 <SortedDescendingCellStyle BackColor="#E9EBEF" />
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
+            <div>
             <br />
             <asp:Button ID="btnMenu" runat="server" Text="Menú Principal" OnClick="btnMenu_Click" />
+            </div>
             <asp:SqlDataSource ID="sqlGetEstacionamientosSubcontratados" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [id] as ID, [nombre] as Nombre, [ubicacion] as Ubicación, [cantidadEspaciosTotal] as Espacios, [cantidadEspaciosActual] as Disponibilidad, [horaApertura] as Apertura, [horaCierre] as Cierre FROM [Estacionamiento] WHERE ([idTipo] = @idTipo)">
                 <SelectParameters>
                     <asp:Parameter DefaultValue="3" Name="idTipo" Type="Int32" />
                 </SelectParameters>
             </asp:SqlDataSource>
+            <div>
             <br />
+            </div>
             <p class="text-center">
                 &nbsp;</p>
         </div>   

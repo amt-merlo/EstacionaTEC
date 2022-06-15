@@ -1,16 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditarFuncionarios.aspx.cs" Inherits="EstacionaTEC.Views.EditarFuncionarios" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron">
-        <h1 class="text-center">EstacionaTEC</h1>
+        <h1 class="text-center">Estaciona<span style="color: #6666FF">TEC</span></h1>
     </div>
-    <div class="row" align="center">
-        <div class="col-md-4">
+    <div>
+        <div>
             <h2 class="text-center">Actualizar Planilla</h2>
             <h4 class="text-center">Bienvenido(a)
                 <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
             </h4>
             <p class="text-center">
-                <asp:GridView ID="gridViewFuncionarios" runat="server" AutoGenerateColumns="False" AutoGenerateSelectButton="True" CellPadding="4" DataKeyNames="Identificación" DataSourceID="sqlGetPersonas" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="834px">
+                <asp:GridView ID="gridViewFuncionarios" runat="server" HorizontalAlign="Center" AutoGenerateColumns="False" AutoGenerateSelectButton="True" CellPadding="4" DataKeyNames="Identificación" DataSourceID="sqlGetPersonas" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="834px">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:BoundField DataField="Identificación" HeaderText="Identificación" ReadOnly="True" SortExpression="Identificación" />

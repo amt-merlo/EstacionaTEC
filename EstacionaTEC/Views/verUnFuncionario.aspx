@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="verUnFuncionario.aspx.cs" Inherits="EstacionaTEC.Views.verUnFuncionario" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron">
-        <h1 class="text-center" style="text-align: center">EstacionaTEC</h1>
+        <h1 class="text-center" style="text-align: center">Estaciona<span style="color: #6666FF">TEC</span></h1>
     </div>
     <div align="center" class="row">
         <div class="col-md-4">

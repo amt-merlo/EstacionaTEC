@@ -1,10 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="verEstacionamientos.aspx.cs" Inherits="EstacionaTEC.Views.verEstacionamientos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron">
-        <h1 class="text-center" style="text-align: center">EstacionaTEC</h1>
+        <h1 class="text-center" style="text-align: center">Estaciona<span style="color: #6666FF">TEC</span></h1>
     </div>
-    <div class="row" align="center">
-        <div class="col-md-4">
+    <div>
+        <div style="text-align: center">
             <h2 class="text-center">
                 <div style="text-align: center" class="text-left">
                     Ver estacionamientos</div>
@@ -20,7 +20,7 @@
             <h3>Estacionamientos Propios</h3>
             <p class="text-center">
                   
-                <asp:GridView ID="gridViewEstacionamientoPropio" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="id" DataSourceID="sqlGetEstacionamientosPropios" ForeColor="#333333" GridLines="None" ShowFooter="True" Width="1120px">
+                <asp:GridView ID="gridViewEstacionamientoPropio" runat="server" HorizontalAlign="Center" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="id" DataSourceID="sqlGetEstacionamientosPropios" ForeColor="#333333" GridLines="None" ShowFooter="True" Width="1120px">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
@@ -57,7 +57,7 @@
                   
                 <p class="text-center">
                   
-                    <asp:GridView ID="gridViewEstacionamientoCampus" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="id" DataSourceID="sqlGetEstacionamientosCampus" ForeColor="#333333" GridLines="None" ShowFooter="True" Width="1132px">
+                    <asp:GridView ID="gridViewEstacionamientoCampus" runat="server" HorizontalAlign="Center" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="id" DataSourceID="sqlGetEstacionamientosCampus" ForeColor="#333333" GridLines="None" ShowFooter="True" Width="1132px">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
                             <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
@@ -92,7 +92,7 @@
             <h3>
                   
                     Estacionamientos Subcontratados</h3>
-            <asp:GridView ID="gridViewEstacionamientoSubcontratado" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" DataSourceID="sqlGetEstacionamientosSubcontratados" ForeColor="#333333" GridLines="None" ShowFooter="True" Width="1132px">
+            <asp:GridView ID="gridViewEstacionamientoSubcontratado" runat="server" HorizontalAlign="Center" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" DataSourceID="sqlGetEstacionamientosSubcontratados" ForeColor="#333333" GridLines="None" ShowFooter="True" Width="1132px">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
@@ -121,6 +121,7 @@
             </asp:SqlDataSource>
             <br />
             <asp:Button ID="btnVolver" runat="server" Text="Volver" OnClick="btnVolver_Click" />
+            <br />
             <br />
             <p class="text-center">
                 &nbsp;</p>

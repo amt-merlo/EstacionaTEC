@@ -1,10 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditarInfoPersonal.aspx.cs" Inherits="EstacionaTEC.Views.EditarInfoPersonal" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
       <div class="jumbotron">
-        <h1 class="text-center">EstacionaTEC</h1>
+        <h1 class="text-center">Estaciona<span style="color: #6666FF">TEC</span></h1>
     </div>
-    <div class="row" align="center">
-        <div class="col-md-4">
+    <div>
+        <div>
             <h2 class="text-center">Información Personal</h2>
             <h4 class="text-center">Bienvenido(a)
                 <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
@@ -18,10 +18,10 @@
             <p class="text-center">
                 <asp:Label ID="lblMensajeCorreo" runat="server" Text=""></asp:Label>
             </p>
-            <h3>
+            <h3 class="text-center">
                 Vehículos Registrados</h3>
             <p class="text-center">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" DataSourceID="sqlGetVehiculos" ForeColor="#333333" GridLines="None" ShowFooter="True" ShowHeaderWhenEmpty="True" Width="280px">
+                <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" DataSourceID="sqlGetVehiculos" ForeColor="#333333" GridLines="None" ShowFooter="True" ShowHeaderWhenEmpty="True" Width="280px">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
@@ -44,14 +44,12 @@
                     </SelectParameters>
                 </asp:SqlDataSource>
             </p>
-            <h3>
+            <h3 class="text-center">
                 Registrar Nuevo Vehículo</h3>
             <p class="text-center">
                 Ingrese el número de placa del vehículo:
                 <asp:TextBox ID="txtBoxPlaca" runat="server" ForeColor="Black" Height="22px"></asp:TextBox>
             </p>
-            <p class="text-center">
-                &nbsp;</p>
             <p class="text-center">
                 <asp:Button ID="btnRegistrarVehiculo" runat="server" Text="Registrar Vehículo" OnClick="btnRegistrarVehiculo_Click" />
             </p>
@@ -62,7 +60,7 @@
             <p class="text-left">
                 Horario Semanal</p>
             <p class="text-center">
-                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="sqlGetFranjas" ForeColor="#333333" GridLines="None" Width="395px">
+                <asp:GridView ID="GridView2" runat="server" HorizontalAlign="Center" AutoGenerateColumns="False" CellPadding="4" DataSourceID="sqlGetFranjas" ForeColor="#333333" GridLines="None" Width="395px">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:BoundField DataField="idDia" HeaderText="idDia" SortExpression="idDia" />
@@ -190,10 +188,15 @@
                 </asp:DropDownList>
             </p>
             <p class="text-center">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btnRegistrarFranja" runat="server" Text="Registrar Franja" OnClick="btnRegistrarFranja_Click" />
-            &nbsp;<asp:Label ID="lblMensajeFranja" runat="server" Text="" style="color: #CC0000"></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </p>
             <p class="text-center">
+                <asp:Label ID="lblMensajeFranja" runat="server" Text="" style="color: #CC0000"></asp:Label>
+            </p>
+            <p class="text-center">
+                &nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btnMenu" runat="server" Text="Menu Principal" Width="168px" OnClick="btnMenu_Click" />
             </p>
             <p class="text-center">
