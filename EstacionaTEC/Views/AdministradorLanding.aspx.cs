@@ -50,5 +50,35 @@ namespace EstacionaTEC.Views
         {
             Response.Redirect("Informes.aspx");
         }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("CrearFuncionario.aspx");
+        }
+
+        protected void ImageButton3_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("EditarFuncionarios.aspx");
+        }
+
+        protected void ImageButton4_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("CrearEstacionamiento.aspx");
+        }
+
+        protected void ImageButton5_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("AgregarEspacio.aspx");
+        }
+
+        protected void ImageButton6_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("Informes.aspx");
+        }
+
+        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("CrearOperador.aspx");
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace EstacionaTEC.Views
 {
 
 
-    public partial class AdministradorLanding
+    public partial class CrearOperador
     {
 
         /// <summary>
@@ -24,66 +24,66 @@ namespace EstacionaTEC.Views
         protected global::System.Web.UI.WebControls.Label lblNombre;
 
         /// <summary>
-        /// Control ImageButton1.
+        /// Control txtBoxCedula.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxCedula;
 
         /// <summary>
-        /// Control ImageButton2.
+        /// Control txtBoxNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton2;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxNombre;
 
         /// <summary>
-        /// Control ImageButton3.
+        /// Control txtBoxCorreo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton3;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxCorreo;
 
         /// <summary>
-        /// Control ImageButton4.
+        /// Control txtBoxTelefono.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton4;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxTelefono;
 
         /// <summary>
-        /// Control ImageButton5.
+        /// Control gridEstacionamientos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton5;
+        protected global::System.Web.UI.WebControls.GridView gridEstacionamientos;
 
         /// <summary>
-        /// Control ImageButton6.
+        /// Control lblIDEstacionamiento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton6;
+        protected global::System.Web.UI.WebControls.Label lblIDEstacionamiento;
 
         /// <summary>
-        /// Control sqlGetNombre.
+        /// Control btnRegistrar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sqlGetNombre;
+        protected global::System.Web.UI.WebControls.Button btnRegistrar;
     }
 }

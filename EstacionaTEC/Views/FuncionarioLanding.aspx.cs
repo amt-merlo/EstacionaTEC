@@ -37,5 +37,30 @@ namespace EstacionaTEC.Views
         {
             Response.Redirect("EditarInfoPersonal.aspx");
         }
+
+        protected void btnReservar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }
+
+        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }
+
+        protected void ImageButton3_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("EditarInfoPersonal.aspx");
+        }
+
+        protected void ImageButton4_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("Informes.aspx");
+        }
     }
 }
