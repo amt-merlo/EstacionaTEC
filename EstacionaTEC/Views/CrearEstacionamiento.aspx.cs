@@ -79,11 +79,13 @@ namespace EstacionaTEC.Views
                 //Se crea el objeto de tipo DTO
                 estacionamiento = new DTOEstacionamientos(0, nombre, direccion, 0, 0, 0, tsApertura, tsCierre, nombreContacto, telefonoContacto, contrato, tipo);
                 lblPrueba.Text = "¡Estacionamiento registrado exitosamente!";
+                Response.Write("<script>alert('¡Estacionamiento registrado exitosamente!')</script>");
             }
             else 
             {
                 estacionamiento = new DTOEstacionamientos(0, nombre, direccion, 0, 0, 0, tsApertura, tsCierre, tipo, 0);
                 lblPrueba.Text = "¡Estacionamiento registrado exitosamente!";
+                Response.Write("<script>alert('¡Estacionamiento registrado exitosamente!')</script>");
             }
 
             //Se envia el objeto al gestor por medio del controller

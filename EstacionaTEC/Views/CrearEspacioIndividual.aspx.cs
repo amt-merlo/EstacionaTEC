@@ -85,11 +85,13 @@ namespace EstacionaTEC.Views
 
             if (resultado)
             {
+                
                 Response.Redirect("CrearEspacioIndividual.aspx");
             }
             else
             {
-                lblMensaje.Text = "Se produjo un error al registrar el espacio, por favor intente de nuevo";
+                Response.Write("<script>alert('Se produjo un error al registrar el espacio, por favor intente de nuevo')</script>");
+               // lblMensaje.Text = "Se produjo un error al registrar el espacio, por favor intente de nuevo";
             }
         }
 

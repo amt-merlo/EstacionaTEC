@@ -26,7 +26,8 @@
             </p>
             <h2 style="text-align: center">
                 <asp:Label ID="lblId" runat="server" Text="Label" Visible="False"></asp:Label>
-                Personas</h2>
+                &nbsp;<asp:Label ID="lblInfo" runat="server" Text=""></asp:Label>
+            </h2>
             
         </div>
     </div>
@@ -61,6 +62,68 @@
                 <asp:SqlDataSource ID="sqlGetPersonas" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [identificacion], [nombreCompleto], [celular], [correoInstitucional], [correoAlterno], D.tipo AS Departamento, [esJefatura], [esAdmin], [serviciosEspeciales], [estaEnPlanilla], [esAdministrativo] FROM [Persona] AS P INNER JOIN [Departamento] AS D ON  P.idDepartamento = D.Id WHERE ([identificacion] = @identificacion)">
                     <SelectParameters>
                         <asp:ControlParameter ControlID="txtIdentificacion" Name="identificacion" PropertyName="Text" Type="Int32" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+            </p>
+        <p>
+                &nbsp;</p>
+        <h2 class="text-center">
+                <asp:Label ID="lblVehiculos" runat="server" Text=""></asp:Label>
+        </h2>
+        <p class="text-center">
+                <asp:GridView ID="GridView2" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="453px" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="sqlVehiculos">
+                    <AlternatingRowStyle BackColor="White" HorizontalAlign="Center" VerticalAlign="Middle" />
+                    <Columns>
+                        <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
+                        <asp:BoundField DataField="placa" HeaderText="placa" SortExpression="placa" />
+                    </Columns>
+                    <EditRowStyle BackColor="#2461BF" HorizontalAlign="Center" VerticalAlign="Middle" />
+                    <EmptyDataRowStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" />
+                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" />
+                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" />
+                    <RowStyle BackColor="#EFF3FB" HorizontalAlign="Center" VerticalAlign="Middle" />
+                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" HorizontalAlign="Center" VerticalAlign="Middle" />
+                    <SortedAscendingCellStyle BackColor="#F5F7FB" HorizontalAlign="Center" VerticalAlign="Middle" />
+                    <SortedAscendingHeaderStyle BackColor="#6D95E1" HorizontalAlign="Center" VerticalAlign="Middle" />
+                    <SortedDescendingCellStyle BackColor="#E9EBEF" HorizontalAlign="Center" VerticalAlign="Middle" />
+                    <SortedDescendingHeaderStyle BackColor="#4870BE" HorizontalAlign="Center" VerticalAlign="Middle" />
+                </asp:GridView>
+            </p>
+        <p class="text-center">
+                <asp:SqlDataSource ID="sqlVehiculos" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [Id], [placa] FROM [Vehiculo] WHERE ([idPersona] = @idPersona)">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="txtIdentificacion" Name="idPersona" PropertyName="Text" Type="Int32" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+            </p>
+        <h2 class="text-center">
+                <asp:Label ID="lblFranjas" runat="server" Text=""></asp:Label>
+            </h2>
+        <p class="text-center">
+                <asp:GridView ID="GridView3" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="449px" AutoGenerateColumns="False" DataSourceID="sqlFranjas">
+                    <AlternatingRowStyle BackColor="White" />
+                    <Columns>
+                        <asp:BoundField DataField="Día" HeaderText="Día" SortExpression="Día" />
+                        <asp:BoundField DataField="Hora de Inicio" HeaderText="Hora de Inicio" SortExpression="Hora de Inicio" />
+                        <asp:BoundField DataField="Hora de Fin" HeaderText="Hora de Fin" SortExpression="Hora de Fin" />
+                    </Columns>
+                    <EditRowStyle BackColor="#2461BF" />
+                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#EFF3FB" />
+                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                </asp:GridView>
+            </p>
+        <p class="text-center">
+                <asp:SqlDataSource ID="sqlFranjas" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT DiasSemana.[dia] as Día, FranjaHoraria.[inicio] as 'Hora de Inicio', FranjaHoraria.[fin] as 'Hora de Fin' FROM [FranjaHoraria]  INNER JOIN DiasSemana ON FranjaHoraria.idDia = DiasSemana.id WHERE ([idPersona] = @idPersona)">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="txtIdentificacion" Name="idPersona" PropertyName="Text" Type="Int32" />
                     </SelectParameters>
                 </asp:SqlDataSource>
             </p>

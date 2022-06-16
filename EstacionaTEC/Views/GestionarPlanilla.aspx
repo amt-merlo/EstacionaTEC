@@ -3,9 +3,10 @@
     <div class="jumbotron">
         <h1 class="text-center" style="text-align: center">Estaciona<span style="color: #6666FF">TEC</span></h1>
     </div>
-    <div >
-        <div>
-            <h2 class="text-left">Gestionar Planilla del Departamento</h2>
+    <div class="row" >
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h2 class="text-center">Gestionar Planilla del Departamento</h2>
             <asp:SqlDataSource ID="sqlGetNombre" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [nombreCompleto] FROM [Persona] WHERE ([identificacion] = @identificacion)">
                 <SelectParameters>
                     <asp:SessionParameter Name="identificacion" SessionField="ID" Type="Int32" />
@@ -27,7 +28,7 @@
                 <asp:Label ID="lblPlanilla" runat="server" Text=""></asp:Label>
             </p>
             <p class="text-left">
-                ¿Desea cambiar el estado del funcionario con respecto a la planilla?<asp:RadioButtonList ID="radButtonPlanilla" runat="server" Width="608px">
+                ¿Desea cambiar el estado del funcionario con respecto a la planilla?<asp:RadioButtonList ID="radButtonPlanilla" runat="server" Width="320px">
                     <asp:ListItem>No</asp:ListItem>
                     <asp:ListItem>Si</asp:ListItem>
                 </asp:RadioButtonList>
@@ -39,8 +40,9 @@
                 <asp:Label ID="lblMensaje" runat="server" Text=""></asp:Label>
             </p>
             <h2 style="text-align: center" class="text-left">Funcionarios</h2>
-            <p>
-                <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" AutoGenerateColumns="False" AutoGenerateSelectButton="True" CellPadding="4" DataKeyNames="Identificación" DataSourceID="sqlGetPersonas" ForeColor="#333333" GridLines="None" ShowFooter="True" ShowHeaderWhenEmpty="True" Width="563px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+
+             <p class="text-center">
+                <asp:GridView ID="GridView1" runat="server"  HorizontalAlign="Center" AutoGenerateColumns="False" AutoGenerateSelectButton="True" CellPadding="4" DataKeyNames="Identificación" DataSourceID="sqlGetPersonas" ForeColor="#333333" GridLines="None" ShowFooter="True" ShowHeaderWhenEmpty="True" Width="563px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:BoundField DataField="Identificación" HeaderText="Identificación" ReadOnly="True" SortExpression="Identificación" />
@@ -72,6 +74,8 @@
             </p>
             <p class="text-center">
                 &nbsp;</p>
+            
         </div>
     </div>
+    
 </asp:Content>

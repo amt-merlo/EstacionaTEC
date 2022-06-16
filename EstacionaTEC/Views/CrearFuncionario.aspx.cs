@@ -76,6 +76,7 @@ namespace EstacionaTEC.Views
                     if (resultado)
                     {
                         lblCorreo.Text = "";
+                        Response.Write("<script>alert('¡Funcionario registrado exitosamente!')</script>");
                         lblPrueba.Text = "¡Funcionario registrado exitosamente!";
                     }
                     else

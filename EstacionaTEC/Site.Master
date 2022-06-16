@@ -72,7 +72,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Developed by: Johel Pérez - Allison Montero - Brayan Marín</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Developed by: Johel Pérez | Allison Montero | Brayan Marín</p>
             </footer>
         </div>
 

@@ -151,11 +151,13 @@ namespace EstacionaTEC.Views
                     if (resultado)
                     {
                         lblCorreo.Text = "";
-                        lblPrueba.Text = "¡Funcionario registrado exitosamente!";
+                        Response.Write("<script>alert('¡La información del funcionario se actualizó exitosamente!')</script>");
+                        lblPrueba.Text = "¡La información del funcionario se actualizó exitosamente!";
                     }
                     else
                     {
                         lblCorreo.Text = "";
+                        Response.Write("<script>alert('Algo salió mal, por favor inténtelo de nuevo')</script>");
                         lblPrueba.Text = "Algo salió mal, por favor inténtelo de nuevo";
                     }
                     
