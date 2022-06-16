@@ -81,7 +81,7 @@
                     </asp:GridView>
                     <asp:SqlDataSource ID="sqlGetEstacionamientosCampus" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [id], [nombre], [ubicacion], [cantidadEspaciosTotal], [cantidadEspaciosActual], [horaApertura], [horaCierre] FROM [Estacionamiento] WHERE ([idTipo] = @idTipo)">
                         <SelectParameters>
-                            <asp:Parameter DefaultValue="2" Name="idTipo" Type="Int32" />
+                            <asp:Parameter DefaultValue="7" Name="idTipo" Type="Int32" />
                         </SelectParameters>
                     </asp:SqlDataSource>
                   
@@ -116,7 +116,7 @@
             </asp:GridView>
             <asp:SqlDataSource ID="sqlGetEstacionamientosSubcontratados" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [id] as ID, [nombre] as Nombre, [ubicacion] as Ubicación, [cantidadEspaciosTotal] as Espacios, [cantidadEspaciosActual] as Disponibilidad, [horaApertura] as Apertura, [horaCierre] as Cierre FROM [Estacionamiento] WHERE ([idTipo] = @idTipo)">
                 <SelectParameters>
-                    <asp:Parameter DefaultValue="3" Name="idTipo" Type="Int32" />
+                    <asp:Parameter DefaultValue="2" Name="idTipo" Type="Int32" />
                 </SelectParameters>
             </asp:SqlDataSource>
             <br />

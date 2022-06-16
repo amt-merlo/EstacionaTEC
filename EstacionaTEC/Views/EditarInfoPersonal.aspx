@@ -3,8 +3,9 @@
       <div class="jumbotron">
         <h1 class="text-center">Estaciona<span style="color: #6666FF">TEC</span></h1>
     </div>
-    <div>
-        <div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4" align="center">
             <h2 class="text-center">Información Personal</h2>
             <h4 class="text-center">Bienvenido(a)
                 <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
@@ -18,10 +19,29 @@
             <p class="text-center">
                 <asp:Label ID="lblMensajeCorreo" runat="server" Text=""></asp:Label>
             </p>
-            <h3 class="text-center">
-                Vehículos Registrados</h3>
             <p class="text-center">
-                <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" DataSourceID="sqlGetVehiculos" ForeColor="#333333" GridLines="None" ShowFooter="True" ShowHeaderWhenEmpty="True" Width="280px">
+                &nbsp;</p>
+            <p class="text-center">
+                &nbsp;</p>
+            <p class="text-center">
+                <asp:SqlDataSource ID="sqlGetVehiculos" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [Id] as ID, [placa] as Placa FROM [Vehiculo] WHERE ([idPersona] = @idPersona)">
+                    <SelectParameters>
+                        <asp:SessionParameter Name="idPersona" SessionField="ID" Type="Int32" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+            </p>
+            <h3 class="text-center" style="color: #3366FF">
+                Registrar Nuevo Vehículo</h3>
+            <p class="text-center">
+                Ingrese el número de placa del vehículo:
+                <asp:TextBox ID="txtBoxPlaca" runat="server" ForeColor="Black" Height="22px"></asp:TextBox>
+            </p>
+            <p class="text-center">
+                <asp:Button ID="btnRegistrarVehiculo" runat="server" Text="Registrar Vehículo" OnClick="btnRegistrarVehiculo_Click" />
+            </p>
+            <h3>
+                Vehículos Registrados</h3>
+                <asp:GridView ID="GridView1" runat="server" HorizontalAlign="center" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" DataSourceID="sqlGetVehiculos" ForeColor="#333333" GridLines="None" ShowFooter="True" ShowHeaderWhenEmpty="True" Width="348px">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
@@ -38,34 +58,23 @@
                     <SortedDescendingCellStyle BackColor="#E9EBEF" />
                     <SortedDescendingHeaderStyle BackColor="#4870BE" />
                 </asp:GridView>
-                <asp:SqlDataSource ID="sqlGetVehiculos" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [Id] as ID, [placa] as Placa FROM [Vehiculo] WHERE ([idPersona] = @idPersona)">
-                    <SelectParameters>
-                        <asp:SessionParameter Name="idPersona" SessionField="ID" Type="Int32" />
-                    </SelectParameters>
-                </asp:SqlDataSource>
-            </p>
-            <h3 class="text-center">
-                Registrar Nuevo Vehículo</h3>
-            <p class="text-center">
-                Ingrese el número de placa del vehículo:
-                <asp:TextBox ID="txtBoxPlaca" runat="server" ForeColor="Black" Height="22px"></asp:TextBox>
-            </p>
-            <p class="text-center">
-                <asp:Button ID="btnRegistrarVehiculo" runat="server" Text="Registrar Vehículo" OnClick="btnRegistrarVehiculo_Click" />
-            </p>
+                <p class="text-center">
+                    &nbsp;</p>
             <p class="text-center">
                 &nbsp;</p>
-            <h3>
+            <p class="text-center">
+                &nbsp;</p>
+            <h3 class="text-center">
                 Franjas Horarias de Trabajo Registradas</h3>
             <p class="text-left">
                 Horario Semanal</p>
             <p class="text-center">
-                <asp:GridView ID="GridView2" runat="server" HorizontalAlign="Center" AutoGenerateColumns="False" CellPadding="4" DataSourceID="sqlGetFranjas" ForeColor="#333333" GridLines="None" Width="395px">
+                <asp:GridView ID="GridView2" runat="server" HorizontalAlign="Center" AutoGenerateColumns="False" CellPadding="4" DataSourceID="sqlGetFranjas" ForeColor="#333333" GridLines="None" Width="442px">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
-                        <asp:BoundField DataField="idDia" HeaderText="idDia" SortExpression="idDia" />
-                        <asp:BoundField DataField="inicio" HeaderText="inicio" SortExpression="inicio" />
-                        <asp:BoundField DataField="fin" HeaderText="fin" SortExpression="fin" />
+                        <asp:BoundField DataField="Día" HeaderText="Día" SortExpression="Día" />
+                        <asp:BoundField DataField="Hora de Inicio" HeaderText="Hora de Inicio" SortExpression="Hora de Inicio" />
+                        <asp:BoundField DataField="Hora de Fin" HeaderText="Hora de Fin" SortExpression="Hora de Fin" />
                     </Columns>
                     <EditRowStyle BackColor="#2461BF" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -79,12 +88,12 @@
                     <SortedDescendingHeaderStyle BackColor="#4870BE" />
                 </asp:GridView>
             </p>
-            <asp:SqlDataSource ID="sqlGetFranjas" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [idDia], [inicio], [fin] FROM [FranjaHoraria] WHERE ([idPersona] = @idPersona)">
+            <asp:SqlDataSource ID="sqlGetFranjas" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT DiasSemana.[dia] as Día, FranjaHoraria.[inicio] as 'Hora de Inicio', FranjaHoraria.[fin] as 'Hora de Fin' FROM [FranjaHoraria]  INNER JOIN DiasSemana ON FranjaHoraria.idDia = DiasSemana.id WHERE ([idPersona] = @idPersona)">
                 <SelectParameters>
                     <asp:SessionParameter Name="idPersona" SessionField="ID" Type="Int32" />
                 </SelectParameters>
             </asp:SqlDataSource>
-            <h3>
+            <h3 style="color: #6666FF">
                 Agregar Franja</h3>
             <p class="text-center">
                 Si desea agregar una franja horaria a su horario por favor indique el periodo de la misma en los campos indicados a continuación</p>
@@ -188,11 +197,12 @@
                 </asp:DropDownList>
             </p>
             <p class="text-center">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
                 <asp:Button ID="btnRegistrarFranja" runat="server" Text="Registrar Franja" OnClick="btnRegistrarFranja_Click" />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           
             </p>
             <p class="text-center">
+                &nbsp;&nbsp;&nbsp;
                 <asp:Label ID="lblMensajeFranja" runat="server" Text="" style="color: #CC0000"></asp:Label>
             </p>
             <p class="text-center">
