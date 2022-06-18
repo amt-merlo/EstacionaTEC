@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1 align="center">Estaciona<span style="color: #6666FF; ">TEC</span></h1>
+        <h1 class="text-center">Estaciona<span style="color: #6666FF; ">TEC</span></h1>
     </div>
 
     <div class="row">
@@ -15,13 +15,13 @@
             <p class="text-center">
                 <asp:TextBox ID="txtBoxCorreo" runat="server" Wrap="False" Font-Bold="True" ForeColor="#0033CC" Height="24px" Width="204px" style="text-align:center"></asp:TextBox>
             </p>
-            <p>
+            <p class="text-center">
                 &nbsp;&nbsp;&nbsp;
                 &nbsp;Contraseña:&nbsp;</p>
             <p class="text-center">
                 <asp:TextBox ID="txtBoxContrasenna" runat="server" TextMode="Password" Font-Bold="True" ForeColor="#0033CC" Height="25px" Width="199px" style="text-align:center"></asp:TextBox>
             </p>
-            <p>
+            <p class="text-center">
                 &nbsp;</p>
             <p class="text-center">
                 &nbsp;&nbsp;&nbsp;
