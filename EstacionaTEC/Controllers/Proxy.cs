@@ -8,8 +8,7 @@ namespace EstacionaTEC.Controllers
 {
     public class Proxy : DAOSolicitudes
     {
-
-        public DAOSolicitudes ServicioReal { get => ServicioReal; set => ServicioReal = value; }
+        private DAOSolicitudes ServicioReal;
 
         public Proxy(DAOSolicitudes servicioReal)
         {

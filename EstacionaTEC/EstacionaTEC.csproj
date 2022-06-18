@@ -232,6 +232,7 @@
     <Compile Include="Controllers\DAO\DAOEspacio.cs" />
     <Compile Include="Controllers\DAO\DAOEstacionamientos.cs" />
     <Compile Include="Controllers\DAO\DAOFranjas.cs" />
+    <Compile Include="Controllers\DAO\DAOOperador.cs" />
     <Compile Include="Controllers\DAO\DAOPersonas.cs" />
     <Compile Include="Controllers\DAO\DAOReservas.cs" />
     <Compile Include="Controllers\DAO\DAOSolicitudes.cs" />
@@ -239,15 +240,18 @@
     <Compile Include="Controllers\DTOEspacio.cs" />
     <Compile Include="Controllers\DTOEstacionamientos.cs" />
     <Compile Include="Controllers\DTOFranja.cs" />
+    <Compile Include="Controllers\DTOOperador.cs" />
     <Compile Include="Controllers\DTOPersonas.cs" />
     <Compile Include="Controllers\DTOVehiculos.cs" />
     <Compile Include="Controllers\GestorEspacio.cs" />
     <Compile Include="Controllers\GestorEstacionamiento.cs" />
     <Compile Include="Controllers\GestorFranjas.cs" />
+    <Compile Include="Controllers\GestorOperadores.cs" />
     <Compile Include="Controllers\GestorPersonas.cs" />
     <Compile Include="Controllers\GestorReservas.cs" />
     <Compile Include="Controllers\GestorResportes.cs" />
     <Compile Include="Controllers\GestorVehiculos.cs" />
+    <Compile Include="Controllers\Proxy.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -267,6 +271,7 @@
     <Compile Include="Models\EstacionamientoSubcontratado.cs" />
     <Compile Include="Models\EstacionamientoTEC.cs" />
     <Compile Include="Models\FranjaHoraria.cs" />
+    <Compile Include="Models\Operador.cs" />
     <Compile Include="Models\Persona.cs" />
     <Compile Include="Models\Reserva.cs" />
     <Compile Include="Models\Vehiculo.cs" />
