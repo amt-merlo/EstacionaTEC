@@ -10,11 +10,17 @@ namespace EstacionaTEC.Controllers
     public class GestorEspacio
     {
         private readonly DAOEspacio dao = new DAOEspacio();
+        private readonly Proxy proxy;
+
+        public GestorEspacio()
+        {
+            this.proxy = new Proxy(dao);
+        }
 
         public bool crearEspacio(DTOEspacio dto)
         {
             Espacio espacio = new Espacio(dto.IdEstacionamiento, dto.IdTipo, dto.Numeracion);
-            return dao.create(espacio);
+            return proxy.create(espacio);
         }
     }
 }
