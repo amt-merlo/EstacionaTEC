@@ -21,14 +21,20 @@ namespace EstacionaTEC.Models
 
         public Espacio(State estado)
         {
-            
+            this.TransitionTo(estado);
         }
 
-        public void TransitionTo(State state)
+        public void TransitionTo(State estado)
         {
-
+            Console.WriteLine($"Context: Transition to {estado.GetType().Name}.");
+            this.estado = estado;
+            this.estado.SetEspacio(this);
         }
 
+        public void Reserver()
+        {
+            this.estado.Reservar();
+        }
         public int IdEstacionamiento { get => idEstacionamiento; set => idEstacionamiento = value; }
         public int IdTipo { get => idTipo; set => idTipo = value; }
         public string Numeracion { get => numeracion; set => numeracion = value; }
