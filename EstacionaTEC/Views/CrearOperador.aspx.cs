@@ -47,6 +47,7 @@ namespace EstacionaTEC.Views
             String nombre = txtBoxNombre.Text;
             int telefono = int.Parse(txtBoxTelefono.Text);
             String correo = txtBoxCorreo.Text;
+            int idEstacionamiento = int.Parse(lblIDEstacionamiento.Text);
 
 
             //Se valida el correo institucional 
@@ -54,12 +55,12 @@ namespace EstacionaTEC.Views
             if (validarCorreo)
             {
                 //Se crea el objeto DTO
-                //DTOOperador operador = new DTOOperador(identificacion, nombre, telefono, correo, "1234"); //la contraseña se manda default como 1234
+                DTOOperador operador = new DTOOperador(identificacion, nombre, correo, telefono, idEstacionamiento,"1234"); //la contraseña se manda default como 1234
 
                 //Se envia el objeto al gestor por medio del controller
                 Controller controller = Controller.getInstance();
-                //bool resultado = controller.crearPersona(operador);
-                /*
+                bool resultado = controller.crearOperador(operador);
+                
                 if (resultado)
                 {
                     
@@ -70,7 +71,7 @@ namespace EstacionaTEC.Views
                 {
 
                     lblMensaje.Text = "Ya existe un operador registrado con el mismo número de cédula";
-                }*/
+                }
             }
             else
             {
