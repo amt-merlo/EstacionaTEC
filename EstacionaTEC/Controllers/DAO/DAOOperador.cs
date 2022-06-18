@@ -15,7 +15,7 @@ namespace EstacionaTEC.Controllers.DAO
             int retorno;
             SqlConnection conexion = new SqlConnection("Data Source = ProyectoDisenno.mssql.somee.com; Initial Catalog = ProyectoDisenno; Persist Security Info=False;User ID = JohelPF_SQLLogin_1; Password=w7v8k5itwh;Packet Size = 4096; Workstation ID = ProyectoDisenno.mssql.somee.com");
             conexion.Open();
-            String cadena = "exec ##### " + operador.Id + "," + "'" + operador.NombreCompleto + "'" + "," + "'" + operador.Correo + "'" + "," + operador.Celular + "," + operador.IdEstacionamiento;
+            String cadena = "exec ##### " + operador.Id + "," + "'" + operador.NombreCompleto + "'" + "," + "'" + operador.Correo + "'" + "," + operador.Celular + "," + operador.IdEstacionamiento + "," + "'" + operador.Contrasenna + "'";
             SqlCommand comando = new SqlCommand(cadena, conexion);
             retorno = (int)comando.ExecuteScalar();
             conexion.Close();

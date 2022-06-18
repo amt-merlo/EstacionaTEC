@@ -18,7 +18,7 @@ namespace EstacionaTEC.Controllers
         }
         public bool crearOperador(DTOOperador dto)
         {
-            Operador operador = new Operador(dto.Id,dto.NombreCompleto,dto.Correo,dto.Celular,dto.IdEstacionamiento);
+            Operador operador = new Operador(dto.Id,dto.NombreCompleto,dto.Correo,dto.Celular,dto.IdEstacionamiento,dto.Contrasenna);
             return proxy.create(operador);
         }
     }
