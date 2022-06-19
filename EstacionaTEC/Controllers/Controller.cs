@@ -17,6 +17,7 @@ namespace EstacionaTEC.Controllers
         private readonly GestorPersonas gestorPersonas = new GestorPersonas();
         private readonly GestorEspacio gestorEspacio = new GestorEspacio();
         private readonly GestorOperadores gestorOperadores = new GestorOperadores();
+        private readonly GestorReservasVisitante gestorReservasVisitante = new GestorReservasVisitante();
 
         public static Controller getInstance()
         {
@@ -129,6 +130,11 @@ namespace EstacionaTEC.Controllers
 
         public bool crearOperador(DTOOperador operador) {
             return gestorOperadores.crearOperador(operador);
+        }
+
+        public bool createReservaVisitante(DTOReservasVisitantes reservas)
+        {
+            return gestorReservasVisitante.createReservaVisitante(reservas);
         }
     }
 }
