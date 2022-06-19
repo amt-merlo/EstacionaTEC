@@ -11,7 +11,7 @@
         <div class="col-sm-3"></div>
 
         <div class="col-sm-3">
-            <h3>Gestionar Reservas</h3>
+            <h3><strong>Gestionar Reservas</strong></h3>
             <p>
                 <asp:ImageButton ID="ImageButton1" runat="server" Height="88px" ImageUrl="~/Imagenes/reservar.png" OnClick="ImageButton1_Click" />
             </p>
@@ -24,15 +24,10 @@
 
             
             <p class="text-center">
-                <asp:SqlDataSource ID="sqlGetNombre" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [nombreCompleto] FROM [Persona] WHERE ([identificacion] = @identificacion)">
-                    <SelectParameters>
-                        <asp:SessionParameter Name="identificacion" SessionField="ID" Type="Int32" />
-                    </SelectParameters>
-                </asp:SqlDataSource>
-            </p>
+                &nbsp;</p>
         </div>  
         <div class="col-sm-3">
-            <h3>Información Personal</h3>
+            <h3><strong>Información Personal</strong></h3>
             <p>
                 <asp:ImageButton ID="ImageButton3" runat="server" Height="88px" ImageUrl="~/Imagenes/editarPerfil.png" OnClick="ImageButton3_Click" />
             </p>
@@ -50,6 +45,11 @@
                 <asp:ImageButton ID="ImageButton4" runat="server" Height="88px" ImageUrl="~/Imagenes/statistics.png" OnClick="ImageButton4_Click" />
             </p>
             <p>Informes y Estadísticas</p>
+                <asp:SqlDataSource ID="sqlGetNombre" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [nombreCompleto] FROM [Persona] WHERE ([identificacion] = @identificacion)">
+                    <SelectParameters>
+                        <asp:SessionParameter Name="identificacion" SessionField="ID" Type="Int32" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
             <p></p>
         </div>
     </div>

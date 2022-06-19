@@ -25,7 +25,7 @@ namespace EstacionaTEC
 
             //Variables a usar
             int ID = 0;
-            bool esAdmin = false;
+            int tipo = 0;
 
             //Se asignan los valores en las variables
             ID = (int)groupsTable.Rows[0]["ID"];
@@ -44,20 +44,25 @@ namespace EstacionaTEC
                 Session["ID"] = ID;
 
                 //Si el usuario existe, valida si es administrador o no
-                esAdmin = (bool)groupsTable.Rows[0]["Administrativo"];
-                
+                tipo = Convert.ToInt32(groupsTable.Rows[0]["Tipo"]);
 
-                if (esAdmin)
+                
+                if (tipo == 1)
                 {
                     //Se redirecciona al menú para administrador
                     Response.Redirect("Views/AdministradorLanding.aspx");
                 }
-                else
+                else if (tipo == 0)
                 {
-                    //Se redirecciona al menu para funcionario normal
+                    //Se redirecciona al menu para operador 
                     Response.Redirect("Views/FuncionarioLanding.aspx");
                 }
-
+                else if(tipo == 2)
+                {
+                    //Se redirecciona al menu para funcionario estándar 
+                    Response.Redirect("Views/OperadorLanding.aspx");
+                }
+                
             }
 
 

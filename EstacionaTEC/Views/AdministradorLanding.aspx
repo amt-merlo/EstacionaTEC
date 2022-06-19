@@ -55,6 +55,9 @@
                 Informes y Estadísticas</p>
             <p>
 
+                &nbsp;</p>
+            <p>
+
                 <asp:SqlDataSource ID="sqlGetNombre" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [nombreCompleto] FROM [Persona] WHERE ([identificacion] = @identificacion)">
                     <SelectParameters>
                         <asp:SessionParameter Name="identificacion" SessionField="ID" Type="Int32" />
