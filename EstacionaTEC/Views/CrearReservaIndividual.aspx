@@ -8,6 +8,15 @@
             <h4 class="text-right">Bienvenido(a)
                 <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
             </h4>
+        <p class="text-right">Bienvenido al módulo de reservas de Estaciona<span style="color: #6666FF">TEC</span>, a continuación se le brindará la información necesaria para completar el proceso de la reserva exitosamente, para reservar un espacio por favor siga las siguientes instrucciones.</p>
+        <p class="text-right">&nbsp;</p>
+        <h4>Intrucciones</h4>
+        <p class="text-right">1. Indicar la hora de entrada y la hora de salida.</p>
+        <p class="text-right">2. Seleccionar la placa del vehículo con el que va a ingresar al estacionamiento <span style="color: #6666FF">(Si la placa no se encuentra en las opciones que se le presentan, deberá dirigirse al módulo de Editar Información Personal para registrar el vehículo).</span></p>
+        <p class="text-right">3. Seleccionar el espacio que desea reservar.</p>
+        <p class="text-right">4. Presionar el botón &quot;Reservar&quot;</p>
+        <p class="text-right">5. Esperar el mensaje de confirmación de la página con la indicación de que la reserva se realizó exitosamente</p>
+        <p class="text-right">&nbsp;</p>
         <p >
             <asp:SqlDataSource ID="sqlGetNombre" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [nombreCompleto] FROM [Persona] WHERE ([identificacion] = @identificacion)">
                 <SelectParameters>
@@ -15,8 +24,8 @@
                 </SelectParameters>
             </asp:SqlDataSource>
             </p>
-        <p class="text-right">
-            Información del parqueo seleccionado</p>
+        <h4>
+            <strong>Información del parqueo seleccionado</strong></h4>
         <p >
             <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Left" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" DataSourceID="sqlEstacionamiento" ForeColor="#333333" GridLines="None" Width="688px">
                 <AlternatingRowStyle BackColor="White" />
@@ -95,7 +104,7 @@
         <p style="color: #000000">
             &nbsp;</p>
         <h4 style="color: #000000" class="text-right">
-            Información de la reserva</h4>
+            <strong>Horario</strong></h4>
     </div>
     <p style="color: #000000" class="text-right">
         Indique el periodo de tiempo por el que desea realizar la reserva</p>
@@ -194,6 +203,8 @@
             </p>
     <p class="text-right">
                 &nbsp;</p>
+    <h4>
+                <strong>Vehículo</strong></h4>
     <p class="text-right">
                 Por favor indique la placa del vehículo que va a utilizar</p>
     <p class="text-right">
@@ -203,8 +214,45 @@
             </p>
     <p class="text-right">
                 &nbsp;</p>
+    <h4>
+                <strong>Espacio</strong></h4>
     <p class="text-right">
-                <asp:Button ID="btnReservar" runat="server" Text="Reservar" Width="119px" Height="34px" />
+                <asp:GridView ID="gridEspacios" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="324px" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="sqlEspacios" OnSelectedIndexChanged="GridView3_SelectedIndexChanged" AutoGenerateSelectButton="True">
+                    <AlternatingRowStyle BackColor="White" />
+                    <Columns>
+                        <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
+                        <asp:BoundField DataField="numeracion" HeaderText="numeracion" SortExpression="numeracion" />
+                    </Columns>
+                    <EditRowStyle BackColor="#2461BF" />
+                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#EFF3FB" />
+                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                </asp:GridView>
+    </p>
+    <p class="text-right">
+                Espacio seleccionado:
+                <asp:Label ID="lblEspacio" runat="server" Text=""></asp:Label>
+    </p>
+    <p class="text-right">
+                &nbsp;</p>
+    <p class="text-right">
+                <asp:SqlDataSource ID="sqlEspacios" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [id], [numeracion] FROM [Espacio] WHERE (([idEstacionamiento] = @idEstacionamiento) AND ([idTipo] = @idTipo))">
+                    <SelectParameters>
+                        <asp:SessionParameter Name="idEstacionamiento" SessionField="EstacionamientoSeleccionado" Type="Int32" />
+                        <asp:SessionParameter Name="idTipo" SessionField="Tipo" Type="Int32" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+    </p>
+    <p class="text-right">
+                <asp:Button ID="btnReservar" runat="server" Text="Reservar" Width="119px" Height="34px" OnClick="btnReservar_Click" />
+            &nbsp;
+                <asp:Button ID="btnVolver" runat="server" Text="Volver" Width="119px" Height="34px" OnClick="btnVolver_Click" />
             </p>
     <br />
     <div class="text-right">

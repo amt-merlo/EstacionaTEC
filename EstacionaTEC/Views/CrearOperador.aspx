@@ -76,6 +76,9 @@
             <p>
                 <asp:Button ID="btnRegistrar" runat="server" Text="Registrar" OnClick="btnRegistrar_Click" />
             </p>
+        <p>
+                <asp:Button ID="btnMenuPrincipal" runat="server" Text="Menú Principal" OnClick="btnMenuPrincipal_Click" />
+            </p>
             <p>
                 <asp:SqlDataSource ID="sqlEstacionamientos" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [id] as ID, [nombre] as Nombre, [ubicacion] as Ubicación, [horaApertura] as 'Hora de Apertura', [horaCierre] as 'Hora de Cierre' FROM [Estacionamiento] WHERE ([idTipo] = @idTipo)">
                     <SelectParameters>

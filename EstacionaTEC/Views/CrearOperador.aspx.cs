@@ -84,5 +84,10 @@ namespace EstacionaTEC.Views
             int ID = int.Parse(gridEstacionamientos.SelectedRow.Cells[1].Text);
             lblIDEstacionamiento.Text = ID.ToString();
         }
+
+        protected void btnMenuPrincipal_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdministradorLanding.aspx");
+        }
     }
 }
