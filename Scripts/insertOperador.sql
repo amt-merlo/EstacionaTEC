@@ -41,7 +41,7 @@ BEGIN
 				 @inEstacionamiento
 			   )
 
-		EXEC [dbo].[generarUsuario] @inIdentificacion, @inContrasenna
+		EXEC [dbo].[generarUsuarioOperador] @inIdentificacion, @inContrasenna
 		SET @returnValue = 1
 		SELECT @returnValue -- Sin error
 		

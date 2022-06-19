@@ -1284,8 +1284,7 @@ h3,
 h4,
 .h4 {
   font-size: 18px;
-    text-align: center;
-}
+    }
 h5,
 .h5 {
   font-size: 14px;
@@ -1296,7 +1295,7 @@ h6,
 }
 p {
   margin: 0 0 10px;
-    text-align: center;
+    text-align: left;
 }
 .lead {
   margin-bottom: 20px;
@@ -1324,7 +1323,7 @@ mark,
   text-align: left;
 }
 .text-center {
-  text-align: center;
+  text-align: left;
 }
 .text-justify {
   text-align: justify;
