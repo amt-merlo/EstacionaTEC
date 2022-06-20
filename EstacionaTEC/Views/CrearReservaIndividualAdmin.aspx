@@ -11,7 +11,7 @@
         <p class="text-right">Bienvenido al módulo de reservas de Estaciona<span style="color: #6666FF">TEC</span><span style="color: #000000"> para visitantes</span>, a continuación se le brindará la información necesaria para completar el proceso de la reserva exitosamente, para reservar un espacio por favor siga las siguientes instrucciones.</p>
         <p class="text-right">&nbsp;</p>
         <h4>Instrucciones</h4>
-        <p>1. Ingresar el número de identificación y nombre del visitante.</p>
+        <p class="text-right">1. Ingresar el número de identificación y nombre del visitante.</p>
         <p class="text-right">2. Indicar el día, la hora de entrada y la hora de salida de la visita.</p>
         <p class="text-right">3. Indicar la placa del vehículo con el que va a ingresar el visitante al estacionamiento.</p>
         <p class="text-right">4. Indicar el motivo de la visita.</p>
@@ -67,11 +67,11 @@
             &nbsp;</p>
         <h4 style="color: #000000">
             <strong>Datos del visitante</strong></h4>
-        <p style="color: #000000">
+        <p style="color: #000000" class="text-right">
             Identificación:&nbsp;
             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         </p>
-        <p style="color: #000000">
+        <p style="color: #000000" class="text-right">
             Nombre completo:
             <asp:TextBox ID="TextBox2" runat="server" Width="275px"></asp:TextBox>
         </p>
@@ -81,9 +81,9 @@
             &nbsp;</p>
         <h4 style="color: #000000">
             <strong>Día de la reserva</strong></h4>
-        <p style="color: #000000">
+        <p style="color: #000000" class="text-right">
             Seleccione el día que desea reservar</p>
-        <p style="color: #000000">
+        <p style="color: #000000" class="text-right">
             <asp:DropDownList ID="ddListDias" runat="server" DataSourceID="sqlDias" DataTextField="dia" DataValueField="dia">
             </asp:DropDownList>
         </p>

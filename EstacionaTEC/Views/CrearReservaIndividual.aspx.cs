@@ -12,6 +12,10 @@ namespace EstacionaTEC.Views
     public partial class CrearReservaIndividual : System.Web.UI.Page
     {
         int idEspacio;
+        int idDia;
+        TimeSpan entrada;
+        TimeSpan salida;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             //Consulta del nombre del usuario
@@ -33,28 +37,18 @@ namespace EstacionaTEC.Views
             int idPersona = Convert.ToInt32(Session["ID"]);
             String placa = ddlistPlacas.SelectedValue;
             int idEspacio = this.idEspacio;
+            int idEstacionamiento = Convert.ToInt32(Session["EstacionamientoSeleccionado"]);
 
-            //Horas
-            String horaInicio = ddListHoraInicio.SelectedValue;
-            String minutosInicio = ddListMinutosInicio.SelectedValue;
-            String horaFin = ddListHoraFin.SelectedValue;
-            String minutosFin = ddListMinutosFin.SelectedValue;
-
-            //Se conforman los timeSpan
-            TimeSpan horaEntrada = TimeSpan.Parse(horaInicio + ":" + minutosInicio);
-            TimeSpan horaSalida = TimeSpan.Parse(horaFin + ":" + minutosFin);
-
-            //Aqui primero se debe validar si el horario coincide con la franja o no
 
             //Si el sp devuelve true
-            DTOReservas reserva = new DTOReservas(idPersona, placa, horaEntrada, horaSalida, idEspacio);
+            DTOReservas reserva = new DTOReservas(idPersona, placa, entrada, salida, idEspacio, idDia, idEstacionamiento);
             //Se envia el objeto al gestor por medio del controller
             Controller controller = Controller.getInstance();
             bool resultado = controller.createReserva(reserva);
-
+            
             if (resultado)
             {
-                Response.Write("<script>alert('¡Funcionario registrado exitosamente!')</script>");
+                Response.Write("<script>alert('¡Espacio reservado exitosamente!')</script>");
             }
             else
             {
@@ -72,6 +66,13 @@ namespace EstacionaTEC.Views
         protected void btnVolver_Click(object sender, EventArgs e)
         {
             Response.Redirect("CrearReserva.aspx");
+        }
+
+        protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            idDia = gridFranjas.SelectedIndex;
+            entrada = TimeSpan.Parse(gridFranjas.SelectedRow.Cells[2].Text);
+            salida = TimeSpan.Parse(gridFranjas.SelectedRow.Cells[3].Text);
         }
     }
 }

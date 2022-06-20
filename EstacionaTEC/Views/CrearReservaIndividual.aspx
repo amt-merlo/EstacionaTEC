@@ -62,10 +62,12 @@
             &nbsp;</p>
         <h4 style="color: #000000" class="text-right" >
             Franjas Horarias Registradas <span style="color: #999999">(Horario del funcionario)*</span></h4>
+        <p style="color: #000000" class="text-right" >
+            Seleccione el día y la hora a la que desea reservar su espacio</p>
         <p  style="color: #6666FF" class="text-right">
             Recuerde que solo puede tramitar reservas dentro de su horario de trabajo*</p>
         <p style="color: #000000">
-            <asp:GridView ID="GridView2" runat="server" HorizontalAlign="Left" AutoGenerateColumns="False" CellPadding="4" DataSourceID="sqlFranjas" ForeColor="#333333" GridLines="None" Width="358px">
+            <asp:GridView ID="gridFranjas" runat="server" HorizontalAlign="Left" AutoGenerateColumns="False" CellPadding="4" DataSourceID="sqlFranjas" ForeColor="#333333" GridLines="None" Width="403px" AutoGenerateSelectButton="True" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField DataField="Día" HeaderText="Día" SortExpression="Día" />
@@ -91,6 +93,18 @@
         <p style="color: #000000">
             &nbsp;</p>
         <p style="color: #000000">
+            Día:&nbsp;
+            <asp:Label ID="lblDia" runat="server" Text=""></asp:Label>
+        </p>
+        <p style="color: #000000">
+            Hora de entrada:&nbsp;
+            <asp:Label ID="lblEntrada" runat="server" Text=""></asp:Label>
+        </p>
+        <p style="color: #000000">
+            Hora de salida:&nbsp;
+            <asp:Label ID="lblSalida" runat="server" Text=""></asp:Label>
+        </p>
+        <p style="color: #000000">
             &nbsp;</p>
         <p style="color: #000000">
             <asp:SqlDataSource ID="sqlFranjas" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT DiasSemana.[dia] as Día, FranjaHoraria.[inicio] as 'Hora de Inicio', FranjaHoraria.[fin] as 'Hora de Fin' FROM [FranjaHoraria]  INNER JOIN DiasSemana ON FranjaHoraria.idDia = DiasSemana.id WHERE ([idPersona] = @idPersona)">
@@ -99,121 +113,11 @@
                 </SelectParameters>
             </asp:SqlDataSource>
         </p>
-        <p style="color: #000000">
-            &nbsp;</p>
         <h4 style="color: #000000">
-            <strong>Día de la reserva</strong></h4>
-        <p style="color: #000000">
-            Seleccione el día que desea reservar</p>
-        <p style="color: #000000">
-            <asp:DropDownList ID="ddListDias" runat="server" DataSourceID="sqlDias" DataTextField="dia" DataValueField="dia">
-            </asp:DropDownList>
-        </p>
-        <p style="color: #000000">
-            <asp:SqlDataSource ID="sqlDias" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [dia] FROM [DiasSemana]"></asp:SqlDataSource>
-        </p>
+            &nbsp;</h4>
         <p style="color: #000000">
             &nbsp;</p>
-        <h4 style="color: #000000" class="text-right">
-            <strong>Horario</strong></h4>
     </div>
-    <p style="color: #000000" class="text-right">
-        Indique el periodo de tiempo por el que desea realizar la reserva</p>
-    <p class="text-right">
-                <strong>Hora de entrada</strong></p>
-            <p class="text-right">
-                Hora:&nbsp;
-                <asp:DropDownList ID="ddListHoraInicio" runat="server" Height="16px" Width="66px" ForeColor="Black">
-                    <asp:ListItem>00</asp:ListItem>
-                    <asp:ListItem>1</asp:ListItem>
-                    <asp:ListItem>2</asp:ListItem>
-                    <asp:ListItem>3</asp:ListItem>
-                    <asp:ListItem>4</asp:ListItem>
-                    <asp:ListItem>5</asp:ListItem>
-                    <asp:ListItem>6</asp:ListItem>
-                    <asp:ListItem>7</asp:ListItem>
-                    <asp:ListItem>8</asp:ListItem>
-                    <asp:ListItem>9</asp:ListItem>
-                    <asp:ListItem>10</asp:ListItem>
-                    <asp:ListItem>11</asp:ListItem>
-                    <asp:ListItem>12</asp:ListItem>
-                    <asp:ListItem>13</asp:ListItem>
-                    <asp:ListItem>14</asp:ListItem>
-                    <asp:ListItem>15</asp:ListItem>
-                    <asp:ListItem>16</asp:ListItem>
-                    <asp:ListItem>17</asp:ListItem>
-                    <asp:ListItem>18</asp:ListItem>
-                    <asp:ListItem>19</asp:ListItem>
-                    <asp:ListItem>20</asp:ListItem>
-                    <asp:ListItem>21</asp:ListItem>
-                    <asp:ListItem>22</asp:ListItem>
-                    <asp:ListItem>23</asp:ListItem>
-                </asp:DropDownList>
-&nbsp; Minutos:
-                <asp:DropDownList ID="ddListMinutosInicio" runat="server" Width="63px" ForeColor="Black">
-                    <asp:ListItem>00</asp:ListItem>
-                    <asp:ListItem>05</asp:ListItem>
-                    <asp:ListItem>10</asp:ListItem>
-                    <asp:ListItem>15</asp:ListItem>
-                    <asp:ListItem>20</asp:ListItem>
-                    <asp:ListItem>25</asp:ListItem>
-                    <asp:ListItem>30</asp:ListItem>
-                    <asp:ListItem>35</asp:ListItem>
-                    <asp:ListItem>40</asp:ListItem>
-                    <asp:ListItem>45</asp:ListItem>
-                    <asp:ListItem>50</asp:ListItem>
-                    <asp:ListItem>55</asp:ListItem>
-
-                </asp:DropDownList>
-            </p>
-            <p class="text-right">
-                <strong>Hora de salida</strong></p>
-            <p class="text-right">
-                Hora:
-                <asp:DropDownList ID="ddListHoraFin" runat="server" ForeColor="Black">
-                    <asp:ListItem>00</asp:ListItem>
-                    <asp:ListItem>1</asp:ListItem>
-                    <asp:ListItem>2</asp:ListItem>
-                    <asp:ListItem>3</asp:ListItem>
-                    <asp:ListItem>4</asp:ListItem>
-                    <asp:ListItem>5</asp:ListItem>
-                    <asp:ListItem>6</asp:ListItem>
-                    <asp:ListItem>7</asp:ListItem>
-                    <asp:ListItem>8</asp:ListItem>
-                    <asp:ListItem>9</asp:ListItem>
-                    <asp:ListItem>10</asp:ListItem>
-                    <asp:ListItem>11</asp:ListItem>
-                    <asp:ListItem>12</asp:ListItem>
-                    <asp:ListItem>13</asp:ListItem>
-                    <asp:ListItem>14</asp:ListItem>
-                    <asp:ListItem>15</asp:ListItem>
-                    <asp:ListItem>16</asp:ListItem>
-                    <asp:ListItem>17</asp:ListItem>
-                    <asp:ListItem>18</asp:ListItem>
-                    <asp:ListItem>19</asp:ListItem>
-                    <asp:ListItem>20</asp:ListItem>
-                    <asp:ListItem>21</asp:ListItem>
-                    <asp:ListItem>22</asp:ListItem>
-                    <asp:ListItem>23</asp:ListItem>
-                </asp:DropDownList>
-&nbsp; Minutos:
-                <asp:DropDownList ID="ddListMinutosFin" runat="server" ForeColor="Black">
-                    <asp:ListItem>00</asp:ListItem>
-                    <asp:ListItem>05</asp:ListItem>
-                    <asp:ListItem>10</asp:ListItem>
-                    <asp:ListItem>15</asp:ListItem>
-                    <asp:ListItem>20</asp:ListItem>
-                    <asp:ListItem>25</asp:ListItem>
-                    <asp:ListItem>30</asp:ListItem>
-                    <asp:ListItem>35</asp:ListItem>
-                    <asp:ListItem>40</asp:ListItem>
-                    <asp:ListItem>45</asp:ListItem>
-                    <asp:ListItem>50</asp:ListItem>
-                    <asp:ListItem>55</asp:ListItem>
-                </asp:DropDownList>
-            </p>
-    <p class="text-right">
-                &nbsp;</p>
     <h4>
                 <strong>Vehículo</strong></h4>
     <p class="text-right">
@@ -223,6 +127,8 @@
                 <asp:DropDownList ID="ddlistPlacas" runat="server" Height="97px" Width="143px" DataSourceID="sqlPlacas" DataTextField="placa" DataValueField="placa" ForeColor="Black">
                 </asp:DropDownList>
             </p>
+    <p class="text-right">
+                &nbsp;</p>
     <p class="text-right">
                 &nbsp;</p>
     <h4>
