@@ -7,27 +7,29 @@ namespace EstacionaTEC.Controllers
 {
     public class DTOReservasVisitantes
     {
-        string nombre;
-        int id;
-        string placa;
-        string motivo;
-        string sitio;
-        int reserva;
-
-        public DTOReservasVisitantes(string nombre, int id, string placa, string motivo, string sitio, int reserva)
+        public DTOReservasVisitantes(string nombre, int id, string motivo, string sitio, int identificacionPersona, string placa, TimeSpan horaEntrada, TimeSpan horaSalida, int idEspacio, int idEstacionamiento)
         {
-            this.Nombre = nombre;
-            this.Id = id;
-            this.Placa = placa;
-            this.Motivo = motivo;
-            this.Sitio = sitio;
+            Nombre = nombre;
+            Id = id;
+            Motivo = motivo;
+            Sitio = sitio;
+            IdentificacionPersona = identificacionPersona;
+            Placa = placa;
+            HoraEntrada = horaEntrada;
+            HoraSalida = horaSalida;
+            IdEspacio = idEspacio;
+            IdEstacionamiento = idEstacionamiento;
         }
 
-        public string Nombre { get => nombre; set => nombre = value; }
-        public int Id { get => id; set => id = value; }
-        public string Placa { get => placa; set => placa = value; }
-        public string Motivo { get => motivo; set => motivo = value; }
-        public string Sitio { get => sitio; set => sitio = value; }
-        public int Reserva { get => reserva; set => reserva = value; }
+        public string Nombre { get => Nombre; set => Nombre = value; }
+        public int Id { get => Id; set => Id = value; }
+        public string Motivo { get => Motivo; set => Motivo = value; }
+        public string Sitio { get => Sitio; set => Sitio = value; }
+        public int IdentificacionPersona { get => IdentificacionPersona; set => IdentificacionPersona = value; }
+        public string Placa { get => Placa; set => Placa = value; }
+        public TimeSpan HoraEntrada { get => HoraEntrada; set => HoraEntrada = value; }
+        public TimeSpan HoraSalida { get => HoraSalida; set => HoraSalida = value; }
+        public int IdEspacio { get => IdEspacio; set => IdEspacio = value; }
+        public int IdEstacionamiento { get => IdEstacionamiento; set => IdEstacionamiento = value; }
     }
 }
