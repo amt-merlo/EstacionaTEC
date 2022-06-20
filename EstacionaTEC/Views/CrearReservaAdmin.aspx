@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CrearReserva.aspx.cs" Inherits="EstacionaTEC.Views.CrearReserva" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CrearReservaAdmin.aspx.cs" Inherits="EstacionaTEC.Views.CrearReservaAdmin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron">
         <h1 class="text-center">Estaciona<span style="color: #6666FF; ">TEC</span></h1>
@@ -18,7 +18,7 @@
             </asp:SqlDataSource>
         </p>
         *<p class="text-center">
-            <asp:GridView ID="gridEstacionamiento" HorizontalAlign="Center" runat="server" Width="712px" CellPadding="4" GridLines="None" AutoGenerateColumns="False" AutoGenerateSelectButton="True" DataSourceID="sqlEstacionamientos" OnSelectedIndexChanged="gridEstacionamiento_SelectedIndexChanged" DataKeyNames="ID" ForeColor="#333333">
+            <asp:GridView ID="gridEstacionamiento" HorizontalAlign="Center" runat="server" Width="664px" CellPadding="4" GridLines="None" AutoGenerateColumns="False" AutoGenerateSelectButton="True" DataSourceID="sqlEstacionamientos" OnSelectedIndexChanged="gridEstacionamiento_SelectedIndexChanged" DataKeyNames="ID" ForeColor="#333333">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" InsertVisible="False" ReadOnly="True" />

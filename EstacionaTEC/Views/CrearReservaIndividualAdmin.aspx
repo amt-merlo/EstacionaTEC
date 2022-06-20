@@ -1,20 +1,23 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CrearReservaIndividual.aspx.cs" Inherits="EstacionaTEC.Views.CrearReservaIndividual" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CrearReservaIndividualAdmin.aspx.cs" Inherits="EstacionaTEC.Views.CrearReservaIndividualAdmin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron">
         <h1 class="text-center">Estaciona<span style="color: #6666FF; ">TEC</span></h1>
     </div>
     <div >
-        <h2 class="text-right" >Reservar Espacio</h2>
+        <h2 class="text-right" >Reservar Espacio para Visitante</h2>
             <h4 class="text-right">Bienvenido(a)
                 <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
             </h4>
-        <p class="text-right">Bienvenido al módulo de reservas de Estaciona<span style="color: #6666FF">TEC</span>, a continuación se le brindará la información necesaria para completar el proceso de la reserva exitosamente, para reservar un espacio por favor siga las siguientes instrucciones.</p>
+        <p class="text-right">Bienvenido al módulo de reservas de Estaciona<span style="color: #6666FF">TEC</span><span style="color: #000000"> para visitantes</span>, a continuación se le brindará la información necesaria para completar el proceso de la reserva exitosamente, para reservar un espacio por favor siga las siguientes instrucciones.</p>
         <p class="text-right">&nbsp;</p>
         <h4>Instrucciones</h4>
-        <p class="text-right">1. Indicar la hora de entrada y la hora de salida.</p>
-        <p class="text-right">2. Seleccionar la placa del vehículo con el que va a ingresar al estacionamiento <span style="color: #6666FF">(Si la placa no se encuentra en las opciones que se le presentan, deberá dirigirse al módulo de Editar Información Personal para registrar el vehículo).</span></p>
-        <p class="text-right">3. Seleccionar el espacio que desea reservar.</p>
-        <p class="text-right">4. Presionar el botón &quot;Reservar&quot;</p>
+        <p>1. Ingresar el número de identificación y nombre del visitante.</p>
+        <p class="text-right">2. Indicar el día, la hora de entrada y la hora de salida de la visita.</p>
+        <p class="text-right">3. Indicar la placa del vehículo con el que va a ingresar el visitante al estacionamiento.</p>
+        <p class="text-right">4. Indicar el motivo de la visita.</p>
+        <p class="text-right">5. Ingresar el sitio dentro del TEC a donde se dirige el visitante</p>
+        <p class="text-right">6. Seleccionar el espacio que desea reservar.</p>
+        <p class="text-right">7. Presionar el botón &quot;Reservar&quot;</p>
         <p class="text-right">5. Esperar el mensaje de confirmación de la página con la indicación de que la reserva se realizó exitosamente</p>
         <p class="text-right">&nbsp;</p>
         <p >
@@ -60,45 +63,20 @@
             &nbsp;</p>
         <p class="text-center">
             &nbsp;</p>
-        <h4 style="color: #000000" class="text-right" >
-            Franjas Horarias Registradas <span style="color: #999999">(Horario del funcionario)*</span></h4>
-        <p  style="color: #6666FF" class="text-right">
-            Recuerde que solo puede tramitar reservas dentro de su horario de trabajo*</p>
+        <p class="text-center">
+            &nbsp;</p>
+        <h4 style="color: #000000">
+            <strong>Datos del visitante</strong></h4>
         <p style="color: #000000">
-            <asp:GridView ID="GridView2" runat="server" HorizontalAlign="Left" AutoGenerateColumns="False" CellPadding="4" DataSourceID="sqlFranjas" ForeColor="#333333" GridLines="None" Width="358px">
-                <AlternatingRowStyle BackColor="White" />
-                <Columns>
-                    <asp:BoundField DataField="Día" HeaderText="Día" SortExpression="Día" />
-                    <asp:BoundField DataField="Hora de Inicio" HeaderText="Hora de Inicio" SortExpression="Hora de Inicio" />
-                    <asp:BoundField DataField="Hora de Fin" HeaderText="Hora de Fin" SortExpression="Hora de Fin" />
-                </Columns>
-                <EditRowStyle BackColor="#2461BF" />
-                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                <RowStyle BackColor="#EFF3FB" HorizontalAlign="Center" VerticalAlign="Middle" />
-                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                <SortedAscendingCellStyle BackColor="#F5F7FB" />
-                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                <SortedDescendingCellStyle BackColor="#E9EBEF" />
-                <SortedDescendingHeaderStyle BackColor="#4870BE" />
-            </asp:GridView>
+            Identificación:&nbsp;
+            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        </p>
+        <p style="color: #000000">
+            Nombre completo:
+            <asp:TextBox ID="TextBox2" runat="server" Width="275px"></asp:TextBox>
         </p>
         <p style="color: #000000">
             &nbsp;</p>
-        <p style="color: #000000">
-            &nbsp;</p>
-        <p style="color: #000000">
-            &nbsp;</p>
-        <p style="color: #000000">
-            &nbsp;</p>
-        <p style="color: #000000">
-            <asp:SqlDataSource ID="sqlFranjas" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT DiasSemana.[dia] as Día, FranjaHoraria.[inicio] as 'Hora de Inicio', FranjaHoraria.[fin] as 'Hora de Fin' FROM [FranjaHoraria]  INNER JOIN DiasSemana ON FranjaHoraria.idDia = DiasSemana.id WHERE ([idPersona] = @idPersona)">
-                <SelectParameters>
-                    <asp:SessionParameter Name="idPersona" SessionField="ID" />
-                </SelectParameters>
-            </asp:SqlDataSource>
-        </p>
         <p style="color: #000000">
             &nbsp;</p>
         <h4 style="color: #000000">
@@ -112,6 +90,8 @@
         <p style="color: #000000">
             <asp:SqlDataSource ID="sqlDias" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [dia] FROM [DiasSemana]"></asp:SqlDataSource>
         </p>
+        <p style="color: #000000">
+            &nbsp;</p>
         <p style="color: #000000">
             &nbsp;</p>
         <h4 style="color: #000000" class="text-right">
@@ -214,14 +194,29 @@
             </p>
     <p class="text-right">
                 &nbsp;</p>
+    <p class="text-right">
+                &nbsp;</p>
     <h4>
                 <strong>Vehículo</strong></h4>
     <p class="text-right">
                 Por favor indique la placa del vehículo que va a utilizar</p>
     <p class="text-right">
                 Placa:
-                <asp:DropDownList ID="ddlistPlacas" runat="server" Height="97px" Width="143px" DataSourceID="sqlPlacas" DataTextField="placa" DataValueField="placa" ForeColor="Black">
-                </asp:DropDownList>
+                <asp:TextBox ID="txtBoxPlaca" runat="server"></asp:TextBox>
+            </p>
+    <h4>
+                &nbsp;</h4>
+    <p>
+                &nbsp;</p>
+    <h4>
+                <strong>Justificación</strong></h4>
+    <p>
+                Por favor indique las razones por las cuales el visitante se encuentra en la institución</p>
+    <p class="text-right">
+                Motivo de la visita: <asp:TextBox ID="TextBox3" runat="server" Width="293px"></asp:TextBox>
+            </p>
+    <p class="text-right">
+                Sitio a donde se dirige: <asp:TextBox ID="TextBox4" runat="server" Width="262px"></asp:TextBox>
             </p>
     <p class="text-right">
                 &nbsp;</p>

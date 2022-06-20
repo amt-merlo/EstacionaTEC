@@ -30,33 +30,37 @@
         </div>
         <div class="col-sm-3">
             <h3 class="text-center"><strong>Gestión de Parqueos</strong></h3>
-            <p>
+            <p class="text-center">
                 <asp:ImageButton ID="ImageButton4" runat="server" Height="61px" ImageUrl="~/Imagenes/crearEstacionamiento.png" Width="73px" OnClick="ImageButton4_Click" />
             </p>
-            <p>Crear Estacionamiento</p>
-            <p>
+            <p class="text-center">Crear Estacionamiento</p>
+            <p class="text-center">
                 <asp:ImageButton ID="ImageButton5" runat="server" Height="70px" ImageUrl="~/Imagenes/agregarEspacio.png" Width="69px" OnClick="ImageButton5_Click" />
             </p>
-            <p>Agregar Espacio</p>
+            <p class="text-center">Agregar Espacio</p>
+            <p class="text-center">
+                <asp:ImageButton ID="ImageButton7" runat="server" Height="70px" ImageUrl="~/Imagenes/reservar.png" OnClick="ImageButton7_Click" />
+            </p>
+            <p class="text-center">Reservar espacio para visitante</p>
         </div>
         <div class="col-sm-3"></div>
     </div>
     <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4">
-            <h3><strong>Informes y Estadísticas</strong></h3>
-            <p>
+            <h3 class="text-center"><strong>Informes y Estadísticas</strong></h3>
+            <p class="text-center">
 
                 <asp:ImageButton ID="ImageButton6" runat="server" Height="67px" ImageUrl="~/Imagenes/statistics.png" OnClick="ImageButton6_Click" Width="69px" />
 
             </p>
-            <p>
+            <p class="text-center">
 
                 Informes y Estadísticas</p>
             <p>
 
                 &nbsp;</p>
-            <p>
+            <p class="text-center">
 
                 <asp:SqlDataSource ID="sqlGetNombre" runat="server" ConnectionString="<%$ ConnectionStrings:ProyectoDisennoConnectionString %>" SelectCommand="SELECT [nombreCompleto] FROM [Persona] WHERE ([identificacion] = @identificacion)">
                     <SelectParameters>

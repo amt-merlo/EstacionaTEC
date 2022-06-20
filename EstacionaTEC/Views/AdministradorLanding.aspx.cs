@@ -80,5 +80,10 @@ namespace EstacionaTEC.Views
         {
             Response.Redirect("CrearOperador.aspx");
         }
+
+        protected void ImageButton7_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("CrearReservaAdmin.aspx");
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace EstacionaTEC.Views
 {
 
 
-    public partial class CrearReservaIndividual
+    public partial class CrearReservaIndividualAdmin
     {
 
         /// <summary>
@@ -42,22 +42,22 @@ namespace EstacionaTEC.Views
         protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
-        /// Control GridView2.
+        /// Control TextBox1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView2;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
 
         /// <summary>
-        /// Control sqlFranjas.
+        /// Control TextBox2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sqlFranjas;
+        protected global::System.Web.UI.WebControls.TextBox TextBox2;
 
         /// <summary>
         /// Control ddListDias.
@@ -114,13 +114,31 @@ namespace EstacionaTEC.Views
         protected global::System.Web.UI.WebControls.DropDownList ddListMinutosFin;
 
         /// <summary>
-        /// Control ddlistPlacas.
+        /// Control txtBoxPlaca.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlistPlacas;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxPlaca;
+
+        /// <summary>
+        /// Control TextBox3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+
+        /// <summary>
+        /// Control TextBox4.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox4;
 
         /// <summary>
         /// Control gridEspacios.
